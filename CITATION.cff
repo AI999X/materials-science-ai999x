@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "materials-science-ai999x: an offline, verified materials science solver"
+authors:
+  - family-names: Farabi
+    given-names: Ibnul Jaif
+    affiliation: AI999X
+version: 1.0.0
+license: Apache-2.0
+url: "https://huggingface.co/AI999X/materials-science-ai999x"
+repository-code: "https://huggingface.co/AI999X/materials-science-ai999x"
+keywords:
+  - materials science
+  - materials_science
+  - crystallography
+  - x-ray diffraction
+  - diffusion
+  - mechanical properties
+  - fracture mechanics
+  - phase diagrams
+  - polymers
+  - ceramics
+  - composites
+  - semiconductors
