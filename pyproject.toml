@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "materials-science-ai999x"
-version = "1.0.0"
+version = "1.0.1"
 description = "Offline materials science solver: crystal structures and diffraction, defects and diffusion, mechanical properties, phase diagrams, polymers, ceramics and composites, and electronic and thermal properties, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"

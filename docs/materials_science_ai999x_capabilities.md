@@ -871,6 +871,10 @@ $$
 - **Assumes:** a, $\lambda > 0$; $\lambda < 2$ d
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Diffraction stick pattern of an FCC crystal with a = 3](https://huggingface.co/AI999X/materials-science-ai999x/resolve/main/figures/cubic-reflection-angle-pattern.svg)
+
+*Diffraction stick pattern of an FCC crystal with a = 3.615 Å under λ = 1.542 Å: every (hkl) up to 4 is placed at the 2θ the package returns and given the structure factor it computes (|F|²/f² = 16 for the 8 allowed reflections, 0 for the 14 absent ones, shown as short grey stems). First line: (111) at 2θ = 43.3583°.*
+
 ```python
 materials_science_ai999x.solve('cubic_reflection_angle', a=3.615e-10, h=1, k=1, l=1, lam=1.542e-10)
 # -> d_nm = 0.208712, theta_deg = 21.6791, two_theta_deg = 43.3583   (SOLVED)
@@ -1464,6 +1468,10 @@ $$
 - **Assumes:** $0 < rc < ra$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![CN (coordination number) against rc (cation radius), with ra = 1](https://huggingface.co/AI999X/materials-science-ai999x/resolve/main/figures/radius-ratio-coordination-cn-vs-rc.svg)
+
+*CN (coordination number) against rc (cation radius), with ra = 1.81e-10 m. 31 points computed by materials-science-ai999x; marked: rc = 1.02e-10, CN = 6.*
+
 ```python
 materials_science_ai999x.solve('radius_ratio_coordination', rc=1.02e-10, ra=1.81e-10)
 # -> ratio = 0.563536, CN = 6, geometry = octahedral   (SOLVED)
@@ -1809,6 +1817,10 @@ $$
 - **Assumes:** x, D, $t > 0$; $Cs  \neq  C_{0}$; constant D, surface concentration held constant
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Concentration profiles of a species diffusing into a solid from a surface held at Cs = 1](https://huggingface.co/AI999X/materials-science-ai999x/resolve/main/figures/fick-second-law-concentration-profile.svg)
+
+*Concentration profiles of a species diffusing into a solid from a surface held at Cs = 1.2 wt% (initial C0 = 0.25 wt%, D = 1.6000e-11 m²/s) after 1, 7 and 24 hours, each computed by the package at 51 depths to 2.5 mm. Marked: x = 0.5 mm, t = 7 h, C = 0.798785 wt%.*
+
 ```python
 materials_science_ai999x.solve('fick_second_law_concentration', C0=0.25, Cs=1.2, x=0.0005, D=1.6e-11, t=25200.0)
 # -> Cx = 0.798785, z = 0.393713, ratio = 0.577668   (SOLVED)
@@ -2134,6 +2146,10 @@ $$
 - **Method:** first crossing of the data polyline with $\sigma = E$ (epsilon - offset), solved on that segment
 - **Assumes:** strains strictly increasing; the curve starts above the offset line and crosses it
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![An engineering stress–strain curve (the stated test points) and the line of slope E = 200 GPa offset by 0](https://huggingface.co/AI999X/materials-science-ai999x/resolve/main/figures/offset-yield-strength-curve.svg)
+
+*An engineering stress–strain curve (the stated test points) and the line of slope E = 200 GPa offset by 0.2 % strain; the package finds their intersection, the offset yield strength. Marked: ε = 0.466667 %, σy = 533.333 MPa.*
 
 ```python
 materials_science_ai999x.solve('offset_yield_strength', strain=[0, 0.002, 0.004, 0.006, 0.008], stress=[0, 400, 520, 560, 580], E=200000000000.0)
@@ -2969,6 +2985,10 @@ $$
 - **Method:** lever rule with the eutectoid at 0.76 wt% C, ferrite 0.022 wt% C and cementite 6.70 wt% C
 - **Assumes:** $0.022 < C_{0} < 2.14$ wt% C
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Microconstituents of slowly cooled plain-carbon steel just below the eutectoid temperature, from the lever rule as computed by the package, as stacked bars at 10 carbon contents: pearlite at the bottom, the proeutectoid constituent on top (ferrite below the eutectoid composition, cementite above it)](https://huggingface.co/AI999X/materials-science-ai999x/resolve/main/figures/iron-carbon-microconstituents-bars.svg)
+
+*Microconstituents of slowly cooled plain-carbon steel just below the eutectoid temperature, from the lever rule as computed by the package, as stacked bars at 10 carbon contents: pearlite at the bottom, the proeutectoid constituent on top (ferrite below the eutectoid composition, cementite above it). Marked: C0 = 0.35 wt%, pearlite fraction 0.444444 (proeutectoid ferrite 0.555556).*
 
 ```python
 materials_science_ai999x.solve('iron_carbon_microconstituents', C0=0.35)

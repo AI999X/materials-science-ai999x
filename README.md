@@ -4,7 +4,9 @@
 
 **[Install](https://pypi.org/project/materials-science-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/materials-science-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/materials-science-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.0
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.1
+
+Field: **Physical Sciences** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
 
 materials-science-ai999x is an offline, deterministic Python solver that answers materials science questions with verified results from 87 certified capabilities, gives 345 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
 
@@ -25,7 +27,7 @@ materials-science-ai999x is an offline, deterministic Python solver that answers
 
 | Property | Value |
 |---|---|
-| Package | `materials-science-ai999x` 1.0.0 (import `materials_science_ai999x`) |
+| Package | `materials-science-ai999x` 1.0.1 (import `materials_science_ai999x`) |
 | Type | Deterministic neuro-symbolic materials science engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 87 certified procedures |
 | Knowledge pack | version 1.0.1 |
@@ -59,7 +61,7 @@ materials_science.ask("Who created you?").message
 # -> materials-science-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `materials-science-ai999x "<question>"`, `materials-science-ai999x --capabilities`. The outputs above were produced by running this exact code on materials-science-ai999x 1.0.0.
+Command line: `materials-science-ai999x "<question>"`, `materials-science-ai999x --capabilities`. The outputs above were produced by running this exact code on materials-science-ai999x 1.0.1.
 
 ## Find the right capability, and draw it
 
@@ -69,7 +71,7 @@ Command line: `materials-science-ai999x "<question>"`, `materials-science-ai999x
 import materials_science_ai999x as materials_science
 
 materials_science.search("Solve x^2 - 5x + 6 = 0", k=2)
-# -> Roots of a quadratic equation (algebra-ai999x, 0.67); Solution of two linear equations in two unknowns (algebra-ai999x, 0.57)
+# -> Roots of a quadratic equation (math-foundations-ai999x, 0.63); Roots of a cubic equation (math-foundations-ai999x, 0.59)
 ```
 
 ## How every answer is verified
@@ -80,6 +82,116 @@ materials_science.search("Solve x^2 - 5x + 6 = 0", k=2)
 4. **Checking** — dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
+
+## Worked examples
+
+Each question was put to `materials-science-ai999x`; the answer is the one it returned, with the steps it took.
+
+**Theoretical density of a metal** · _Crystal structures_
+
+> Theoretical density: structure = FCC, A = 63.55 g/mol, R = 0.128 nm
+
+→ **rho = 8895.28269 kg/m^3, rho_gcc = 8.89528269, a_nm = 0.362038672**
+
+<details><summary>Steps</summary>
+
+- Theoretical density of a metal: structure = FCC, A = 63.55 g/mol, R = 0.128 nm → rho = 8895.28269 kg/m^3, rho_gcc = 8.89528269, a_nm = 0.362038672
+
+</details>
+
+**Bragg angle of a reflection** · _Diffraction_
+
+> Bragg angle: d = 0.2087 nm, lambda = 0.1542 nm
+
+→ **theta_deg = 21.68045609, two_theta_deg = 43.36091219**
+
+<details><summary>Steps</summary>
+
+- Bragg angle of a reflection: d = 0.2087 nm, lam = 0.1542 nm → theta_deg = 21.68045609, two_theta_deg = 43.36091219
+
+</details>
+
+**Concentration in a semi-infinite solid (Fick's second law)** · _Diffusion_
+
+> Fick's second law: C0 = 0.25 wt%, Cs = 1.2 wt%, x = 0.5 mm, D = 1.6e-11 m^2/s, t = 7 h
+
+→ **Cx = 0.7987846097, z = 0.3937129927, ratio = 0.5776680102**
+
+<details><summary>Steps</summary>
+
+- Concentration in a semi-infinite solid (Fick's second law): C0 = 0.25, Cs = 1.2, x = 0.5 mm, D = 1.6e-11 m^2/s, t = 7 h → Cx = 0.7987846097, z = 0.3937129927, ratio = 0.5776680102
+
+</details>
+
+**Proeutectoid phase and pearlite in a plain-carbon steel** · _Phase diagrams_
+
+> Iron-carbon microconstituents: C0 = 0.35 wt%
+
+→ **W_proeutectoid = 0.5555555556, W_pearlite = 0.4444444444, W_ferrite_total = 0.9508834981, W_cementite_total = 0.04911650195, proeutectoid_phase = ferrite**
+
+<details><summary>Steps</summary>
+
+- Proeutectoid phase and pearlite in a plain-carbon steel: C0 = 0.35 → W_proeutectoid = 0.5555555556, W_pearlite = 0.4444444444, W_ferrite_total = 0.9508834981, W_cementite_total = 0.04911650195, proeutectoid_phase = ferrite
+
+</details>
+
+**Planar density of a crystal plane** · _Crystal structures_
+
+`m.solve("planar_density", structure="BCC", h=1, k=1, l=0, a="0.2866 nm")`
+
+→ **PD_per_nm2 = 17.21720402, PD = 1.721720402e+19 1/m^2, PPF = 0.8330405509**
+
+<details><summary>Steps</summary>
+
+- Planar density of a crystal plane: structure = BCC, h = 1, k = 1, l = 0, a = 0.2866 nm → PD_per_nm2 = 17.21720402, PD = 1.721720402e+19 1/m^2, PPF = 0.8330405509
+
+</details>
+
+**Lattice parameter and density of an ionic crystal** · _Ceramics_
+
+> Ceramic density: prototype = rocksalt, rc = 0.102 nm, ra = 0.181 nm, Ac = 22.99 g/mol, Aa = 35.45 g/mol
+
+→ **a = 5.66e-10 m, a_nm = 0.566, rho = 2140.769963 kg/m^3, rho_gcc = 2.140769963**
+
+<details><summary>Steps</summary>
+
+- Lattice parameter and density of an ionic crystal: prototype = rocksalt, rc = 0.102 nm, ra = 0.181 nm, Ac = 22.99 g/mol, Aa = 35.45 g/mol → a = 5.66e-10 m, a_nm = 0.566, rho = 2140.769963 kg/m^3, rho_gcc = 2.140769963
+
+</details>
+
+## Figures
+
+Every point was computed by `materials-science-ai999x`.
+
+**Diffusion into a solid: concentration profiles over time**
+
+![Diffusion into a solid: concentration profiles over time — computed by materials-science-ai999x](https://huggingface.co/AI999X/materials-science-ai999x/resolve/main/figures/fick-second-law-concentration-profile.svg)
+
+_Concentration profiles of a species diffusing into a solid from a surface held at Cs = 1.2 wt% (initial C0 = 0.25 wt%, D = 1.6000e-11 m²/s) after 1, 7 and 24 hours, each computed by the package at 51 depths to 2.5 mm. Marked: x = 0.5 mm, t = 7 h, C = 0.798785 wt%._
+
+**X-ray diffraction pattern of an FCC crystal**
+
+![X-ray diffraction pattern of an FCC crystal — computed by materials-science-ai999x](https://huggingface.co/AI999X/materials-science-ai999x/resolve/main/figures/cubic-reflection-angle-pattern.svg)
+
+_Diffraction stick pattern of an FCC crystal with a = 3.615 Å under λ = 1.542 Å: every (hkl) up to 4 is placed at the 2θ the package returns and given the structure factor it computes (|F|²/f² = 16 for the 8 allowed reflections, 0 for the 14 absent ones, shown as short grey stems). First line: (111) at 2θ = 43.3583°._
+
+**Stress–strain curve and the 0.2 % offset yield strength**
+
+![Stress–strain curve and the 0.2 % offset yield strength — computed by materials-science-ai999x](https://huggingface.co/AI999X/materials-science-ai999x/resolve/main/figures/offset-yield-strength-curve.svg)
+
+_An engineering stress–strain curve (the stated test points) and the line of slope E = 200 GPa offset by 0.2 % strain; the package finds their intersection, the offset yield strength. Marked: ε = 0.466667 %, σy = 533.333 MPa._
+
+**Steel microconstituents across the eutectoid (lever rule)**
+
+![Steel microconstituents across the eutectoid (lever rule) — computed by materials-science-ai999x](https://huggingface.co/AI999X/materials-science-ai999x/resolve/main/figures/iron-carbon-microconstituents-bars.svg)
+
+_Microconstituents of slowly cooled plain-carbon steel just below the eutectoid temperature, from the lever rule as computed by the package, as stacked bars at 10 carbon contents: pearlite at the bottom, the proeutectoid constituent on top (ferrite below the eutectoid composition, cementite above it). Marked: C0 = 0.35 wt%, pearlite fraction 0.444444 (proeutectoid ferrite 0.555556)._
+
+**Coordination number from the cation-anion radius ratio**
+
+![Coordination number from the cation-anion radius ratio — computed by materials-science-ai999x](https://huggingface.co/AI999X/materials-science-ai999x/resolve/main/figures/radius-ratio-coordination-cn-vs-rc.svg)
+
+_CN (coordination number) against rc (cation radius), with ra = 1.81e-10 m. 31 points computed by materials-science-ai999x; marked: rc = 1.02e-10, CN = 6._
 
 ## Capabilities
 
@@ -104,10 +216,10 @@ Capabilities are certified before they ship: each must reproduce hand-worked ref
 ## Citation
 
 ```bibtex
-@software{materials_science_ai999x_1_0_0,
+@software{materials_science_ai999x_1_0_1,
   title  = {materials-science-ai999x: an offline, verified materials science solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.0},
+  year   = {2026}, version = {1.0.1},
   url    = {https://huggingface.co/AI999X/materials-science-ai999x}
 }
 ```
