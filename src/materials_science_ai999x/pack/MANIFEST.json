@@ -1,5 +1,5 @@
 {
- "package": "1.0.2",
+ "package": "1.0.3",
  "pack": "1.0.1",
  "knowledge_db": null,
  "files": {
@@ -9,7 +9,7 @@
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
   "capabilities/procedures.py": "748f5f41d0cc37b6a7a3df2b28c3f2aa2a63c9ef32b2710f8ecdf5a516714f28",
   "capabilities/procedures_certified.json": "9997ad48acd383af25f547a1f99ad19bffe11126c413399949eaecef0f930e03",
-  "materials_science_knowledge_public.sqlite": "44be6296caf2116f7a01f3ea5fda566716ac992b1c7ab977e6e3b7b5aa33f6a8",
+  "materials_science_knowledge_public.sqlite": "6fa09508cb132ab706f56ed18a0daa07a223531ef1c5a9367732e668a69c65e2",
   "search/encoder.int8.onnx": "521452d928a72da4d241b1835ab0f46b0e81ff58ffff0367b9a7029bd129fbd9",
   "search/tokenizer.json": "b2f2deb461e6ad672b8e42aac29773e7a9be77d582cdf58808113ea43fda565e",
   "search/index.json": "d8f81d9706c9a0efa7d9643bcec3d39a6c3500766ce0f44937d85ad90f772507",
@@ -19,6 +19,7 @@
  },
  "engine": [
   "__init__.py",
+  "_lazy.py",
   "answer.py",
   "compiler.py",
   "decision_reader.py",
