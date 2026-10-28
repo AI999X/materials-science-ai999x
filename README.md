@@ -4,7 +4,7 @@
 
 **[Install](https://pypi.org/project/materials-science-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/materials-science-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/materials-science-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.1
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.2
 
 Field: **Physical Sciences** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
 
@@ -27,7 +27,7 @@ materials-science-ai999x is an offline, deterministic Python solver that answers
 
 | Property | Value |
 |---|---|
-| Package | `materials-science-ai999x` 1.0.1 (import `materials_science_ai999x`) |
+| Package | `materials-science-ai999x` 1.0.2 (import `materials_science_ai999x`) |
 | Type | Deterministic neuro-symbolic materials science engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 87 certified procedures |
 | Knowledge pack | version 1.0.1 |
@@ -61,7 +61,7 @@ materials_science.ask("Who created you?").message
 # -> materials-science-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `materials-science-ai999x "<question>"`, `materials-science-ai999x --capabilities`. The outputs above were produced by running this exact code on materials-science-ai999x 1.0.1.
+Command line: `materials-science-ai999x "<question>"`, `materials-science-ai999x --capabilities`. The outputs above were produced by running this exact code on materials-science-ai999x 1.0.2.
 
 ## Find the right capability, and draw it
 
@@ -216,10 +216,10 @@ _CN (coordination number) against rc (cation radius), with ra = 1.81e-10 m. 31 p
 ## Citation
 
 ```bibtex
-@software{materials_science_ai999x_1_0_1,
+@software{materials_science_ai999x_1_0_2,
   title  = {materials-science-ai999x: an offline, verified materials science solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.1},
+  year   = {2026}, version = {1.0.2},
   url    = {https://huggingface.co/AI999X/materials-science-ai999x}
 }
 ```
