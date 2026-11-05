@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "materials-science-ai999x"
-version = "1.1.0"
+version = "1.5.0"
 description = "Offline materials science solver: crystal structures and diffraction, defects and diffusion, mechanical properties, phase diagrams, polymers, ceramics and composites, and electronic and thermal properties, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -16,10 +16,8 @@ classifiers = ["License :: OSI Approved :: Apache Software License", "Programmin
 dependencies = ["sympy>=1.12", "mpmath>=1.3"]
 
 [project.optional-dependencies]
-search = ["onnxruntime>=1.17", "tokenizers>=0.15", "numpy>=1.24"]
 plot = ["matplotlib>=3.7"]
-all = ["matplotlib>=3.7", "numpy>=1.24", "onnxruntime>=1.17", "tokenizers>=0.15"]
-reader = ["onnxruntime>=1.17", "tokenizers>=0.15", "numpy>=1.24"]
+all = ["matplotlib>=3.7", "numpy>=1.24"]
 
 [project.scripts]
 materials-science-ai999x = "materials_science_ai999x.cli:main"
@@ -35,4 +33,4 @@ materials-science-ai999x = "materials_science_ai999x.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-materials_science_ai999x = ["pack/*.json", "pack/*/*.json", "pack/*.sqlite", "pack/capabilities/*.py", "pack/search/*.onnx", "pack/reader/*.onnx"]
+materials_science_ai999x = ["pack/*.json", "pack/*/*.json", "pack/*.sqlite", "pack/capabilities/*.py", "pack/search/*.onnx"]

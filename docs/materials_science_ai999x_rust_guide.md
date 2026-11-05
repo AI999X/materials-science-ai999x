@@ -1,4 +1,4 @@
-# materials-science: the Materials Science program — user guide
+# materials-science: the Materials Science program, user guide
 
 **materials-science-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
@@ -17,63 +17,63 @@ Materials Science covers crystal structures and diffraction, defects and diffusi
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Materials Science | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-materials-science-1.4.0-windows-x86_64.zip |
-| Desktop app: Materials Science | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-materials-science-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Materials Science | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-materials-science-1.5.0-windows-x86_64.zip |
+| Desktop app: Materials Science | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-materials-science-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Materials Science in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-materials-science-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-materials-science.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Materials Science in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-materials-science-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-materials-science.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-materials-science-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-materials-science-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-materials-science-1.4.0-linux-x86_64.tar.gz
-./ai999x-materials-science-1.4.0-linux-x86_64/ai999x-materials-science
+tar xzf ai999x-materials-science-1.5.0-linux-x86_64.tar.gz
+./ai999x-materials-science-1.5.0-linux-x86_64/ai999x-materials-science
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
-./ai999x-1.4.0-linux-x86_64/ai999x
+tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
+./ai999x-1.5.0-linux-x86_64/ai999x
 ```
 
-### Command line — Linux
+### Command line: Linux
 
 The bundle holds one program per model; `materials-science` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 materials-science --version
 ```
 
-### Command line — Windows (PowerShell)
+### Command line: Windows (PowerShell)
 
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 materials-science --version
 ```
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ materials-science --version
-materials-science-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
+materials-science-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
 ```
 
 ### 2.2 Ask in words
@@ -200,41 +200,7 @@ $ materials-science solve theoretical_density structure=FCC "A=63.55 g/mol"
 NEEDS_INPUT: theoretical_density needs R (atomic radius). Example: solve('theoretical_density', structure='FCC', A='0.06355 kg/mol', R='1.28e-10 m').
 ```
 
-### 2.9 Draw the figures
-
-The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```shell
-$ materials-science figures theoretical_density structure=FCC "A=63.55 g/mol" "R=0.128 nm" --out .
-[
-  {
-    "slug": "theoretical-density-cell",
-    "title": "The unit cell with the returned values",
-    "caption": "The FCC unit cell: atoms at the standard positions of the structure (corner atoms in the first colour, other lattice sites in the third, the second atom of the basis in the second; hidden edges dashed). Labelled with what the model returned: rho_gcc = 8.895, a_nm = 0.362. Your inputs: structure = FCC, A = 63.55 g/mol, R = 0.128 nm.",
-    "file": ".\\theoretical-density-cell.svg"
-  },
-  {
-    "slug": "theoretical-density-live-1",
-    "title": "Density in g/cm^3 as atomic radius varies",
-    "caption": "Density in g/cm^3 as R runs from 0.032 to 0.224 nm, every other input as you entered it (41 solutions). Marked: your R = 0.128 nm gives rho_gcc = 8.895. Your inputs: structure = FCC, A = 63.55 g/mol, R = 0.128 nm.",
-    "file": ".\\theoretical-density-live-1.svg"
-  },
-  {
-    "slug": "theoretical-density-live-2",
-    "title": "Density in g/cm^3 for each choice of crystal structure (SC, BCC, FCC, HCP, diamond)",
-    "caption": "Density in g/cm^3 for every choice of structure, every other input as you entered it (highlighted: your choice). SC: 6.29; BCC: 8.171; FCC: 8.895; HCP: 8.895; diamond: 4.085. Your inputs: structure = FCC, A = 63.55 g/mol, R = 0.128 nm.",
-    "file": ".\\theoretical-density-live-2.svg"
-  },
-  {
-    "slug": "theoretical-density-live-3",
-    "title": "Density in g/cm^3 as molar mass (atomic weight) varies",
-    "caption": "Density in g/cm^3 as A runs from 15.89 to 111.2 g/mol, every other input as you entered it (29 solutions). Marked: your A = 63.55 g/mol gives rho_gcc = 8.895. Your inputs: structure = FCC, A = 63.55 g/mol, R = 0.128 nm.",
-    "file": ".\\theoretical-density-live-3.svg"
-  }
-]
-```
-
-### 2.10 Many questions at once
+### 2.9 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | materials-science batch
 
@@ -307,36 +273,6 @@ answers = [json.loads(line) for line in out.splitlines()]
 
 `materials-science figures <capability> name=value ... --out DIR` draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without `--out` the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.
 
-```shell
-$ materials-science figures theoretical_density structure=FCC "A=63.55 g/mol" "R=0.128 nm" --out .
-[
-  {
-    "slug": "theoretical-density-cell",
-    "title": "The unit cell with the returned values",
-    "caption": "The FCC unit cell: atoms at the standard positions of the structure (corner atoms in the first colour, other lattice sites in the third, the second atom of the basis in the second; hidden edges dashed). Labelled with what the model returned: rho_gcc = 8.895, a_nm = 0.362. Your inputs: structure = FCC, A = 63.55 g/mol, R = 0.128 nm.",
-    "file": ".\\theoretical-density-cell.svg"
-  },
-  {
-    "slug": "theoretical-density-live-1",
-    "title": "Density in g/cm^3 as atomic radius varies",
-    "caption": "Density in g/cm^3 as R runs from 0.032 to 0.224 nm, every other input as you entered it (41 solutions). Marked: your R = 0.128 nm gives rho_gcc = 8.895. Your inputs: structure = FCC, A = 63.55 g/mol, R = 0.128 nm.",
-    "file": ".\\theoretical-density-live-1.svg"
-  },
-  {
-    "slug": "theoretical-density-live-2",
-    "title": "Density in g/cm^3 for each choice of crystal structure (SC, BCC, FCC, HCP, diamond)",
-    "caption": "Density in g/cm^3 for every choice of structure, every other input as you entered it (highlighted: your choice). SC: 6.29; BCC: 8.171; FCC: 8.895; HCP: 8.895; diamond: 4.085. Your inputs: structure = FCC, A = 63.55 g/mol, R = 0.128 nm.",
-    "file": ".\\theoretical-density-live-2.svg"
-  },
-  {
-    "slug": "theoretical-density-live-3",
-    "title": "Density in g/cm^3 as molar mass (atomic weight) varies",
-    "caption": "Density in g/cm^3 as A runs from 15.89 to 111.2 g/mol, every other input as you entered it (29 solutions). Marked: your A = 63.55 g/mol gives rho_gcc = 8.895. Your inputs: structure = FCC, A = 63.55 g/mol, R = 0.128 nm.",
-    "file": ".\\theoretical-density-live-3.svg"
-  }
-]
-```
-
 ## 7. In a web page or Node.js: WebAssembly
 
 The same model is a WebAssembly module, `materials_science_ai999x.wasm` (https://www.ai999x.com/compute/rust/materials_science_ai999x.wasm), with a small loader, `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.
@@ -360,7 +296,7 @@ By topic. For each: what it does, what it needs and gives, when it applies, and 
 
 <a id="radius_ratio_coordination"></a>
 
-#### Coordination number from the cation-anion radius ratio — `radius_ratio_coordination`
+#### Coordination number from the cation-anion radius ratio, `radius_ratio_coordination`
 
 The expected coordination number and polyhedron of a cation from the ratio of the cation and anion radii (Pauling's radius-ratio rule).
 
@@ -372,9 +308,9 @@ $$
 |---|---|---|---|
 | `rc` | in | cation radius | m |
 | `ra` | in | anion radius | m |
-| `ratio` | out | rc/ra | — |
-| `CN` | out | coordination number | — |
-| `geometry` | out | coordination polyhedron | — |
+| `ratio` | out | rc/ra | - |
+| `CN` | out | coordination number | - |
+| `geometry` | out | coordination polyhedron | - |
 
 **Applies when:** 0 < rc < ra.
 
@@ -393,7 +329,7 @@ geometry = octahedral
 
 <a id="ceramic_density"></a>
 
-#### Lattice parameter and density of an ionic crystal — `ceramic_density`
+#### Lattice parameter and density of an ionic crystal, `ceramic_density`
 
 The cubic lattice parameter and theoretical density of a rock-salt, cesium-chloride, zinc-blende or fluorite crystal from its ionic radii and molar masses.
 
@@ -403,15 +339,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `prototype` | in | crystal structure (rocksalt, CsCl, zincblende, fluorite) | — |
+| `prototype` | in | crystal structure (rocksalt, CsCl, zincblende, fluorite) | - |
 | `rc` | in | cation radius | m |
 | `ra` | in | anion radius | m |
 | `Ac` | in | molar mass of the cation element | kg/mol |
 | `Aa` | in | molar mass of the anion element | kg/mol |
 | `a` | out | lattice parameter | m |
-| `a_nm` | out | lattice parameter in nm | — |
+| `a_nm` | out | lattice parameter in nm | - |
 | `rho` | out | density | kg/m^3 |
-| `rho_gcc` | out | density in g/cm^3 | — |
+| `rho_gcc` | out | density in g/cm^3 | - |
 
 **Applies when:** radii and molar masses > 0; cations and anions touch (the anions need not).
 
@@ -436,7 +372,7 @@ rho_gcc = 2.140769963
 
 <a id="critical_fiber_length"></a>
 
-#### Critical fibre length — `critical_fiber_length`
+#### Critical fibre length: `critical_fiber_length`
 
 The critical length l_c = sigma_f d / (2 tau_c) a fibre needs to be loaded to its strength through the fibre-matrix interface.
 
@@ -450,8 +386,8 @@ $$
 | `d` | in | fibre diameter | m |
 | `tau_c` | in | fibre-matrix bond strength (or matrix shear yield strength) | Pa |
 | `lc` | out | critical fibre length | m |
-| `lc_mm` | out | critical length in mm | — |
-| `aspect_ratio` | out | l_c/d | — |
+| `lc_mm` | out | critical length in mm | - |
+| `aspect_ratio` | out | l_c/d | - |
 
 **Applies when:** all inputs > 0.
 
@@ -471,7 +407,7 @@ aspect_ratio = 87.5
 
 <a id="composite_rule_of_mixtures"></a>
 
-#### Elastic moduli of a continuous-fibre composite (rule of mixtures) — `composite_rule_of_mixtures`
+#### Elastic moduli of a continuous-fibre composite (rule of mixtures), `composite_rule_of_mixtures`
 
 The longitudinal (isostrain) and transverse (isostress) moduli of an aligned continuous-fibre composite and the fraction of the load carried by the fibres.
 
@@ -483,10 +419,10 @@ $$
 |---|---|---|---|
 | `Ef` | in | fibre modulus | Pa |
 | `Em` | in | matrix modulus | Pa |
-| `Vf` | in | fibre volume fraction (0 to 1) | — |
-| `E_long_GPa` | out | longitudinal modulus in GPa | — |
-| `E_trans_GPa` | out | transverse modulus in GPa | — |
-| `fiber_load_fraction` | out | fraction of a longitudinal load carried by the fibres | — |
+| `Vf` | in | fibre volume fraction (0 to 1) | - |
+| `E_long_GPa` | out | longitudinal modulus in GPa | - |
+| `E_trans_GPa` | out | transverse modulus in GPa | - |
+| `fiber_load_fraction` | out | fraction of a longitudinal load carried by the fibres | - |
 | `E_long` | out | longitudinal modulus | Pa |
 | `E_trans` | out | transverse modulus | Pa |
 
@@ -512,7 +448,7 @@ E_trans = 5486435921 Pa
 
 <a id="angle_between_directions_cubic"></a>
 
-#### Angle between two directions in a cubic crystal — `angle_between_directions_cubic`
+#### Angle between two directions in a cubic crystal, `angle_between_directions_cubic`
 
 The angle between the directions [u1 v1 w1] and [u2 v2 w2] of a cubic crystal (also the angle between the planes with those indices).
 
@@ -522,13 +458,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `u1` | in | index u of direction 1 | — |
-| `v1` | in | index v of direction 1 | — |
-| `w1` | in | index w of direction 1 | — |
-| `u2` | in | index u of direction 2 | — |
-| `v2` | in | index v of direction 2 | — |
-| `w2` | in | index w of direction 2 | — |
-| `angle_deg` | out | angle in degrees | — |
+| `u1` | in | index u of direction 1 | - |
+| `v1` | in | index v of direction 1 | - |
+| `w1` | in | index w of direction 1 | - |
+| `u2` | in | index u of direction 2 | - |
+| `v2` | in | index v of direction 2 | - |
+| `w2` | in | index w of direction 2 | - |
+| `angle_deg` | out | angle in degrees | - |
 
 **Applies when:** integer indices, neither direction zero.
 
@@ -543,7 +479,7 @@ angle_deg = 54.73561032
 
 <a id="angle_between_directions"></a>
 
-#### Angle between two lattice directions in any crystal — `angle_between_directions`
+#### Angle between two lattice directions in any crystal, `angle_between_directions`
 
 The angle between the directions [u1 v1 w1] and [u2 v2 w2] of a crystal with any cell (a, b, c, alpha, beta, gamma).
 
@@ -556,16 +492,16 @@ $$
 | `a` | in | cell edge a | m |
 | `b` | in | cell edge b | m |
 | `c` | in | cell edge c | m |
-| `alpha` | in | cell angle alpha in degrees (between b and c) | — |
-| `beta` | in | cell angle beta in degrees (between a and c) | — |
-| `gamma` | in | cell angle gamma in degrees (between a and b) | — |
-| `u1` | in | index u of direction 1 | — |
-| `v1` | in | index v of direction 1 | — |
-| `w1` | in | index w of direction 1 | — |
-| `u2` | in | index u of direction 2 | — |
-| `v2` | in | index v of direction 2 | — |
-| `w2` | in | index w of direction 2 | — |
-| `angle_deg` | out | angle in degrees | — |
+| `alpha` | in | cell angle alpha in degrees (between b and c) | - |
+| `beta` | in | cell angle beta in degrees (between a and c) | - |
+| `gamma` | in | cell angle gamma in degrees (between a and b) | - |
+| `u1` | in | index u of direction 1 | - |
+| `v1` | in | index v of direction 1 | - |
+| `w1` | in | index w of direction 1 | - |
+| `u2` | in | index u of direction 2 | - |
+| `v2` | in | index v of direction 2 | - |
+| `w2` | in | index w of direction 2 | - |
+| `angle_deg` | out | angle in degrees | - |
 
 **Applies when:** a valid cell; neither direction zero.
 
@@ -586,7 +522,7 @@ angle_deg = 120
 
 <a id="angle_between_planes"></a>
 
-#### Angle between two lattice planes in any crystal — `angle_between_planes`
+#### Angle between two lattice planes in any crystal, `angle_between_planes`
 
 The angle between the normals of the planes (h1 k1 l1) and (h2 k2 l2) of a crystal with any cell.
 
@@ -599,16 +535,16 @@ $$
 | `a` | in | cell edge a | m |
 | `b` | in | cell edge b | m |
 | `c` | in | cell edge c | m |
-| `alpha` | in | cell angle alpha in degrees (between b and c) | — |
-| `beta` | in | cell angle beta in degrees (between a and c) | — |
-| `gamma` | in | cell angle gamma in degrees (between a and b) | — |
-| `h1` | in | Miller index h of plane 1 | — |
-| `k1` | in | Miller index k of plane 1 | — |
-| `l1` | in | Miller index l of plane 1 | — |
-| `h2` | in | Miller index h of plane 2 | — |
-| `k2` | in | Miller index k of plane 2 | — |
-| `l2` | in | Miller index l of plane 2 | — |
-| `angle_deg` | out | angle between the plane normals in degrees | — |
+| `alpha` | in | cell angle alpha in degrees (between b and c) | - |
+| `beta` | in | cell angle beta in degrees (between a and c) | - |
+| `gamma` | in | cell angle gamma in degrees (between a and b) | - |
+| `h1` | in | Miller index h of plane 1 | - |
+| `k1` | in | Miller index k of plane 1 | - |
+| `l1` | in | Miller index l of plane 1 | - |
+| `h2` | in | Miller index h of plane 2 | - |
+| `k2` | in | Miller index k of plane 2 | - |
+| `l2` | in | Miller index l of plane 2 | - |
+| `angle_deg` | out | angle between the plane normals in degrees | - |
 
 **Applies when:** a valid cell; neither plane (0 0 0).
 
@@ -629,7 +565,7 @@ angle_deg = 70.52877937
 
 <a id="atomic_packing_factor"></a>
 
-#### Atomic packing factor and coordination number — `atomic_packing_factor`
+#### Atomic packing factor and coordination number, `atomic_packing_factor`
 
 The fraction of a crystal's volume filled by hard-sphere atoms, the coordination number and the atoms per conventional cell of SC, BCC, FCC, HCP or diamond cubic.
 
@@ -639,10 +575,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | crystal structure (SC, BCC, FCC, HCP, diamond) | — |
-| `apf` | out | atomic packing factor | — |
-| `coordination` | out | coordination number | — |
-| `atoms_per_cell` | out | atoms per conventional cell (HCP: the hexagonal prism) | — |
+| `structure` | in | crystal structure (SC, BCC, FCC, HCP, diamond) | - |
+| `apf` | out | atomic packing factor | - |
+| `coordination` | out | coordination number | - |
+| `atoms_per_cell` | out | atoms per conventional cell (HCP: the hexagonal prism) | - |
 
 **Applies when:** hard spheres touching along the close-packed direction; ideal c/a for HCP.
 
@@ -660,7 +596,7 @@ atoms_per_cell = 4
 
 <a id="miller_bravais_to_three_index"></a>
 
-#### Four-index (Miller-Bravais) to three-index direction — `miller_bravais_to_three_index`
+#### Four-index (Miller-Bravais) to three-index direction, `miller_bravais_to_three_index`
 
 Convert a Miller-Bravais direction [u v t w] of a hexagonal crystal to the three-index form [U V W].
 
@@ -670,14 +606,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `u` | in | index along a1 | — |
-| `v` | in | index along a2 | — |
-| `t` | in | index along a3 (= -(u + v)) | — |
-| `w` | in | index along c | — |
-| `U` | out | three-index component U | — |
-| `V` | out | three-index component V | — |
-| `W` | out | three-index component W | — |
-| `indices` | out | [U V W] | — |
+| `u` | in | index along a1 | - |
+| `v` | in | index along a2 | - |
+| `t` | in | index along a3 (= -(u + v)) | - |
+| `w` | in | index along c | - |
+| `U` | out | three-index component U | - |
+| `V` | out | three-index component V | - |
+| `W` | out | three-index component W | - |
+| `indices` | out | [U V W] | - |
 
 **Applies when:** integer indices; t = -(u + v).
 
@@ -695,7 +631,7 @@ indices = [1 0 0]
 
 <a id="lattice_parameter_from_density"></a>
 
-#### Lattice parameter and atomic radius from the density — `lattice_parameter_from_density`
+#### Lattice parameter and atomic radius from the density, `lattice_parameter_from_density`
 
 The lattice parameter a and hard-sphere atomic radius R of a crystal of known structure, density and molar mass.
 
@@ -705,12 +641,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | crystal structure (SC, BCC, FCC, HCP, diamond) | — |
+| `structure` | in | crystal structure (SC, BCC, FCC, HCP, diamond) | - |
 | `rho` | in | measured density | kg/m^3 |
 | `A` | in | molar mass | kg/mol |
 | `a` | out | lattice parameter a | m |
-| `a_nm` | out | lattice parameter a in nm | — |
-| `R_nm` | out | atomic radius in nm | — |
+| `a_nm` | out | lattice parameter a in nm | - |
+| `R_nm` | out | atomic radius in nm | - |
 
 **Applies when:** rho > 0; A > 0.
 
@@ -730,7 +666,7 @@ R_nm = 0.1276910774
 
 <a id="cubic_lattice_parameter"></a>
 
-#### Lattice parameter from the atomic radius — `cubic_lattice_parameter`
+#### Lattice parameter from the atomic radius: `cubic_lattice_parameter`
 
 The cubic lattice parameter a of an SC, BCC, FCC or diamond-cubic crystal of hard-sphere atoms of radius R.
 
@@ -740,11 +676,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | crystal structure (SC, BCC, FCC, diamond) | — |
+| `structure` | in | crystal structure (SC, BCC, FCC, diamond) | - |
 | `R` | in | atomic radius | m |
 | `a` | out | lattice parameter | m |
-| `a_nm` | out | lattice parameter in nm | — |
-| `nearest_neighbour_nm` | out | nearest-neighbour distance 2R in nm | — |
+| `a_nm` | out | lattice parameter in nm | - |
+| `nearest_neighbour_nm` | out | nearest-neighbour distance 2R in nm | - |
 
 **Applies when:** R > 0.
 
@@ -763,7 +699,7 @@ In the worked example, structure = FCC, R = 0.1278 nm go through the equation ab
 
 <a id="linear_density"></a>
 
-#### Linear density along a crystal direction — `linear_density`
+#### Linear density along a crystal direction: `linear_density`
 
 The number of atoms per unit length along the [u v w] direction of an SC, BCC or FCC crystal, and the linear packing fraction.
 
@@ -773,15 +709,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | crystal structure (SC, BCC, FCC) | — |
-| `u` | in | direction index u | — |
-| `v` | in | direction index v | — |
-| `w` | in | direction index w | — |
+| `structure` | in | crystal structure (SC, BCC, FCC) | - |
+| `u` | in | direction index u | - |
+| `v` | in | direction index v | - |
+| `w` | in | direction index w | - |
 | `a` | in | lattice parameter | m |
-| `LD_per_nm` | out | atoms per nm along [uvw] | — |
+| `LD_per_nm` | out | atoms per nm along [uvw] | - |
 | `LD` | out | atoms per metre along [uvw] | 1/m |
-| `repeat_nm` | out | repeat distance along [uvw] in nm | — |
-| `LPF` | out | linear packing fraction (hard spheres) | — |
+| `repeat_nm` | out | repeat distance along [uvw] in nm | - |
+| `LPF` | out | linear packing fraction (hard spheres) | - |
 
 **Applies when:** a > 0; integer indices between -4 and 4, not all zero.
 
@@ -801,7 +737,7 @@ LPF = 1
 
 <a id="miller_indices_from_intercepts"></a>
 
-#### Miller indices of a plane from its intercepts — `miller_indices_from_intercepts`
+#### Miller indices of a plane from its intercepts, `miller_indices_from_intercepts`
 
 The Miller indices (h k l) of a plane cutting the axes at x, y, z (in units of the cell edges; inf for a plane parallel to an axis).
 
@@ -811,13 +747,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x` | in | intercept on the a axis (number, fraction or inf) | — |
-| `y` | in | intercept on the b axis | — |
-| `z` | in | intercept on the c axis | — |
-| `h` | out | Miller index h | — |
-| `k` | out | Miller index k | — |
-| `l` | out | Miller index l | — |
-| `indices` | out | (h k l) | — |
+| `x` | in | intercept on the a axis (number, fraction or inf) | - |
+| `y` | in | intercept on the b axis | - |
+| `z` | in | intercept on the c axis | - |
+| `h` | out | Miller index h | - |
+| `k` | out | Miller index k | - |
+| `l` | out | Miller index l | - |
+| `indices` | out | (h k l) | - |
 
 **Applies when:** no intercept 0 (move the origin); at least one finite intercept.
 
@@ -828,9 +764,9 @@ k = 2
 l = 0
 indices = (1 2 0)
   by: Miller indices of a plane from its intercepts  (take reciprocals of the intercepts, clear fractions, reduce to the smallest integers (signs kept))
-  z = inf
-  y = 1/2
   x = 1
+  y = 1/2
+  z = inf
   assumes: no intercept 0 (move the origin); at least one finite intercept
 ```
 
@@ -838,7 +774,7 @@ indices = (1 2 0)
 
 <a id="planar_density"></a>
 
-#### Planar density of a crystal plane — `planar_density`
+#### Planar density of a crystal plane: `planar_density`
 
 The number of atoms per unit area on the (h k l) plane of an SC, BCC or FCC crystal, and the planar packing fraction.
 
@@ -848,14 +784,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | crystal structure (SC, BCC, FCC) | — |
-| `h` | in | Miller index h | — |
-| `k` | in | Miller index k | — |
-| `l` | in | Miller index l | — |
+| `structure` | in | crystal structure (SC, BCC, FCC) | - |
+| `h` | in | Miller index h | - |
+| `k` | in | Miller index k | - |
+| `l` | in | Miller index l | - |
 | `a` | in | lattice parameter | m |
-| `PD_per_nm2` | out | atoms per nm^2 on the plane | — |
+| `PD_per_nm2` | out | atoms per nm^2 on the plane | - |
 | `PD` | out | atoms per m^2 on the plane | 1/m^2 |
-| `PPF` | out | planar packing fraction (hard spheres) | — |
+| `PPF` | out | planar packing fraction (hard spheres) | - |
 
 **Applies when:** a > 0; integer indices between -3 and 3, not all zero.
 
@@ -874,7 +810,7 @@ PPF = 0.9068996821
 
 <a id="space_group"></a>
 
-#### Space group of a common crystal structure — `space_group`
+#### Space group of a common crystal structure: `space_group`
 
 The space-group number, Hermann-Mauguin symbol and crystal system of a common metallic or ionic structure.
 
@@ -884,10 +820,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | structure (SC, BCC, FCC, HCP, diamond, rocksalt, CsCl, zincblende, fluorite) | — |
-| `number` | out | space-group number (International Tables) | — |
-| `symbol` | out | Hermann-Mauguin symbol | — |
-| `crystal_system` | out | crystal system | — |
+| `structure` | in | structure (SC, BCC, FCC, HCP, diamond, rocksalt, CsCl, zincblende, fluorite) | - |
+| `number` | out | space-group number (International Tables) | - |
+| `symbol` | out | Hermann-Mauguin symbol | - |
+| `crystal_system` | out | crystal system | - |
 
 ```shell
 $ materials-science solve space_group structure=BCC
@@ -902,7 +838,7 @@ crystal_system = cubic
 
 <a id="theoretical_density"></a>
 
-#### Theoretical density of a metal — `theoretical_density`
+#### Theoretical density of a metal: `theoretical_density`
 
 The density of a crystal from its structure, the atomic radius and the molar mass: rho = n A / (V_cell N_A).
 
@@ -912,12 +848,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | crystal structure (SC, BCC, FCC, HCP, diamond) | — |
+| `structure` | in | crystal structure (SC, BCC, FCC, HCP, diamond) | - |
 | `A` | in | molar mass (atomic weight) | kg/mol |
 | `R` | in | atomic radius | m |
 | `rho` | out | theoretical density | kg/m^3 |
-| `rho_gcc` | out | density in g/cm^3 | — |
-| `a_nm` | out | lattice parameter a in nm | — |
+| `rho_gcc` | out | density in g/cm^3 | - |
+| `a_nm` | out | lattice parameter a in nm | - |
 
 **Applies when:** A > 0; R > 0.
 
@@ -937,7 +873,7 @@ a_nm = 0.362038672
 
 <a id="miller_bravais_direction"></a>
 
-#### Three-index to four-index (Miller-Bravais) direction — `miller_bravais_direction`
+#### Three-index to four-index (Miller-Bravais) direction, `miller_bravais_direction`
 
 Convert a hexagonal direction [U V W] (axes a1, a2, c) to the Miller-Bravais form [u v t w] (axes a1, a2, a3, c).
 
@@ -947,14 +883,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `U` | in | index along a1 | — |
-| `V` | in | index along a2 | — |
-| `W` | in | index along c | — |
-| `u` | out | Miller-Bravais index u | — |
-| `v` | out | Miller-Bravais index v | — |
-| `t` | out | Miller-Bravais index t | — |
-| `w` | out | Miller-Bravais index w | — |
-| `indices` | out | [u v t w] | — |
+| `U` | in | index along a1 | - |
+| `V` | in | index along a2 | - |
+| `W` | in | index along c | - |
+| `u` | out | Miller-Bravais index u | - |
+| `v` | out | Miller-Bravais index v | - |
+| `t` | out | Miller-Bravais index t | - |
+| `w` | out | Miller-Bravais index w | - |
+| `indices` | out | [u v t w] | - |
 
 **Applies when:** integer indices, not all zero.
 
@@ -973,7 +909,7 @@ indices = [2 -1 -1 0]
 
 <a id="hcp_cell_density"></a>
 
-#### Volume and density of a hexagonal close-packed cell — `hcp_cell_density`
+#### Volume and density of a hexagonal close-packed cell, `hcp_cell_density`
 
 The volume of the HCP hexagonal prism (6 atoms), the density and the c/a ratio from a, c and the molar mass.
 
@@ -987,10 +923,10 @@ $$
 | `c` | in | lattice parameter c | m |
 | `A` | in | molar mass | kg/mol |
 | `V` | out | volume of the hexagonal prism (6 atoms) | m^3 |
-| `V_nm3` | out | prism volume in nm^3 | — |
+| `V_nm3` | out | prism volume in nm^3 | - |
 | `rho` | out | density | kg/m^3 |
-| `rho_gcc` | out | density in g/cm^3 | — |
-| `c_over_a` | out | c/a ratio | — |
+| `rho_gcc` | out | density in g/cm^3 | - |
+| `c_over_a` | out | c/a ratio | - |
 
 **Applies when:** a > 0; c > 0; A > 0.
 
@@ -1012,7 +948,7 @@ In the worked example, a = 0.3209 nm, c = 0.5211 nm, A = 24.31 g/mol go through 
 
 <a id="polymorphic_volume_change"></a>
 
-#### Volume change of a BCC to FCC transformation — `polymorphic_volume_change`
+#### Volume change of a BCC to FCC transformation, `polymorphic_volume_change`
 
 The percentage volume change when a metal transforms from BCC to FCC (as iron at 912 C), from the atomic radius in each structure.
 
@@ -1024,9 +960,9 @@ $$
 |---|---|---|---|
 | `R_bcc` | in | atomic radius in the BCC form | m |
 | `R_fcc` | in | atomic radius in the FCC form | m |
-| `volume_change_percent` | out | volume change BCC -> FCC in percent (negative = contraction) | — |
-| `V_atom_bcc_nm3` | out | volume per atom in BCC, nm^3 | — |
-| `V_atom_fcc_nm3` | out | volume per atom in FCC, nm^3 | — |
+| `volume_change_percent` | out | volume change BCC -> FCC in percent (negative = contraction) | - |
+| `V_atom_bcc_nm3` | out | volume per atom in BCC, nm^3 | - |
+| `V_atom_fcc_nm3` | out | volume per atom in FCC, nm^3 | - |
 
 **Applies when:** radii > 0.
 
@@ -1045,7 +981,7 @@ V_atom_fcc_nm3 = 0.01220007583
 
 <a id="unit_cell_volume"></a>
 
-#### Volume of a general (triclinic) unit cell — `unit_cell_volume`
+#### Volume of a general (triclinic) unit cell: `unit_cell_volume`
 
 The volume of a unit cell from its six lattice parameters a, b, c, alpha, beta, gamma.
 
@@ -1058,11 +994,11 @@ $$
 | `a` | in | cell edge a | m |
 | `b` | in | cell edge b | m |
 | `c` | in | cell edge c | m |
-| `alpha` | in | cell angle alpha in degrees (between b and c) | — |
-| `beta` | in | cell angle beta in degrees (between a and c) | — |
-| `gamma` | in | cell angle gamma in degrees (between a and b) | — |
+| `alpha` | in | cell angle alpha in degrees (between b and c) | - |
+| `beta` | in | cell angle beta in degrees (between a and c) | - |
+| `gamma` | in | cell angle gamma in degrees (between a and b) | - |
 | `V` | out | cell volume | m^3 |
-| `V_nm3` | out | cell volume in nm^3 | — |
+| `V_nm3` | out | cell volume in nm^3 | - |
 
 **Applies when:** 0 < angles < 180; 1 - cos^2(alpha) - cos^2(beta) - cos^2(gamma) + 2 cos(alpha) cos(beta) cos(gamma) > 0.
 
@@ -1086,7 +1022,7 @@ V_nm3 = 0.2068096281
 
 <a id="burgers_vector"></a>
 
-#### Burgers vector of a perfect dislocation — `burgers_vector`
+#### Burgers vector of a perfect dislocation: `burgers_vector`
 
 The magnitude of the shortest lattice translation (the Burgers vector of a perfect dislocation) in an SC, BCC or FCC metal.
 
@@ -1096,11 +1032,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | crystal structure (SC, BCC, FCC) | — |
+| `structure` | in | crystal structure (SC, BCC, FCC) | - |
 | `a` | in | lattice parameter | m |
 | `b` | out | Burgers vector magnitude | m |
-| `b_nm` | out | Burgers vector in nm | — |
-| `direction` | out | Burgers vector family | — |
+| `b_nm` | out | Burgers vector in nm | - |
+| `direction` | out | Burgers vector family | - |
 
 **Applies when:** a > 0.
 
@@ -1119,7 +1055,7 @@ In the worked example, structure = FCC, a = 0.3615 nm go through the equation ab
 
 <a id="vacancy_concentration"></a>
 
-#### Equilibrium vacancy concentration — `vacancy_concentration`
+#### Equilibrium vacancy concentration: `vacancy_concentration`
 
 The number of atomic sites per volume and the equilibrium number of vacancies N_v = N exp(-Q_v/kT) of a metal.
 
@@ -1135,9 +1071,9 @@ $$
 | `T` | in | temperature | K |
 | `N` | out | atomic sites per volume | 1/m^3 |
 | `Nv` | out | vacancies per volume | 1/m^3 |
-| `fraction` | out | vacancy fraction Nv/N | — |
-| `log10_Nv` | out | log10 of Nv in m^-3 | — |
-| `N_per_cm3` | out | atomic sites per cm^3 | — |
+| `fraction` | out | vacancy fraction Nv/N | - |
+| `log10_Nv` | out | log10 of Nv in m^-3 | - |
+| `N_per_cm3` | out | atomic sites per cm^3 | - |
 
 **Applies when:** all inputs > 0.
 
@@ -1160,7 +1096,7 @@ N_per_cm3 = 7.966296438e+22
 
 <a id="interstitial_site_size"></a>
 
-#### Largest atom that fits an interstitial site — `interstitial_site_size`
+#### Largest atom that fits an interstitial site, `interstitial_site_size`
 
 The radius of the largest sphere that fits the octahedral or tetrahedral interstitial site of an FCC or BCC lattice of host atoms of radius R.
 
@@ -1170,12 +1106,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | crystal structure (FCC, BCC) | — |
-| `site` | in | interstitial site (octahedral, tetrahedral) | — |
+| `structure` | in | crystal structure (FCC, BCC) | - |
+| `site` | in | interstitial site (octahedral, tetrahedral) | - |
 | `R` | in | radius of the host atoms | m |
 | `r` | out | radius of the interstitial sphere | m |
-| `r_nm` | out | interstitial radius in nm | — |
-| `ratio` | out | r/R | — |
+| `r_nm` | out | interstitial radius in nm | - |
+| `ratio` | out | r/R | - |
 
 **Applies when:** R > 0.
 
@@ -1186,8 +1122,8 @@ r_nm = 0.05343354955
 ratio = 0.4142135624
   by: Largest atom that fits an interstitial site  (hard spheres: distance from the site centre to the nearest host atom minus R (FCC oct sqrt2-1, tet sqrt(3/2)-1; BCC oct 2/sqrt3-1, tet sqrt(5/3)-1))
   R = 1.29e-10 m
-  site = octahedral
   structure = FCC
+  site = octahedral
   assumes: R > 0
 ```
 
@@ -1195,7 +1131,7 @@ ratio = 0.4142135624
 
 <a id="vacancy_formation_energy_fit"></a>
 
-#### Vacancy formation energy from vacancy fractions — `vacancy_formation_energy_fit`
+#### Vacancy formation energy from vacancy fractions, `vacancy_formation_energy_fit`
 
 The vacancy formation energy Q_v and prefactor from vacancy fractions measured at two or more temperatures (least-squares Arrhenius line).
 
@@ -1205,12 +1141,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `T` | in | temperatures in kelvin | — |
-| `fraction` | in | vacancy fractions N_v/N at those temperatures | — |
-| `Qv_eV` | out | vacancy formation energy in eV | — |
+| `T` | in | temperatures in kelvin | - |
+| `fraction` | in | vacancy fractions N_v/N at those temperatures | - |
+| `Qv_eV` | out | vacancy formation energy in eV | - |
 | `Qv` | out | vacancy formation energy | J |
-| `prefactor` | out | prefactor C of N_v/N = C exp(-Q_v/kT) | — |
-| `r_squared` | out | r^2 of the fit | — |
+| `prefactor` | out | prefactor C of N_v/N = C exp(-Q_v/kT) | - |
+| `r_squared` | out | r^2 of the fit | - |
 
 **Applies when:** equal lengths, at least two distinct temperatures; 0 < fraction < 1; fraction rising with T.
 
@@ -1230,7 +1166,7 @@ r_squared = 1
 
 <a id="bragg_angle"></a>
 
-#### Bragg angle of a reflection — `bragg_angle`
+#### Bragg angle of a reflection: `bragg_angle`
 
 The diffraction angle theta (and 2-theta) of planes of spacing d for X-rays of wavelength lambda: n lambda = 2 d sin(theta).
 
@@ -1242,9 +1178,9 @@ $$
 |---|---|---|---|
 | `d` | in | interplanar spacing | m |
 | `lam` | in | X-ray wavelength | m |
-| `n` | in | order of the reflection (default 1) (optional) | — |
-| `theta_deg` | out | Bragg angle theta in degrees | — |
-| `two_theta_deg` | out | diffraction angle 2-theta in degrees | — |
+| `n` | in | order of the reflection (default 1) (optional) | - |
+| `theta_deg` | out | Bragg angle theta in degrees | - |
+| `two_theta_deg` | out | diffraction angle 2-theta in degrees | - |
 
 **Applies when:** d, lambda > 0; n lambda < 2 d.
 
@@ -1262,7 +1198,7 @@ two_theta_deg = 43.36091219
 
 <a id="cubic_reflection_angle"></a>
 
-#### Diffraction angle of a cubic (h k l) reflection — `cubic_reflection_angle`
+#### Diffraction angle of a cubic (h k l) reflection, `cubic_reflection_angle`
 
 The interplanar spacing and the diffraction angle 2-theta of the (h k l) reflection of a cubic crystal of lattice parameter a at wavelength lambda.
 
@@ -1273,13 +1209,13 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `a` | in | lattice parameter | m |
-| `h` | in | Miller index h | — |
-| `k` | in | Miller index k | — |
-| `l` | in | Miller index l | — |
+| `h` | in | Miller index h | - |
+| `k` | in | Miller index k | - |
+| `l` | in | Miller index l | - |
 | `lam` | in | X-ray wavelength | m |
-| `d_nm` | out | interplanar spacing in nm | — |
-| `theta_deg` | out | Bragg angle in degrees | — |
-| `two_theta_deg` | out | diffraction angle 2-theta in degrees | — |
+| `d_nm` | out | interplanar spacing in nm | - |
+| `theta_deg` | out | Bragg angle in degrees | - |
+| `two_theta_deg` | out | diffraction angle 2-theta in degrees | - |
 
 **Applies when:** a, lambda > 0; lambda < 2 d.
 
@@ -1298,7 +1234,7 @@ two_theta_deg = 43.35826623
 
 <a id="allowed_reflections_cubic"></a>
 
-#### First allowed reflections of a cubic crystal — `allowed_reflections_cubic`
+#### First allowed reflections of a cubic crystal, `allowed_reflections_cubic`
 
 The values of h^2 + k^2 + l^2 of the first allowed X-ray reflections of a monatomic SC, BCC, FCC or diamond-cubic crystal, in order of increasing angle.
 
@@ -1308,11 +1244,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | crystal structure (SC, BCC, FCC, diamond) | — |
-| `count` | in | how many reflections (1 to 15, default 6) (optional) | — |
-| `N_values` | out | h^2 + k^2 + l^2 of the allowed reflections, ascending | — |
-| `N_last` | out | the last of them | — |
-| `N_first` | out | the first allowed reflection | — |
+| `structure` | in | crystal structure (SC, BCC, FCC, diamond) | - |
+| `count` | in | how many reflections (1 to 15, default 6) (optional) | - |
+| `N_values` | out | h^2 + k^2 + l^2 of the allowed reflections, ascending | - |
+| `N_last` | out | the last of them | - |
+| `N_first` | out | the first allowed reflection | - |
 
 **Applies when:** 1 <= count <= 15.
 
@@ -1330,7 +1266,7 @@ N_first = 3
 
 <a id="bragg_spacing"></a>
 
-#### Interplanar spacing from a Bragg reflection — `bragg_spacing`
+#### Interplanar spacing from a Bragg reflection, `bragg_spacing`
 
 The interplanar spacing d of planes that reflect X-rays of wavelength lambda at the Bragg angle theta in order n.
 
@@ -1341,10 +1277,10 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `lam` | in | X-ray wavelength | m |
-| `theta` | in | Bragg angle theta in degrees (half of 2-theta) | — |
-| `n` | in | order of the reflection (default 1) (optional) | — |
+| `theta` | in | Bragg angle theta in degrees (half of 2-theta) | - |
+| `n` | in | order of the reflection (default 1) (optional) | - |
 | `d` | out | interplanar spacing | m |
-| `d_nm` | out | interplanar spacing in nm | — |
+| `d_nm` | out | interplanar spacing in nm | - |
 
 **Applies when:** lambda > 0; 0 < theta < 90 degrees.
 
@@ -1362,7 +1298,7 @@ d_nm = 0.1542
 
 <a id="d_spacing_cubic"></a>
 
-#### Interplanar spacing in a cubic crystal — `d_spacing_cubic`
+#### Interplanar spacing in a cubic crystal: `d_spacing_cubic`
 
 The spacing of the (h k l) planes of a cubic lattice: d = a / sqrt(h^2 + k^2 + l^2).
 
@@ -1373,11 +1309,11 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `a` | in | lattice parameter | m |
-| `h` | in | Miller index h | — |
-| `k` | in | Miller index k | — |
-| `l` | in | Miller index l | — |
+| `h` | in | Miller index h | - |
+| `k` | in | Miller index k | - |
+| `l` | in | Miller index l | - |
 | `d` | out | interplanar spacing | m |
-| `d_nm` | out | interplanar spacing in nm | — |
+| `d_nm` | out | interplanar spacing in nm | - |
 
 **Applies when:** a > 0; integer indices, not all zero.
 
@@ -1394,7 +1330,7 @@ d_nm = 0.2087121223
 
 <a id="d_spacing_triclinic"></a>
 
-#### Interplanar spacing in a general (triclinic) lattice — `d_spacing_triclinic`
+#### Interplanar spacing in a general (triclinic) lattice, `d_spacing_triclinic`
 
 The spacing of the (h k l) planes of any lattice from its six cell parameters, through the reciprocal metric tensor.
 
@@ -1407,14 +1343,14 @@ $$
 | `a` | in | cell edge a | m |
 | `b` | in | cell edge b | m |
 | `c` | in | cell edge c | m |
-| `alpha` | in | cell angle alpha in degrees (between b and c) | — |
-| `beta` | in | cell angle beta in degrees (between a and c) | — |
-| `gamma` | in | cell angle gamma in degrees (between a and b) | — |
-| `h` | in | Miller index h | — |
-| `k` | in | Miller index k | — |
-| `l` | in | Miller index l | — |
+| `alpha` | in | cell angle alpha in degrees (between b and c) | - |
+| `beta` | in | cell angle beta in degrees (between a and c) | - |
+| `gamma` | in | cell angle gamma in degrees (between a and b) | - |
+| `h` | in | Miller index h | - |
+| `k` | in | Miller index k | - |
+| `l` | in | Miller index l | - |
 | `d` | out | interplanar spacing | m |
-| `d_nm` | out | interplanar spacing in nm | — |
+| `d_nm` | out | interplanar spacing in nm | - |
 
 **Applies when:** a valid cell; integer indices, not all zero.
 
@@ -1436,7 +1372,7 @@ d_nm = 0.4330127019
 
 <a id="d_spacing_hexagonal"></a>
 
-#### Interplanar spacing in a hexagonal crystal — `d_spacing_hexagonal`
+#### Interplanar spacing in a hexagonal crystal, `d_spacing_hexagonal`
 
 The spacing of the (h k l) planes of a hexagonal lattice: 1/d^2 = 4(h^2 + hk + k^2)/(3a^2) + l^2/c^2.
 
@@ -1448,12 +1384,12 @@ $$
 |---|---|---|---|
 | `a` | in | lattice parameter a | m |
 | `c` | in | lattice parameter c | m |
-| `h` | in | Miller index h | — |
-| `k` | in | Miller index k | — |
-| `l` | in | Miller index l | — |
-| `i` | in | Miller-Bravais index i = -(h + k) (optional, checked) (optional) | — |
+| `h` | in | Miller index h | - |
+| `k` | in | Miller index k | - |
+| `l` | in | Miller index l | - |
+| `i` | in | Miller-Bravais index i = -(h + k) (optional, checked) (optional) | - |
 | `d` | out | interplanar spacing | m |
-| `d_nm` | out | interplanar spacing in nm | — |
+| `d_nm` | out | interplanar spacing in nm | - |
 
 **Applies when:** a, c > 0; integer indices, not all zero; i = -(h + k) when given.
 
@@ -1471,7 +1407,7 @@ d_nm = 0.2452149781
 
 <a id="d_spacing_tetragonal"></a>
 
-#### Interplanar spacing in a tetragonal crystal — `d_spacing_tetragonal`
+#### Interplanar spacing in a tetragonal crystal, `d_spacing_tetragonal`
 
 The spacing of the (h k l) planes of a tetragonal lattice: 1/d^2 = (h^2 + k^2)/a^2 + l^2/c^2.
 
@@ -1483,11 +1419,11 @@ $$
 |---|---|---|---|
 | `a` | in | lattice parameter a | m |
 | `c` | in | lattice parameter c | m |
-| `h` | in | Miller index h | — |
-| `k` | in | Miller index k | — |
-| `l` | in | Miller index l | — |
+| `h` | in | Miller index h | - |
+| `k` | in | Miller index k | - |
+| `l` | in | Miller index l | - |
 | `d` | out | interplanar spacing | m |
-| `d_nm` | out | interplanar spacing in nm | — |
+| `d_nm` | out | interplanar spacing in nm | - |
 
 **Applies when:** a, c > 0; integer indices, not all zero.
 
@@ -1505,7 +1441,7 @@ d_nm = 0.2572478777
 
 <a id="d_spacing_orthorhombic"></a>
 
-#### Interplanar spacing in an orthorhombic crystal — `d_spacing_orthorhombic`
+#### Interplanar spacing in an orthorhombic crystal, `d_spacing_orthorhombic`
 
 The spacing of the (h k l) planes of an orthorhombic lattice: 1/d^2 = h^2/a^2 + k^2/b^2 + l^2/c^2.
 
@@ -1518,11 +1454,11 @@ $$
 | `a` | in | lattice parameter a | m |
 | `b` | in | lattice parameter b | m |
 | `c` | in | lattice parameter c | m |
-| `h` | in | Miller index h | — |
-| `k` | in | Miller index k | — |
-| `l` | in | Miller index l | — |
+| `h` | in | Miller index h | - |
+| `k` | in | Miller index k | - |
+| `l` | in | Miller index l | - |
 | `d` | out | interplanar spacing | m |
-| `d_nm` | out | interplanar spacing in nm | — |
+| `d_nm` | out | interplanar spacing in nm | - |
 
 **Applies when:** a, b, c > 0; integer indices, not all zero.
 
@@ -1541,7 +1477,7 @@ d_nm = 0.3123475238
 
 <a id="structure_factor_cubic"></a>
 
-#### Structure factor and extinction of a cubic reflection — `structure_factor_cubic`
+#### Structure factor and extinction of a cubic reflection, `structure_factor_cubic`
 
 The structure factor |F|/f of the (h k l) reflection of a monatomic SC, BCC, FCC or diamond-cubic crystal, and whether the reflection is allowed.
 
@@ -1551,13 +1487,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | crystal structure (SC, BCC, FCC, diamond) | — |
-| `h` | in | Miller index h | — |
-| `k` | in | Miller index k | — |
-| `l` | in | Miller index l | — |
-| `F_over_f` | out | \|F\| in units of the atomic scattering factor f | — |
-| `F2_over_f2` | out | \|F\|^2 / f^2 (proportional to intensity) | — |
-| `allowed` | out | whether the reflection appears | — |
+| `structure` | in | crystal structure (SC, BCC, FCC, diamond) | - |
+| `h` | in | Miller index h | - |
+| `k` | in | Miller index k | - |
+| `l` | in | Miller index l | - |
+| `F_over_f` | out | \|F\| in units of the atomic scattering factor f | - |
+| `F2_over_f2` | out | \|F\|^2 / f^2 (proportional to intensity) | - |
+| `allowed` | out | whether the reflection appears | - |
 
 **Applies when:** integer indices, not all zero.
 
@@ -1575,7 +1511,7 @@ allowed = true
 
 <a id="bragg_wavelength"></a>
 
-#### X-ray wavelength from a Bragg reflection — `bragg_wavelength`
+#### X-ray wavelength from a Bragg reflection: `bragg_wavelength`
 
 The wavelength that reflects from planes of spacing d at the Bragg angle theta in order n.
 
@@ -1586,10 +1522,10 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `d` | in | interplanar spacing | m |
-| `theta` | in | Bragg angle theta in degrees (half of 2-theta) | — |
-| `n` | in | order of the reflection (default 1) (optional) | — |
+| `theta` | in | Bragg angle theta in degrees (half of 2-theta) | - |
+| `n` | in | order of the reflection (default 1) (optional) | - |
 | `lam` | out | wavelength | m |
-| `lam_nm` | out | wavelength in nm | — |
+| `lam_nm` | out | wavelength in nm | - |
 
 **Applies when:** d > 0; 0 < theta < 90 degrees.
 
@@ -1609,7 +1545,7 @@ lam_nm = 0.2
 
 <a id="diffusion_arrhenius_fit"></a>
 
-#### Activation energy and pre-exponential factor of diffusion — `diffusion_arrhenius_fit`
+#### Activation energy and pre-exponential factor of diffusion, `diffusion_arrhenius_fit`
 
 Q_d and D_0 of D = D_0 exp(-Q_d/RT) from diffusion coefficients at two or more temperatures, and D at another temperature.
 
@@ -1619,16 +1555,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `T` | in | temperatures in kelvin | — |
-| `D` | in | diffusion coefficients in m^2/s at those temperatures | — |
+| `T` | in | temperatures in kelvin | - |
+| `D` | in | diffusion coefficients in m^2/s at those temperatures | - |
 | `T_target` | in | temperature at which D is wanted (optional) (optional) | K |
 | `Q` | out | activation energy | J/mol |
-| `Q_kJmol` | out | activation energy in kJ/mol | — |
+| `Q_kJmol` | out | activation energy in kJ/mol | - |
 | `D0` | out | pre-exponential factor | m^2/s |
-| `log10_D0` | out | log10 of D0 in m^2/s | — |
-| `r_squared` | out | r^2 of the fit | — |
+| `log10_D0` | out | log10 of D0 in m^2/s | - |
+| `r_squared` | out | r^2 of the fit | - |
 | `D_target` | out | D at T_target | m^2/s |
-| `log10_D_target` | out | log10 of D at T_target | — |
+| `log10_D_target` | out | log10 of D at T_target | - |
 
 **Applies when:** equal lengths, at least two distinct temperatures; D rising with T.
 
@@ -1647,7 +1583,7 @@ In the worked example, T = [773, 873], D = [5.8e-13, 5.3e-12] go through the equ
 
 <a id="fick_second_law_concentration"></a>
 
-#### Concentration in a semi-infinite solid (Fick's second law) — `fick_second_law_concentration`
+#### Concentration in a semi-infinite solid (Fick's second law), `fick_second_law_concentration`
 
 The concentration at depth x after time t in a semi-infinite solid with a constant surface concentration (carburizing, doping): C_x = C_s - (C_s - C_0) erf(x / 2 sqrt(Dt)).
 
@@ -1657,14 +1593,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `C0` | in | initial (bulk) concentration (wt%, at% or any one unit) | — |
-| `Cs` | in | surface concentration (same unit) | — |
+| `C0` | in | initial (bulk) concentration (wt%, at% or any one unit) | - |
+| `Cs` | in | surface concentration (same unit) | - |
 | `x` | in | depth below the surface | m |
 | `D` | in | diffusion coefficient | m^2/s |
 | `t` | in | diffusion time | s |
-| `Cx` | out | concentration at depth x (unit of C0, Cs) | — |
-| `z` | out | erf argument x / (2 sqrt(D t)) | — |
-| `ratio` | out | (Cx - C0)/(Cs - C0) | — |
+| `Cx` | out | concentration at depth x (unit of C0, Cs) | - |
+| `z` | out | erf argument x / (2 sqrt(D t)) | - |
+| `ratio` | out | (Cx - C0)/(Cs - C0) | - |
 
 **Applies when:** x, D, t > 0; Cs != C0; constant D, surface concentration held constant.
 
@@ -1686,7 +1622,7 @@ ratio = 0.5776680102
 
 <a id="diffusion_depth_of_concentration"></a>
 
-#### Depth at which a concentration is reached (Fick's second law) — `diffusion_depth_of_concentration`
+#### Depth at which a concentration is reached (Fick's second law), `diffusion_depth_of_concentration`
 
 The depth at which the concentration equals C_x after diffusion time t in a semi-infinite solid with constant surface concentration (case depth).
 
@@ -1696,14 +1632,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `C0` | in | initial concentration | — |
-| `Cs` | in | surface concentration | — |
-| `Cx` | in | target concentration | — |
+| `C0` | in | initial concentration | - |
+| `Cs` | in | surface concentration | - |
+| `Cx` | in | target concentration | - |
 | `D` | in | diffusion coefficient | m^2/s |
 | `t` | in | diffusion time | s |
 | `x` | out | depth | m |
-| `x_mm` | out | depth in mm | — |
-| `z` | out | erf argument | — |
+| `x_mm` | out | depth in mm | - |
+| `z` | out | erf argument | - |
 
 **Applies when:** D, t > 0; Cx strictly between C0 and Cs.
 
@@ -1725,7 +1661,7 @@ z = 0.4769362762
 
 <a id="arrhenius_diffusivity"></a>
 
-#### Diffusion coefficient at a temperature (Arrhenius) — `arrhenius_diffusivity`
+#### Diffusion coefficient at a temperature (Arrhenius), `arrhenius_diffusivity`
 
 The diffusion coefficient D = D0 exp(-Q_d/RT) at temperature T from the pre-exponential factor and the activation energy.
 
@@ -1739,8 +1675,8 @@ $$
 | `Q` | in | activation energy per mole | J/mol |
 | `T` | in | absolute temperature | K |
 | `D` | out | diffusion coefficient | m^2/s |
-| `log10_D` | out | log10 of D in m^2/s | — |
-| `Q_over_RT` | out | Q_d/(R T) | — |
+| `log10_D` | out | log10 of D in m^2/s | - |
+| `Q_over_RT` | out | Q_d/(R T) | - |
 
 **Applies when:** D0, Q, T > 0.
 
@@ -1760,7 +1696,7 @@ Q_over_RT = 23.02756604
 
 <a id="fick_first_law_flux"></a>
 
-#### Steady-state diffusion flux (Fick's first law) — `fick_first_law_flux`
+#### Steady-state diffusion flux (Fick's first law), `fick_first_law_flux`
 
 The steady-state diffusion flux between two positions with known concentrations: J = -D (C2 - C1)/(x2 - x1).
 
@@ -1776,7 +1712,7 @@ $$
 | `x1` | in | first position | m |
 | `x2` | in | second position | m |
 | `J` | out | diffusion flux (positive towards increasing x) | kg/(m^2*s) |
-| `J_per_hour` | out | flux in kg/(m^2 h) | — |
+| `J_per_hour` | out | flux in kg/(m^2 h) | - |
 
 **Applies when:** D > 0; x1 != x2.
 
@@ -1797,7 +1733,7 @@ J_per_hour = 8.64e-06
 
 <a id="diffusion_time_to_concentration"></a>
 
-#### Time to reach a concentration at a depth (Fick's second law) — `diffusion_time_to_concentration`
+#### Time to reach a concentration at a depth (Fick's second law), `diffusion_time_to_concentration`
 
 The diffusion time for the concentration at depth x to reach C_x in a semi-infinite solid with constant surface concentration (carburizing time).
 
@@ -1807,14 +1743,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `C0` | in | initial concentration | — |
-| `Cs` | in | surface concentration | — |
-| `Cx` | in | target concentration at depth x | — |
+| `C0` | in | initial concentration | - |
+| `Cs` | in | surface concentration | - |
+| `Cx` | in | target concentration at depth x | - |
 | `x` | in | depth | m |
 | `D` | in | diffusion coefficient | m^2/s |
 | `t` | out | diffusion time | s |
-| `t_hours` | out | diffusion time in hours | — |
-| `z` | out | erf argument | — |
+| `t_hours` | out | diffusion time in hours | - |
+| `z` | out | erf argument | - |
 
 **Applies when:** x, D > 0; Cx strictly between C0 and Cs.
 
@@ -1838,7 +1774,7 @@ z = 0.5
 
 <a id="band_gap_from_conductivity"></a>
 
-#### Band gap from intrinsic conductivities at several temperatures — `band_gap_from_conductivity`
+#### Band gap from intrinsic conductivities at several temperatures, `band_gap_from_conductivity`
 
 The band gap of an intrinsic semiconductor from its conductivity at two or more temperatures, with sigma = C exp(-Eg/2kT) (the weak temperature dependence of the prefactor neglected).
 
@@ -1848,11 +1784,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `T` | in | temperatures in kelvin | — |
-| `sigma` | in | conductivities (any one unit) at those temperatures | — |
-| `Eg_eV` | out | band gap in eV | — |
-| `prefactor` | out | prefactor C (unit of sigma) | — |
-| `r_squared` | out | r^2 of the fit | — |
+| `T` | in | temperatures in kelvin | - |
+| `sigma` | in | conductivities (any one unit) at those temperatures | - |
+| `Eg_eV` | out | band gap in eV | - |
+| `prefactor` | out | prefactor C (unit of sigma) | - |
+| `r_squared` | out | r^2 of the fit | - |
 
 **Applies when:** equal lengths, at least two distinct temperatures; sigma rising with T.
 
@@ -1869,7 +1805,7 @@ r_squared = 1
 
 <a id="pn_junction_built_in_potential"></a>
 
-#### Built-in potential of a p-n junction — `pn_junction_built_in_potential`
+#### Built-in potential of a p-n junction: `pn_junction_built_in_potential`
 
 The built-in potential V_bi = (kT/q) ln(n_n p_p/ni^2) of an abrupt p-n junction (majority concentrations from charge neutrality; V_bi ~ (kT/q) ln(Na Nd/ni^2) when Na, Nd >> ni), and with a permittivity the zero-bias depletion width.
 
@@ -1883,14 +1819,14 @@ $$
 | `Nd` | in | donor concentration on the n side | 1/m^3 |
 | `ni` | in | intrinsic carrier concentration | 1/m^3 |
 | `T` | in | temperature | K |
-| `eps_r` | in | relative permittivity of the semiconductor (optional, for the depletion width) (optional) | — |
+| `eps_r` | in | relative permittivity of the semiconductor (optional, for the depletion width) (optional) | - |
 | `V_bi` | out | built-in potential | V |
 | `V_bi_approx` | out | (kT/q) ln(Na Nd/ni^2) | V |
 | `thermal_voltage` | out | kT/q | V |
 | `W` | out | zero-bias depletion width | m |
-| `W_um` | out | depletion width in um | — |
-| `x_n_um` | out | depletion width on the n side in um | — |
-| `x_p_um` | out | depletion width on the p side in um | — |
+| `W_um` | out | depletion width in um | - |
+| `x_n_um` | out | depletion width on the n side in um | - |
+| `x_p_um` | out | depletion width on the p side in um | - |
 
 **Applies when:** Na, Nd, ni, T > 0; abrupt junction, complete ionisation, non-degenerate; depletion approximation for W.
 
@@ -1911,7 +1847,7 @@ In the worked example, Na = 1e+23 m^-3, Nd = 1e+22 m^-3, ni = 1e+16 m^-3, T = 30
 
 <a id="extrinsic_carrier_concentration"></a>
 
-#### Electron and hole concentrations of a doped semiconductor — `extrinsic_carrier_concentration`
+#### Electron and hole concentrations of a doped semiconductor, `extrinsic_carrier_concentration`
 
 The electron and hole concentrations of a semiconductor with donor and acceptor concentrations Nd and Na (complete ionisation), from charge neutrality and n p = ni^2, and the Fermi level relative to the intrinsic level.
 
@@ -1927,10 +1863,10 @@ $$
 | `T` | in | temperature (optional, for the Fermi level) (optional) | K |
 | `n` | out | electron concentration | 1/m^3 |
 | `p` | out | hole concentration | 1/m^3 |
-| `log10_n` | out | log10 of n in m^-3 | — |
-| `log10_p` | out | log10 of p in m^-3 | — |
-| `carrier_type` | out | n-type, p-type or intrinsic | — |
-| `EF_minus_Ei_eV` | out | Fermi level above the intrinsic level in eV (when T is given) | — |
+| `log10_n` | out | log10 of n in m^-3 | - |
+| `log10_p` | out | log10 of p in m^-3 | - |
+| `carrier_type` | out | n-type, p-type or intrinsic | - |
+| `EF_minus_Ei_eV` | out | Fermi level above the intrinsic level in eV (when T is given) | - |
 
 **Applies when:** Nd, Na >= 0; ni > 0; complete ionisation, non-degenerate statistics.
 
@@ -1952,7 +1888,7 @@ carrier_type = n-type
 
 <a id="fermi_energy_free_electron"></a>
 
-#### Fermi energy of a free-electron metal — `fermi_energy_free_electron`
+#### Fermi energy of a free-electron metal: `fermi_energy_free_electron`
 
 The conduction-electron density, Fermi energy, Fermi temperature and Fermi velocity of a metal from its density, molar mass and number of valence electrons per atom.
 
@@ -1964,11 +1900,11 @@ $$
 |---|---|---|---|
 | `rho` | in | density | kg/m^3 |
 | `A` | in | molar mass | kg/mol |
-| `valence` | in | valence electrons per atom | — |
+| `valence` | in | valence electrons per atom | - |
 | `n` | out | conduction-electron density | 1/m^3 |
-| `log10_n` | out | log10 of n in m^-3 | — |
+| `log10_n` | out | log10 of n in m^-3 | - |
 | `EF` | out | Fermi energy | J |
-| `EF_eV` | out | Fermi energy in eV | — |
+| `EF_eV` | out | Fermi energy in eV | - |
 | `TF` | out | Fermi temperature | K |
 | `vF` | out | Fermi velocity | m/s |
 
@@ -1993,7 +1929,7 @@ vF = 1574134.91 m/s
 
 <a id="intrinsic_carrier_concentration"></a>
 
-#### Intrinsic carrier concentration of a semiconductor — `intrinsic_carrier_concentration`
+#### Intrinsic carrier concentration of a semiconductor, `intrinsic_carrier_concentration`
 
 The effective densities of states Nc and Nv and the intrinsic carrier concentration ni = sqrt(Nc Nv) exp(-Eg/2kT) from the band gap, temperature and effective masses.
 
@@ -2005,14 +1941,14 @@ $$
 |---|---|---|---|
 | `Eg` | in | band gap | J |
 | `T` | in | temperature | K |
-| `me` | in | electron density-of-states effective mass / m0 (default 1) (optional) | — |
-| `mh` | in | hole density-of-states effective mass / m0 (default 1) (optional) | — |
+| `me` | in | electron density-of-states effective mass / m0 (default 1) (optional) | - |
+| `mh` | in | hole density-of-states effective mass / m0 (default 1) (optional) | - |
 | `Nc` | out | effective density of states, conduction band | 1/m^3 |
 | `Nv` | out | effective density of states, valence band | 1/m^3 |
 | `ni` | out | intrinsic carrier concentration | 1/m^3 |
-| `log10_ni` | out | log10 of ni in m^-3 | — |
-| `log10_Nc` | out | log10 of Nc in m^-3 | — |
-| `Ei_offset_meV` | out | intrinsic Fermi level above midgap in meV | — |
+| `log10_ni` | out | log10 of ni in m^-3 | - |
+| `log10_Nc` | out | log10 of Nc in m^-3 | - |
+| `Ei_offset_meV` | out | intrinsic Fermi level above midgap in meV | - |
 
 **Applies when:** all inputs > 0; non-degenerate (Boltzmann) statistics, parabolic bands.
 
@@ -2038,7 +1974,7 @@ Ei_offset_meV = -5.577867657
 
 <a id="critical_crack_length"></a>
 
-#### Critical crack length from the fracture toughness — `critical_crack_length`
+#### Critical crack length from the fracture toughness, `critical_crack_length`
 
 The largest crack a part can carry at stress sigma without fracture: a_c = (K_IC / (Y sigma))^2 / pi.
 
@@ -2050,9 +1986,9 @@ $$
 |---|---|---|---|
 | `K_IC` | in | plane-strain fracture toughness | Pa*m^0.5 |
 | `sigma` | in | applied stress | Pa |
-| `Y` | in | geometry factor Y (default 1) (optional) | — |
+| `Y` | in | geometry factor Y (default 1) (optional) | - |
 | `a_c` | out | critical crack length | m |
-| `a_c_mm` | out | critical crack length in mm | — |
+| `a_c_mm` | out | critical crack length in mm | - |
 
 **Applies when:** all inputs > 0; linear-elastic fracture mechanics.
 
@@ -2070,7 +2006,7 @@ a_c_mm = 0.9628874057
 
 <a id="weibull_design_stress"></a>
 
-#### Design stress for a target failure probability (Weibull) — `weibull_design_stress`
+#### Design stress for a target failure probability (Weibull), `weibull_design_stress`
 
 The stress at which a brittle part reaches a given failure probability, from the Weibull modulus and characteristic strength (and V/V0).
 
@@ -2080,12 +2016,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `P_failure` | in | allowed probability of failure (0 to 1) | — |
+| `P_failure` | in | allowed probability of failure (0 to 1) | - |
 | `sigma0` | in | characteristic strength | Pa |
-| `m` | in | Weibull modulus | — |
-| `V_ratio` | in | V/V0 (default 1) (optional) | — |
+| `m` | in | Weibull modulus | - |
+| `V_ratio` | in | V/V0 (default 1) (optional) | - |
 | `sigma` | out | design stress | Pa |
-| `sigma_MPa` | out | design stress in MPa | — |
+| `sigma_MPa` | out | design stress in MPa | - |
 
 **Applies when:** 0 < P_failure < 1; sigma0, m, V/V0 > 0.
 
@@ -2104,7 +2040,7 @@ sigma_MPa = 200.4849216
 
 <a id="fracture_critical_stress"></a>
 
-#### Fracture stress from the fracture toughness — `fracture_critical_stress`
+#### Fracture stress from the fracture toughness, `fracture_critical_stress`
 
 The stress at which a crack of length a fails in a material of plane-strain fracture toughness K_IC: sigma_c = K_IC / (Y sqrt(pi a)).
 
@@ -2116,9 +2052,9 @@ $$
 |---|---|---|---|
 | `K_IC` | in | plane-strain fracture toughness | Pa*m^0.5 |
 | `a` | in | crack length (surface) or half-length (internal) | m |
-| `Y` | in | geometry factor Y (default 1) (optional) | — |
+| `Y` | in | geometry factor Y (default 1) (optional) | - |
 | `sigma_c` | out | critical stress | Pa |
-| `sigma_c_MPa` | out | critical stress in MPa | — |
+| `sigma_c_MPa` | out | critical stress in MPa | - |
 
 **Applies when:** all inputs > 0; linear-elastic fracture mechanics.
 
@@ -2137,7 +2073,7 @@ sigma_c_MPa = 273.3393566
 
 <a id="griffith_critical_stress"></a>
 
-#### Griffith critical stress of a brittle solid — `griffith_critical_stress`
+#### Griffith critical stress of a brittle solid, `griffith_critical_stress`
 
 The stress at which a crack of length 2a (internal) or a (surface) propagates in a brittle solid: sigma_c = sqrt(2 E gamma_s / (pi a)).
 
@@ -2151,7 +2087,7 @@ $$
 | `gamma_s` | in | specific surface energy | J/m^2 |
 | `a` | in | half-length of an internal crack (or length of a surface crack) | m |
 | `sigma_c` | out | critical stress | Pa |
-| `sigma_c_MPa` | out | critical stress in MPa | — |
+| `sigma_c_MPa` | out | critical stress in MPa | - |
 
 **Applies when:** all inputs > 0; ideally brittle (no plastic work), plane stress.
 
@@ -2170,7 +2106,7 @@ sigma_c_MPa = 162.3454914
 
 <a id="weibull_modulus_fit"></a>
 
-#### Weibull modulus from a set of measured strengths — `weibull_modulus_fit`
+#### Weibull modulus from a set of measured strengths, `weibull_modulus_fit`
 
 The Weibull modulus m and characteristic strength sigma_0 from measured fracture strengths, by median-rank regression (Bernard's ranks).
 
@@ -2180,10 +2116,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `strengths` | in | fracture strengths (any one unit, e.g. MPa) | — |
-| `m` | out | Weibull modulus | — |
-| `sigma0` | out | characteristic strength (unit of the data) | — |
-| `r_squared` | out | r^2 of the fit | — |
+| `strengths` | in | fracture strengths (any one unit, e.g. MPa) | - |
+| `m` | out | Weibull modulus | - |
+| `sigma0` | out | characteristic strength (unit of the data) | - |
+| `r_squared` | out | r^2 of the fit | - |
 
 **Applies when:** at least three strengths, not all equal, all > 0.
 
@@ -2200,7 +2136,7 @@ r_squared = 0.9995661203
 
 <a id="weibull_failure_probability"></a>
 
-#### Weibull probability of failure of a brittle part — `weibull_failure_probability`
+#### Weibull probability of failure of a brittle part, `weibull_failure_probability`
 
 The probability that a brittle (ceramic) part fails at stress sigma, from the Weibull modulus m and characteristic strength sigma_0, with an optional volume ratio V/V0.
 
@@ -2212,10 +2148,10 @@ $$
 |---|---|---|---|
 | `sigma` | in | applied stress | Pa |
 | `sigma0` | in | characteristic strength (63.2 % failure at V0) | Pa |
-| `m` | in | Weibull modulus | — |
-| `V_ratio` | in | stressed volume over the reference volume V/V0 (default 1) (optional) | — |
-| `P_failure` | out | probability of failure | — |
-| `P_survival` | out | probability of survival | — |
+| `m` | in | Weibull modulus | - |
+| `V_ratio` | in | stressed volume over the reference volume V/V0 (default 1) (optional) | - |
+| `P_failure` | out | probability of failure | - |
+| `P_survival` | out | probability of survival | - |
 
 **Applies when:** all inputs > 0.
 
@@ -2236,7 +2172,7 @@ P_survival = 0.9452427419
 
 <a id="offset_yield_strength"></a>
 
-#### 0.2 % offset yield strength from a stress-strain curve — `offset_yield_strength`
+#### 0.2 % offset yield strength from a stress-strain curve, `offset_yield_strength`
 
 The yield strength where the stress-strain curve (piecewise linear through the data) meets a line of slope E offset by 0.2 % strain (or another offset).
 
@@ -2246,12 +2182,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `strain` | in | engineering strains, increasing | — |
-| `stress` | in | engineering stresses in MPa | — |
+| `strain` | in | engineering strains, increasing | - |
+| `stress` | in | engineering stresses in MPa | - |
 | `E` | in | Young's modulus | Pa |
-| `offset` | in | strain offset (default 0.002) (optional) | — |
-| `yield_MPa` | out | offset yield strength in MPa | — |
-| `yield_strain` | out | strain at the intersection | — |
+| `offset` | in | strain offset (default 0.002) (optional) | - |
+| `yield_MPa` | out | offset yield strength in MPa | - |
+| `yield_strain` | out | strain at the intersection | - |
 
 **Applies when:** strains strictly increasing; the curve starts above the offset line and crosses it.
 
@@ -2268,7 +2204,7 @@ yield_strain = 0.004666666667
 
 <a id="elastic_deformation_of_a_rod"></a>
 
-#### Elastic elongation and diameter change of a rod in tension — `elastic_deformation_of_a_rod`
+#### Elastic elongation and diameter change of a rod in tension, `elastic_deformation_of_a_rod`
 
 Stress, axial strain, elongation, lateral strain and diameter change of a cylindrical rod under an axial force (Hooke's law and Poisson's ratio).
 
@@ -2282,12 +2218,12 @@ $$
 | `d0` | in | original diameter | m |
 | `l0` | in | original length | m |
 | `E` | in | Young's modulus | Pa |
-| `nu` | in | Poisson's ratio | — |
-| `stress_MPa` | out | axial stress in MPa | — |
-| `axial_strain` | out | axial strain | — |
-| `elongation_mm` | out | elongation in mm | — |
-| `lateral_strain` | out | lateral strain | — |
-| `diameter_change_um` | out | change of diameter in micrometres (negative = contraction) | — |
+| `nu` | in | Poisson's ratio | - |
+| `stress_MPa` | out | axial stress in MPa | - |
+| `axial_strain` | out | axial strain | - |
+| `elongation_mm` | out | elongation in mm | - |
+| `lateral_strain` | out | lateral strain | - |
+| `diameter_change_um` | out | change of diameter in micrometres (negative = contraction) | - |
 
 **Applies when:** F, d0, l0, E > 0; -1 < nu < 0.5; elastic, isotropic.
 
@@ -2311,7 +2247,7 @@ diameter_change_um = -5.903201526
 
 <a id="hall_petch"></a>
 
-#### Hall-Petch grain-size strengthening — `hall_petch`
+#### Hall-Petch grain-size strengthening: `hall_petch`
 
 sigma_0 and k of sigma_y = sigma_0 + k d^(-1/2) from yield strengths at two or more grain sizes, and the yield strength at another grain size.
 
@@ -2321,14 +2257,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `d_um` | in | grain diameters in micrometres | — |
-| `yield_MPa` | in | yield strengths in MPa | — |
-| `d_target_um` | in | grain diameter in micrometres at which the yield strength is wanted (optional) (optional) | — |
-| `sigma0_MPa` | out | friction stress sigma_0 in MPa | — |
-| `k_MPa_sqrt_um` | out | k in MPa um^0.5 | — |
-| `k_MPa_sqrt_m` | out | k in MPa m^0.5 | — |
-| `r_squared` | out | r^2 of the fit | — |
-| `yield_target_MPa` | out | yield strength at the target grain size in MPa | — |
+| `d_um` | in | grain diameters in micrometres | - |
+| `yield_MPa` | in | yield strengths in MPa | - |
+| `d_target_um` | in | grain diameter in micrometres at which the yield strength is wanted (optional) (optional) | - |
+| `sigma0_MPa` | out | friction stress sigma_0 in MPa | - |
+| `k_MPa_sqrt_um` | out | k in MPa um^0.5 | - |
+| `k_MPa_sqrt_m` | out | k in MPa m^0.5 | - |
+| `r_squared` | out | r^2 of the fit | - |
+| `yield_target_MPa` | out | yield strength at the target grain size in MPa | - |
 
 **Applies when:** equal lengths, at least two distinct grain sizes.
 
@@ -2348,7 +2284,7 @@ yield_target_MPa = 200
 
 <a id="larson_miller_parameter"></a>
 
-#### Larson-Miller parameter (creep rupture) — `larson_miller_parameter`
+#### Larson-Miller parameter (creep rupture): `larson_miller_parameter`
 
 The Larson-Miller parameter LMP = T (C + log10 t_r) from a rupture time at a temperature, and the rupture time at another temperature for the same parameter (same stress).
 
@@ -2360,13 +2296,13 @@ $$
 |---|---|---|---|
 | `T` | in | absolute temperature | K |
 | `t_r` | in | rupture time (hours, h ...) | s |
-| `C` | in | Larson-Miller constant (default 20, with t_r in hours) (optional) | — |
+| `C` | in | Larson-Miller constant (default 20, with t_r in hours) (optional) | - |
 | `T2` | in | another temperature at the same stress (optional) (optional) | K |
-| `LMP` | out | Larson-Miller parameter (K, t in hours) | — |
-| `LMP_thousands` | out | LMP / 1000 | — |
-| `log10_t_hours` | out | log10 of the rupture time in hours | — |
-| `t_r2_hours` | out | rupture time at T2 in hours | — |
-| `log10_t2_hours` | out | log10 of the rupture time at T2 | — |
+| `LMP` | out | Larson-Miller parameter (K, t in hours) | - |
+| `LMP_thousands` | out | LMP / 1000 | - |
+| `log10_t_hours` | out | log10 of the rupture time in hours | - |
+| `t_r2_hours` | out | rupture time at T2 in hours | - |
+| `log10_t2_hours` | out | log10 of the rupture time at T2 | - |
 
 **Applies when:** T, t_r > 0; 5 <= C <= 50; time in hours inside the logarithm.
 
@@ -2385,7 +2321,7 @@ log10_t_hours = 3
 
 <a id="modulus_of_resilience"></a>
 
-#### Modulus of resilience — `modulus_of_resilience`
+#### Modulus of resilience: `modulus_of_resilience`
 
 The elastic strain energy per unit volume stored up to yielding: U_r = sigma_y^2/(2E).
 
@@ -2398,8 +2334,8 @@ $$
 | `sy` | in | yield strength | Pa |
 | `E` | in | Young's modulus | Pa |
 | `Ur` | out | modulus of resilience | J/m^3 |
-| `Ur_MJ_m3` | out | modulus of resilience in MJ/m^3 (= MPa) | — |
-| `yield_strain` | out | strain at yield | — |
+| `Ur_MJ_m3` | out | modulus of resilience in MJ/m^3 (= MPa) | - |
+| `yield_strain` | out | strain at yield | - |
 
 **Applies when:** sy, E > 0; linear elastic up to yield.
 
@@ -2418,7 +2354,7 @@ yield_strain = 0.002004830918
 
 <a id="max_schmid_factor"></a>
 
-#### Most favourable slip system of an FCC or BCC crystal — `max_schmid_factor`
+#### Most favourable slip system of an FCC or BCC crystal, `max_schmid_factor`
 
 The largest Schmid factor over the 12 {111}<110> (FCC) or {110}<111> (BCC) slip systems for a tensile load direction, how many systems share it, and the yield stress from the CRSS.
 
@@ -2428,13 +2364,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `structure` | in | crystal structure (FCC, BCC) | — |
-| `load` | in | loading direction [u v w] | — |
+| `structure` | in | crystal structure (FCC, BCC) | - |
+| `load` | in | loading direction [u v w] | - |
 | `tau_crss` | in | critical resolved shear stress (optional) (optional) | Pa |
-| `max_schmid_factor` | out | largest Schmid factor | — |
-| `active_systems` | out | number of systems with that factor | — |
-| `systems` | out | slip systems considered | — |
-| `yield_MPa` | out | tensile yield stress in MPa | — |
+| `max_schmid_factor` | out | largest Schmid factor | - |
+| `active_systems` | out | number of systems with that factor | - |
+| `systems` | out | slip systems considered | - |
+| `yield_MPa` | out | tensile yield stress in MPa | - |
 
 **Applies when:** nonzero loading direction.
 
@@ -2452,7 +2388,7 @@ In the worked example, structure = FCC, load = [0, 0, 1] go through the equation
 
 <a id="schmid_factor"></a>
 
-#### Resolved shear stress and Schmid factor of a slip system — `schmid_factor`
+#### Resolved shear stress and Schmid factor of a slip system, `schmid_factor`
 
 The Schmid factor cos(phi) cos(lambda) of a slip system (plane normal and slip direction) for a tensile load along a direction of a cubic crystal, the resolved shear stress and the stress to start slip.
 
@@ -2462,16 +2398,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `load` | in | loading direction [u v w] | — |
-| `plane` | in | slip-plane normal (h k l) | — |
-| `direction` | in | slip direction [u v w] | — |
+| `load` | in | loading direction [u v w] | - |
+| `plane` | in | slip-plane normal (h k l) | - |
+| `direction` | in | slip direction [u v w] | - |
 | `sigma` | in | applied tensile stress (optional) (optional) | Pa |
 | `tau_crss` | in | critical resolved shear stress (optional) (optional) | Pa |
-| `schmid_factor` | out | \|cos(phi) cos(lambda)\| | — |
-| `phi_deg` | out | angle between load and plane normal | — |
-| `lambda_deg` | out | angle between load and slip direction | — |
-| `tau_R_MPa` | out | resolved shear stress in MPa | — |
-| `yield_MPa` | out | tensile stress at which slip starts, in MPa | — |
+| `schmid_factor` | out | \|cos(phi) cos(lambda)\| | - |
+| `phi_deg` | out | angle between load and plane normal | - |
+| `lambda_deg` | out | angle between load and slip direction | - |
+| `tau_R_MPa` | out | resolved shear stress in MPa | - |
+| `yield_MPa` | out | tensile stress at which slip starts, in MPa | - |
 
 **Applies when:** cubic crystal (indices as Cartesian directions); slip direction in the slip plane.
 
@@ -2490,7 +2426,7 @@ In the worked example, load = [0, 1, 0], plane = [1, 1, 0], direction = [-1, 1, 
 
 <a id="isotropic_elastic_constants"></a>
 
-#### Shear modulus, bulk modulus and Lame constant from E and Poisson's ratio — `isotropic_elastic_constants`
+#### Shear modulus, bulk modulus and Lame constant from E and Poisson's ratio, `isotropic_elastic_constants`
 
 The shear modulus G, bulk modulus K and Lame constant lambda of an isotropic material from Young's modulus E and Poisson's ratio nu.
 
@@ -2501,12 +2437,12 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `E` | in | Young's modulus | Pa |
-| `nu` | in | Poisson's ratio | — |
+| `nu` | in | Poisson's ratio | - |
 | `G` | out | shear modulus | Pa |
-| `G_GPa` | out | shear modulus in GPa | — |
+| `G_GPa` | out | shear modulus in GPa | - |
 | `K` | out | bulk modulus | Pa |
-| `K_GPa` | out | bulk modulus in GPa | — |
-| `lame_GPa` | out | Lame's first constant in GPa | — |
+| `K_GPa` | out | bulk modulus in GPa | - |
+| `lame_GPa` | out | Lame's first constant in GPa | - |
 
 **Applies when:** E > 0; -1 < nu < 0.5.
 
@@ -2527,7 +2463,7 @@ lame_GPa = 115.3846154
 
 <a id="strain_hardening_exponent"></a>
 
-#### Strain-hardening exponent and strength coefficient (Hollomon) — `strain_hardening_exponent`
+#### Strain-hardening exponent and strength coefficient (Hollomon), `strain_hardening_exponent`
 
 The strain-hardening exponent n and strength coefficient K of sigma_T = K epsilon_T^n from true stress-strain points of the plastic region, and the stress at another strain.
 
@@ -2537,13 +2473,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `true_strain` | in | true plastic strains | — |
-| `true_stress` | in | true stresses in MPa | — |
-| `strain_target` | in | true strain at which the stress is wanted (optional) (optional) | — |
-| `n` | out | strain-hardening exponent | — |
-| `K_MPa` | out | strength coefficient in MPa | — |
-| `r_squared` | out | r^2 of the log-log fit | — |
-| `stress_target_MPa` | out | true stress at the target strain in MPa | — |
+| `true_strain` | in | true plastic strains | - |
+| `true_stress` | in | true stresses in MPa | - |
+| `strain_target` | in | true strain at which the stress is wanted (optional) (optional) | - |
+| `n` | out | strain-hardening exponent | - |
+| `K_MPa` | out | strength coefficient in MPa | - |
+| `r_squared` | out | r^2 of the log-log fit | - |
+| `stress_target_MPa` | out | true stress at the target strain in MPa | - |
 
 **Applies when:** equal lengths, at least two distinct strains, all values > 0.
 
@@ -2560,7 +2496,7 @@ r_squared = 1
 
 <a id="creep_parameters_fit"></a>
 
-#### Stress exponent and activation energy of steady-state creep — `creep_parameters_fit`
+#### Stress exponent and activation energy of steady-state creep, `creep_parameters_fit`
 
 n and Q_c of the power-law creep model rate = A sigma^n exp(-Q_c/RT) from steady-state creep rates at several stresses and temperatures (least squares).
 
@@ -2570,11 +2506,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `stress_MPa` | in | stresses in MPa | — |
-| `T` | in | temperatures in kelvin | — |
-| `rate` | in | steady-state creep rates in 1/s | — |
-| `n` | out | stress exponent | — |
-| `Q_kJmol` | out | creep activation energy in kJ/mol | — |
+| `stress_MPa` | in | stresses in MPa | - |
+| `T` | in | temperatures in kelvin | - |
+| `rate` | in | steady-state creep rates in 1/s | - |
+| `n` | out | stress exponent | - |
+| `Q_kJmol` | out | creep activation energy in kJ/mol | - |
 
 **Applies when:** equal lengths (at least 3); stress and temperature both vary independently; all values > 0.
 
@@ -2590,7 +2526,7 @@ Q_kJmol = 240.8690045
 
 <a id="thermal_stress"></a>
 
-#### Thermal stress in a constrained body — `thermal_stress`
+#### Thermal stress in a constrained body: `thermal_stress`
 
 The stress from a temperature change in a body held in one direction (rod between walls), two (thin film or plate) or three (fully constrained).
 
@@ -2603,10 +2539,10 @@ $$
 | `E` | in | Young's modulus | Pa |
 | `alpha` | in | linear thermal expansion coefficient | 1/K |
 | `dT` | in | temperature change (positive = heating) | K |
-| `constraint` | in | constraint (uniaxial, biaxial, triaxial; default uniaxial) (optional) | — |
-| `nu` | in | Poisson's ratio (needed for biaxial and triaxial) (optional) | — |
+| `constraint` | in | constraint (uniaxial, biaxial, triaxial; default uniaxial) (optional) | - |
+| `nu` | in | Poisson's ratio (needed for biaxial and triaxial) (optional) | - |
 | `stress` | out | thermal stress (negative = compression) | Pa |
-| `stress_MPa` | out | thermal stress in MPa | — |
+| `stress_MPa` | out | thermal stress in MPa | - |
 
 **Applies when:** E, alpha > 0; -1 < nu < 0.5 when needed.
 
@@ -2625,7 +2561,7 @@ stress_MPa = -116.4
 
 <a id="tensile_toughness"></a>
 
-#### Toughness (area under the stress-strain curve) — `tensile_toughness`
+#### Toughness (area under the stress-strain curve), `tensile_toughness`
 
 The energy absorbed per unit volume up to fracture (trapezoidal area under the stress-strain data), the tensile strength and the fracture strain.
 
@@ -2635,12 +2571,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `strain` | in | engineering strains, non-decreasing | — |
-| `stress` | in | engineering stresses in MPa | — |
-| `toughness_MJ_m3` | out | toughness in MJ/m^3 | — |
+| `strain` | in | engineering strains, non-decreasing | - |
+| `stress` | in | engineering stresses in MPa | - |
+| `toughness_MJ_m3` | out | toughness in MJ/m^3 | - |
 | `toughness` | out | toughness | J/m^3 |
-| `uts_MPa` | out | tensile strength (largest stress) in MPa | — |
-| `fracture_strain` | out | strain at the last point | — |
+| `uts_MPa` | out | tensile strength (largest stress) in MPa | - |
+| `fracture_strain` | out | strain at the last point | - |
 
 **Applies when:** equal lengths; strains non-decreasing; stress in MPa.
 
@@ -2658,7 +2594,7 @@ fracture_strain = 0.15
 
 <a id="true_stress_and_strain"></a>
 
-#### True stress and true strain from engineering values — `true_stress_and_strain`
+#### True stress and true strain from engineering values, `true_stress_and_strain`
 
 True stress and true strain from the engineering stress and strain of a tensile test before necking (volume conserved).
 
@@ -2669,10 +2605,10 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `stress` | in | engineering stress | Pa |
-| `strain` | in | engineering strain (dimensionless) | — |
+| `strain` | in | engineering strain (dimensionless) | - |
 | `true_stress` | out | true stress | Pa |
-| `true_stress_MPa` | out | true stress in MPa | — |
-| `true_strain` | out | true strain | — |
+| `true_stress_MPa` | out | true stress in MPa | - |
+| `true_strain` | out | true strain | - |
 
 **Applies when:** strain > -1; uniform deformation (before necking).
 
@@ -2691,7 +2627,7 @@ true_strain = 0.1823215568
 
 <a id="youngs_modulus_from_data"></a>
 
-#### Young's modulus from elastic stress-strain data — `youngs_modulus_from_data`
+#### Young's modulus from elastic stress-strain data, `youngs_modulus_from_data`
 
 Young's modulus as the slope of the least-squares line through stress-strain points of the elastic region.
 
@@ -2701,12 +2637,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `strain` | in | engineering strains (dimensionless) | — |
-| `stress` | in | engineering stresses in MPa | — |
-| `E_GPa` | out | Young's modulus in GPa | — |
+| `strain` | in | engineering strains (dimensionless) | - |
+| `stress` | in | engineering stresses in MPa | - |
+| `E_GPa` | out | Young's modulus in GPa | - |
 | `E` | out | Young's modulus | Pa |
-| `intercept_MPa` | out | intercept of the line in MPa | — |
-| `r_squared` | out | r^2 of the fit | — |
+| `intercept_MPa` | out | intercept of the line in MPa | - |
+| `r_squared` | out | r^2 of the fit | - |
 
 **Applies when:** equal lengths, at least two distinct strains; stress in MPa.
 
@@ -2726,7 +2662,7 @@ r_squared = 1
 
 <a id="atomic_to_weight_percent"></a>
 
-#### Atomic percent to weight percent (binary alloy) — `atomic_to_weight_percent`
+#### Atomic percent to weight percent (binary alloy), `atomic_to_weight_percent`
 
 Convert the composition of a binary alloy from atomic percent to weight percent.
 
@@ -2736,11 +2672,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `element1` | in | symbol of element 1 | — |
-| `element2` | in | symbol of element 2 | — |
-| `at1` | in | atomic percent of element 1 | — |
-| `wt1` | out | weight percent of element 1 | — |
-| `wt2` | out | weight percent of element 2 | — |
+| `element1` | in | symbol of element 1 | - |
+| `element2` | in | symbol of element 2 | - |
+| `at1` | in | atomic percent of element 1 | - |
+| `wt1` | out | weight percent of element 1 | - |
+| `wt2` | out | weight percent of element 2 | - |
 
 **Applies when:** known elements, different; 0 <= at1 <= 100.
 
@@ -2759,7 +2695,7 @@ wt2 = 20.74092031
 
 <a id="gibbs_phase_rule"></a>
 
-#### Degrees of freedom by Gibbs' phase rule — `gibbs_phase_rule`
+#### Degrees of freedom by Gibbs' phase rule: `gibbs_phase_rule`
 
 The number of degrees of freedom F = C - P + 2 (or + 1 at fixed pressure) of a system of C components and P phases in equilibrium.
 
@@ -2769,10 +2705,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `C` | in | number of components | — |
-| `P` | in | number of phases | — |
-| `pressure` | in | pressure variable or held constant (default variable) (optional) | — |
-| `F` | out | degrees of freedom | — |
+| `C` | in | number of components | - |
+| `P` | in | number of phases | - |
+| `pressure` | in | pressure variable or held constant (default variable) (optional) | - |
+| `F` | out | degrees of freedom | - |
 
 **Applies when:** F >= 0.
 
@@ -2788,7 +2724,7 @@ F = 0
 
 <a id="lever_rule"></a>
 
-#### Phase fractions by the lever rule — `lever_rule`
+#### Phase fractions by the lever rule: `lever_rule`
 
 The mass fractions (and masses) of the two phases of an alloy of overall composition C0 in a two-phase region whose tie line ends at C1 and C2.
 
@@ -2798,12 +2734,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `C0` | in | overall composition (wt%) | — |
-| `C1` | in | composition of phase 1 (wt%) | — |
-| `C2` | in | composition of phase 2 (wt%) | — |
+| `C0` | in | overall composition (wt%) | - |
+| `C1` | in | composition of phase 1 (wt%) | - |
+| `C2` | in | composition of phase 2 (wt%) | - |
 | `mass` | in | total mass of the alloy (optional) (optional) | kg |
-| `W1` | out | mass fraction of phase 1 | — |
-| `W2` | out | mass fraction of phase 2 | — |
+| `W1` | out | mass fraction of phase 1 | - |
+| `W2` | out | mass fraction of phase 2 | - |
 | `m1` | out | mass of phase 1 | kg |
 | `m2` | out | mass of phase 2 | kg |
 
@@ -2824,7 +2760,7 @@ W2 = 0.3181818182
 
 <a id="eutectic_microconstituents"></a>
 
-#### Primary and eutectic microconstituent fractions — `eutectic_microconstituents`
+#### Primary and eutectic microconstituent fractions, `eutectic_microconstituents`
 
 The fractions of primary phase and eutectic microconstituent, and of total alpha and beta, in a binary eutectic alloy cooled just below the eutectic temperature.
 
@@ -2834,15 +2770,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `C0` | in | alloy composition (wt%) | — |
-| `C_alpha` | in | composition of alpha at the eutectic temperature | — |
-| `C_E` | in | eutectic composition | — |
-| `C_beta` | in | composition of beta at the eutectic temperature | — |
-| `W_primary` | out | fraction of primary (proeutectic) phase | — |
-| `W_eutectic` | out | fraction of eutectic microconstituent | — |
-| `W_alpha_total` | out | total fraction of alpha | — |
-| `W_beta_total` | out | total fraction of beta | — |
-| `primary_phase` | out | the primary phase (alpha for hypoeutectic, beta for hypereutectic) | — |
+| `C0` | in | alloy composition (wt%) | - |
+| `C_alpha` | in | composition of alpha at the eutectic temperature | - |
+| `C_E` | in | eutectic composition | - |
+| `C_beta` | in | composition of beta at the eutectic temperature | - |
+| `W_primary` | out | fraction of primary (proeutectic) phase | - |
+| `W_eutectic` | out | fraction of eutectic microconstituent | - |
+| `W_alpha_total` | out | total fraction of alpha | - |
+| `W_beta_total` | out | total fraction of beta | - |
+| `primary_phase` | out | the primary phase (alpha for hypoeutectic, beta for hypereutectic) | - |
 
 **Applies when:** C_alpha < C_E < C_beta; C_alpha < C0 < C_beta.
 
@@ -2865,7 +2801,7 @@ primary_phase = alpha
 
 <a id="iron_carbon_microconstituents"></a>
 
-#### Proeutectoid phase and pearlite in a plain-carbon steel — `iron_carbon_microconstituents`
+#### Proeutectoid phase and pearlite in a plain-carbon steel, `iron_carbon_microconstituents`
 
 The fractions of proeutectoid ferrite or cementite and of pearlite, and of total ferrite and cementite, in a steel cooled slowly just below the eutectoid temperature.
 
@@ -2875,12 +2811,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `C0` | in | carbon content in wt% (0.022 to 2.14) | — |
-| `W_proeutectoid` | out | fraction of proeutectoid ferrite or cementite | — |
-| `W_pearlite` | out | fraction of pearlite | — |
-| `W_ferrite_total` | out | total fraction of ferrite | — |
-| `W_cementite_total` | out | total fraction of cementite | — |
-| `proeutectoid_phase` | out | ferrite (hypoeutectoid) or cementite (hypereutectoid) | — |
+| `C0` | in | carbon content in wt% (0.022 to 2.14) | - |
+| `W_proeutectoid` | out | fraction of proeutectoid ferrite or cementite | - |
+| `W_pearlite` | out | fraction of pearlite | - |
+| `W_ferrite_total` | out | total fraction of ferrite | - |
+| `W_cementite_total` | out | total fraction of cementite | - |
+| `proeutectoid_phase` | out | ferrite (hypoeutectoid) or cementite (hypereutectoid) | - |
 
 **Applies when:** 0.022 < C0 < 2.14 wt% C.
 
@@ -2900,7 +2836,7 @@ proeutectoid_phase = ferrite
 
 <a id="weight_to_atomic_percent"></a>
 
-#### Weight percent to atomic percent (binary alloy) — `weight_to_atomic_percent`
+#### Weight percent to atomic percent (binary alloy), `weight_to_atomic_percent`
 
 Convert the composition of a binary alloy from weight percent to atomic percent.
 
@@ -2910,11 +2846,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `element1` | in | symbol of element 1 | — |
-| `element2` | in | symbol of element 2 | — |
-| `wt1` | in | weight percent of element 1 | — |
-| `at1` | out | atomic percent of element 1 | — |
-| `at2` | out | atomic percent of element 2 | — |
+| `element1` | in | symbol of element 1 | - |
+| `element2` | in | symbol of element 2 | - |
+| `wt1` | in | weight percent of element 1 | - |
+| `at1` | out | atomic percent of element 1 | - |
+| `at2` | out | atomic percent of element 2 | - |
 
 **Applies when:** known elements, different; 0 <= wt1 <= 100.
 
@@ -2935,7 +2871,7 @@ at2 = 41.9207302
 
 <a id="avrami_kinetics"></a>
 
-#### Avrami (JMAK) transformation kinetics — `avrami_kinetics`
+#### Avrami (JMAK) transformation kinetics: `avrami_kinetics`
 
 The Avrami exponent n and rate constant k of y = 1 - exp(-k t^n) from transformed fractions at two or more times, the half-transformation time and the time for a target fraction.
 
@@ -2945,15 +2881,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `t` | in | times (any one unit, e.g. s) | — |
-| `y` | in | transformed fractions (0 to 1) | — |
-| `y_target` | in | fraction whose time is wanted (optional) (optional) | — |
-| `n` | out | Avrami exponent | — |
-| `k` | out | rate constant (time unit^-n) | — |
-| `log10_k` | out | log10 of k | — |
-| `t_half` | out | time to 50 % transformation (time unit of t) | — |
-| `r_squared` | out | r^2 of the fit | — |
-| `t_target` | out | time to the target fraction | — |
+| `t` | in | times (any one unit, e.g. s) | - |
+| `y` | in | transformed fractions (0 to 1) | - |
+| `y_target` | in | fraction whose time is wanted (optional) (optional) | - |
+| `n` | out | Avrami exponent | - |
+| `k` | out | rate constant (time unit^-n) | - |
+| `log10_k` | out | log10 of k | - |
+| `t_half` | out | time to 50 % transformation (time unit of t) | - |
+| `r_squared` | out | r^2 of the fit | - |
+| `t_target` | out | time to the target fraction | - |
 
 **Applies when:** equal lengths, at least two distinct times; 0 < y < 1, rising with t.
 
@@ -2972,7 +2908,7 @@ r_squared = 1
 
 <a id="homogeneous_nucleation"></a>
 
-#### Critical nucleus radius and activation energy (homogeneous nucleation) — `homogeneous_nucleation`
+#### Critical nucleus radius and activation energy (homogeneous nucleation), `homogeneous_nucleation`
 
 The critical radius r* and the energy barrier dG* for homogeneous nucleation of a solid from its undercooled melt.
 
@@ -2987,11 +2923,11 @@ $$
 | `Tm` | in | melting temperature | K |
 | `T` | in | temperature of the undercooled liquid | K |
 | `undercooling` | out | undercooling Tm - T | K |
-| `dGv_MJ_m3` | out | volume free-energy change in MJ/m^3 | — |
+| `dGv_MJ_m3` | out | volume free-energy change in MJ/m^3 | - |
 | `r_star` | out | critical radius | m |
-| `r_star_nm` | out | critical radius in nm | — |
+| `r_star_nm` | out | critical radius in nm | - |
 | `dG_star` | out | activation free energy | J |
-| `dG_star_eV` | out | activation free energy in eV | — |
+| `dG_star_eV` | out | activation free energy in eV | - |
 
 **Applies when:** gamma, dHf, Tm > 0; 0 < T < Tm.
 
@@ -3017,7 +2953,7 @@ dG_star_eV = 6.041553245
 
 <a id="copolymer_degree_of_polymerization"></a>
 
-#### Average repeat-unit weight and degree of polymerization of a copolymer — `copolymer_degree_of_polymerization`
+#### Average repeat-unit weight and degree of polymerization of a copolymer, `copolymer_degree_of_polymerization`
 
 The average repeat-unit molecular weight of a copolymer from the two repeat-unit formulas and the mole fraction of the first, and its degree of polymerization.
 
@@ -3027,12 +2963,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `formula1` | in | formula of repeat unit 1 | — |
-| `formula2` | in | formula of repeat unit 2 | — |
-| `f1` | in | mole fraction of repeat unit 1 (0 to 1) | — |
+| `formula1` | in | formula of repeat unit 1 | - |
+| `formula2` | in | formula of repeat unit 2 | - |
+| `f1` | in | mole fraction of repeat unit 1 (0 to 1) | - |
 | `Mn` | in | number-average molecular weight | kg/mol |
-| `m_avg_g_mol` | out | average repeat-unit molecular weight in g/mol | — |
-| `DP` | out | degree of polymerization | — |
+| `m_avg_g_mol` | out | average repeat-unit molecular weight in g/mol | - |
+| `DP` | out | degree of polymerization | - |
 
 **Applies when:** valid formulas; 0 <= f1 <= 1; Mn > 0.
 
@@ -3043,8 +2979,8 @@ DP = 5254.852068
   by: Average repeat-unit weight and degree of polymerization of a copolymer  (m = f1 m1 + (1 - f1) m2; DP = Mn/m)
   f1 = 0.75
   Mn = 350 kg/mol
-  formula2 = C8H8
   formula1 = C4H6
+  formula2 = C8H8
   assumes: valid formulas; 0 <= f1 <= 1; Mn > 0
 ```
 
@@ -3052,7 +2988,7 @@ DP = 5254.852068
 
 <a id="kelvin_voigt_creep"></a>
 
-#### Creep strain of a Kelvin-Voigt viscoelastic solid — `kelvin_voigt_creep`
+#### Creep strain of a Kelvin-Voigt viscoelastic solid, `kelvin_voigt_creep`
 
 The strain after time t under constant stress for a Kelvin-Voigt (spring and dashpot in parallel) material: eps(t) = (sigma_0/E)(1 - exp(-t E/eta)).
 
@@ -3066,8 +3002,8 @@ $$
 | `E` | in | spring modulus | Pa |
 | `eta` | in | dashpot viscosity | Pa*s |
 | `t` | in | time under load | s |
-| `strain` | out | creep strain at time t | — |
-| `fraction_of_elastic` | out | strain over the final strain sigma_0/E | — |
+| `strain` | out | creep strain at time t | - |
+| `fraction_of_elastic` | out | strain over the final strain sigma_0/E | - |
 | `tau` | out | retardation time eta/E | s |
 
 **Applies when:** sigma0, E, eta > 0; t >= 0.
@@ -3089,7 +3025,7 @@ tau = 200 s
 
 <a id="polymer_chain_dimensions"></a>
 
-#### End-to-end distance of a freely rotating chain — `polymer_chain_dimensions`
+#### End-to-end distance of a freely rotating chain, `polymer_chain_dimensions`
 
 The root-mean-square end-to-end distance and characteristic ratio of a polymer chain of n bonds of length l with fixed bond angle and free rotation, and its all-trans contour length.
 
@@ -3099,13 +3035,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | number of backbone bonds | — |
+| `n` | in | number of backbone bonds | - |
 | `l` | in | bond length | m |
-| `theta` | in | bond angle in degrees (default 109.47, tetrahedral) (optional) | — |
+| `theta` | in | bond angle in degrees (default 109.47, tetrahedral) (optional) | - |
 | `r_rms` | out | rms end-to-end distance | m |
-| `r_rms_nm` | out | rms end-to-end distance in nm | — |
-| `C_n` | out | characteristic ratio <r^2>/(n l^2) | — |
-| `contour_nm` | out | all-trans contour length in nm | — |
+| `r_rms_nm` | out | rms end-to-end distance in nm | - |
+| `C_n` | out | characteristic ratio <r^2>/(n l^2) | - |
+| `contour_nm` | out | all-trans contour length in nm | - |
 
 **Applies when:** n >= 1; l > 0; 90 < theta < 180 degrees.
 
@@ -3125,7 +3061,7 @@ contour_nm = 0.2667358244
 
 <a id="molecular_weight_averages"></a>
 
-#### Number- and weight-average molecular weight and dispersity — `molecular_weight_averages`
+#### Number- and weight-average molecular weight and dispersity, `molecular_weight_averages`
 
 Mn, Mw and the dispersity Mw/Mn of a polymer from a molecular-weight distribution given as number fractions or weight fractions per size range.
 
@@ -3135,12 +3071,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `M` | in | mean molecular weight of each size range in g/mol | — |
-| `fraction` | in | number or weight fraction of each range (normalised) | — |
-| `basis` | in | whether the fractions are number (x_i) or weight (w_i) fractions (default number) (optional) | — |
-| `Mn` | out | number-average molecular weight in g/mol | — |
-| `Mw` | out | weight-average molecular weight in g/mol | — |
-| `PDI` | out | dispersity (polydispersity index) Mw/Mn | — |
+| `M` | in | mean molecular weight of each size range in g/mol | - |
+| `fraction` | in | number or weight fraction of each range (normalised) | - |
+| `basis` | in | whether the fractions are number (x_i) or weight (w_i) fractions (default number) (optional) | - |
+| `Mn` | out | number-average molecular weight in g/mol | - |
+| `Mw` | out | weight-average molecular weight in g/mol | - |
+| `PDI` | out | dispersity (polydispersity index) Mw/Mn | - |
 
 **Applies when:** equal lengths; M > 0; fractions >= 0, not all zero (they are normalised).
 
@@ -3158,7 +3094,7 @@ PDI = 1.111111111
 
 <a id="polymer_crystallinity"></a>
 
-#### Percent crystallinity of a polymer from densities — `polymer_crystallinity`
+#### Percent crystallinity of a polymer from densities, `polymer_crystallinity`
 
 The mass percent crystallinity of a semicrystalline polymer from its density and the densities of the fully crystalline and fully amorphous polymer.
 
@@ -3171,7 +3107,7 @@ $$
 | `rho_s` | in | density of the sample | kg/m^3 |
 | `rho_c` | in | density of the totally crystalline polymer | kg/m^3 |
 | `rho_a` | in | density of the totally amorphous polymer | kg/m^3 |
-| `crystallinity_percent` | out | percent crystallinity (by mass) | — |
+| `crystallinity_percent` | out | percent crystallinity (by mass) | - |
 
 **Applies when:** rho_a < rho_s < rho_c.
 
@@ -3189,7 +3125,7 @@ In the worked example, rho_s = 0.925 g/cm^3, rho_c = 1 g/cm^3, rho_a = 0.87 g/cm
 
 <a id="degree_of_polymerization"></a>
 
-#### Repeat-unit molecular weight and degree of polymerization — `degree_of_polymerization`
+#### Repeat-unit molecular weight and degree of polymerization, `degree_of_polymerization`
 
 The molecular weight of a repeat unit from its formula and the number-average degree of polymerization DP = Mn / m.
 
@@ -3199,10 +3135,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `formula` | in | repeat-unit formula, e.g. C2H3Cl | — |
+| `formula` | in | repeat-unit formula, e.g. C2H3Cl | - |
 | `Mn` | in | number-average molecular weight | kg/mol |
-| `repeat_unit_g_mol` | out | repeat-unit molecular weight in g/mol | — |
-| `DP` | out | degree of polymerization | — |
+| `repeat_unit_g_mol` | out | repeat-unit molecular weight in g/mol | - |
+| `DP` | out | degree of polymerization | - |
 
 **Applies when:** a valid formula; Mn > 0.
 
@@ -3220,7 +3156,7 @@ DP = 1696.048303
 
 <a id="rubber_elasticity"></a>
 
-#### Stress in a stretched rubber (affine network) — `rubber_elasticity`
+#### Stress in a stretched rubber (affine network), `rubber_elasticity`
 
 The shear modulus G = rho R T / Mc of a crosslinked rubber and its engineering and true stress at a uniaxial stretch ratio lambda.
 
@@ -3233,10 +3169,10 @@ $$
 | `rho` | in | density of the rubber | kg/m^3 |
 | `Mc` | in | molecular weight between crosslinks | kg/mol |
 | `T` | in | temperature | K |
-| `stretch` | in | stretch ratio lambda = L/L0 | — |
-| `G_MPa` | out | shear modulus in MPa | — |
-| `stress_MPa` | out | engineering stress in MPa | — |
-| `true_stress_MPa` | out | true stress in MPa | — |
+| `stretch` | in | stretch ratio lambda = L/L0 | - |
+| `G_MPa` | out | shear modulus in MPa | - |
+| `stress_MPa` | out | engineering stress in MPa | - |
+| `true_stress_MPa` | out | true stress in MPa | - |
 
 **Applies when:** all inputs > 0; ideal affine network, incompressible.
 
@@ -3257,7 +3193,7 @@ true_stress_MPa = 1.658735292
 
 <a id="maxwell_stress_relaxation"></a>
 
-#### Stress relaxation of a Maxwell viscoelastic solid — `maxwell_stress_relaxation`
+#### Stress relaxation of a Maxwell viscoelastic solid, `maxwell_stress_relaxation`
 
 The stress remaining after time t in a polymer held at constant strain, modelled as a Maxwell element: sigma(t) = sigma_0 exp(-t E/eta).
 
@@ -3272,9 +3208,9 @@ $$
 | `eta` | in | dashpot viscosity | Pa*s |
 | `t` | in | time held | s |
 | `sigma_t` | out | stress at time t | Pa |
-| `sigma_t_MPa` | out | stress at time t in MPa | — |
+| `sigma_t_MPa` | out | stress at time t in MPa | - |
 | `tau` | out | relaxation time eta/E | s |
-| `ratio` | out | sigma(t)/sigma_0 | — |
+| `ratio` | out | sigma(t)/sigma_0 | - |
 
 **Applies when:** sigma0, E, eta > 0; t >= 0.
 
@@ -3298,7 +3234,7 @@ ratio = 0.3678794412
 
 <a id="wiedemann_franz"></a>
 
-#### Electronic thermal conductivity of a metal (Wiedemann-Franz law) — `wiedemann_franz`
+#### Electronic thermal conductivity of a metal (Wiedemann-Franz law), `wiedemann_franz`
 
 The electronic thermal conductivity kappa = L sigma T of a metal from its electrical conductivity (or resistivity) and temperature, with the Sommerfeld value of the Lorenz number.
 
@@ -3312,7 +3248,7 @@ $$
 | `sigma` | in | electrical conductivity (or give rho) (optional) | 1/(ohm*m) |
 | `rho` | in | electrical resistivity (or give sigma) (optional) | ohm*m |
 | `kappa` | out | thermal conductivity | W/(m*K) |
-| `lorenz` | out | Lorenz number in W ohm/K^2 | — |
+| `lorenz` | out | Lorenz number in W ohm/K^2 | - |
 
 **Applies when:** T > 0; exactly one of sigma, rho, positive; degenerate free-electron metal.
 
@@ -3330,7 +3266,7 @@ lorenz = 2.443004509e-08
 
 <a id="linear_thermal_expansion"></a>
 
-#### Linear thermal expansion — `linear_thermal_expansion`
+#### Linear thermal expansion: `linear_thermal_expansion`
 
 The length change dL = alpha L0 dT and the new length of a bar heated or cooled freely by dT.
 
@@ -3344,9 +3280,9 @@ $$
 | `L0` | in | initial length | m |
 | `dT` | in | temperature change (positive = heating) | K |
 | `dL` | out | length change | m |
-| `dL_mm` | out | length change in mm | — |
+| `dL_mm` | out | length change in mm | - |
 | `L` | out | new length | m |
-| `strain` | out | thermal strain alpha dT | — |
+| `strain` | out | thermal strain alpha dT | - |
 
 **Applies when:** alpha, L0 > 0; alpha constant over the range (linear, small strain).
 
@@ -3367,7 +3303,7 @@ strain = 0.0017
 
 <a id="debye_heat_capacity"></a>
 
-#### Molar heat capacity of a solid (Debye model) — `debye_heat_capacity`
+#### Molar heat capacity of a solid (Debye model), `debye_heat_capacity`
 
 The constant-volume molar heat capacity of a monatomic solid from the Debye model at temperature T.
 
@@ -3380,7 +3316,7 @@ $$
 | `theta_D` | in | Debye temperature | K |
 | `T` | in | temperature | K |
 | `Cv` | out | molar heat capacity at constant volume | J/(mol*K) |
-| `Cv_over_3R` | out | Cv / 3R (1 at high T) | — |
+| `Cv_over_3R` | out | Cv / 3R (1 at high T) | - |
 
 **Applies when:** theta_D, T > 0; T >= theta_D/300.
 
@@ -3398,7 +3334,7 @@ Cv_over_3R = 0.9999999941
 
 <a id="einstein_heat_capacity"></a>
 
-#### Molar heat capacity of a solid (Einstein model) — `einstein_heat_capacity`
+#### Molar heat capacity of a solid (Einstein model), `einstein_heat_capacity`
 
 The constant-volume molar heat capacity of a solid from the Einstein model (all atoms vibrating at one frequency).
 
@@ -3411,7 +3347,7 @@ $$
 | `theta_E` | in | Einstein temperature | K |
 | `T` | in | temperature | K |
 | `Cv` | out | molar heat capacity at constant volume | J/(mol*K) |
-| `Cv_over_3R` | out | Cv / 3R | — |
+| `Cv_over_3R` | out | Cv / 3R | - |
 
 **Applies when:** theta_E, T > 0.
 
@@ -3429,7 +3365,7 @@ Cv_over_3R = 0.9206735942
 
 <a id="volumetric_thermal_expansion"></a>
 
-#### Volumetric thermal expansion — `volumetric_thermal_expansion`
+#### Volumetric thermal expansion: `volumetric_thermal_expansion`
 
 The volume change dV = beta V0 dT of an isotropic solid with beta = 3 alpha (linearised), and the exact change V0((1 + alpha dT)^3 - 1).
 
@@ -3444,10 +3380,10 @@ $$
 | `dT` | in | temperature change (positive = heating) | K |
 | `beta` | out | volumetric coefficient 3 alpha | 1/K |
 | `dV` | out | linearised volume change beta V0 dT | m^3 |
-| `dV_cm3` | out | linearised volume change in cm^3 | — |
+| `dV_cm3` | out | linearised volume change in cm^3 | - |
 | `V` | out | new volume (linearised) | m^3 |
 | `dV_exact` | out | exact volume change V0((1 + alpha dT)^3 - 1) | m^3 |
-| `dV_exact_cm3` | out | exact volume change in cm^3 | — |
+| `dV_exact_cm3` | out | exact volume change in cm^3 | - |
 
 **Applies when:** alpha, V0 > 0; isotropic solid, alpha constant over the range.
 
@@ -3468,4 +3404,4 @@ dV_exact_cm3 = 5.108674913
 
 **What the worked example means:** This calculation determines how the volume of an isotropic solid changes due to temperature variations. Using the linear expansion coefficient 1.7e-05 1/K and initial volume 1000 cm^3, the model computes the volumetric coefficient as 5.1e-05 1/K. The linearized volume change is found to be 5.1e-06 m^3 cubic meters, while the exact calculation yields 5.10867e-06 m^3 cubic meters. These results help predict dimensional stability under thermal stress.
 
-Questions and reports: support@ai999x.com. AI999X — The Future Is Self-Improving.
+Questions and reports: support@ai999x.com. AI999X, The Future Is Self-Improving.

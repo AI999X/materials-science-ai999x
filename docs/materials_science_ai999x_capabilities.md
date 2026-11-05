@@ -200,7 +200,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 
 <a id="cubic_lattice_parameter"></a>
 
-### Lattice parameter from the atomic radius — `cubic_lattice_parameter`
+### Lattice parameter from the atomic radius: `cubic_lattice_parameter`
 
 The cubic lattice parameter a of an SC, BCC, FCC or diamond-cubic crystal of hard-sphere atoms of radius R.
 
@@ -263,7 +263,7 @@ materials_science_ai999x.solve('cubic_lattice_parameter', structure='diamond', R
 
 <a id="atomic_packing_factor"></a>
 
-### Atomic packing factor and coordination number — `atomic_packing_factor`
+### Atomic packing factor and coordination number, `atomic_packing_factor`
 
 The fraction of a crystal's volume filled by hard-sphere atoms, the coordination number and the atoms per conventional cell of SC, BCC, FCC, HCP or diamond cubic.
 
@@ -325,7 +325,7 @@ materials_science_ai999x.solve('atomic_packing_factor', structure='diamond')
 
 <a id="theoretical_density"></a>
 
-### Theoretical density of a metal — `theoretical_density`
+### Theoretical density of a metal: `theoretical_density`
 
 The density of a crystal from its structure, the atomic radius and the molar mass: $\rho = n$ A / (V_cell N_A).
 
@@ -383,7 +383,7 @@ materials_science_ai999x.solve('theoretical_density', structure='HCP', A=0.02431
 
 <a id="lattice_parameter_from_density"></a>
 
-### Lattice parameter and atomic radius from the density — `lattice_parameter_from_density`
+### Lattice parameter and atomic radius from the density, `lattice_parameter_from_density`
 
 The lattice parameter a and hard-sphere atomic radius R of a crystal of known structure, density and molar mass.
 
@@ -434,7 +434,7 @@ materials_science_ai999x.solve('lattice_parameter_from_density', structure='BCC'
 
 <a id="hcp_cell_density"></a>
 
-### Volume and density of a hexagonal close-packed cell — `hcp_cell_density`
+### Volume and density of a hexagonal close-packed cell, `hcp_cell_density`
 
 The volume of the HCP hexagonal prism (6 atoms), the density and the c/a ratio from a, c and the molar mass.
 
@@ -478,7 +478,7 @@ materials_science_ai999x.solve('hcp_cell_density', a=3.209e-10, c=5.211e-10, A=0
 
 <a id="unit_cell_volume"></a>
 
-### Volume of a general (triclinic) unit cell — `unit_cell_volume`
+### Volume of a general (triclinic) unit cell: `unit_cell_volume`
 
 The volume of a unit cell from its six lattice parameters a, b, c, alpha, beta, gamma.
 
@@ -528,7 +528,7 @@ materials_science_ai999x.solve('unit_cell_volume', a=4e-10, b=4e-10, c=4e-10, al
 
 <a id="d_spacing_cubic"></a>
 
-### Interplanar spacing in a cubic crystal — `d_spacing_cubic`
+### Interplanar spacing in a cubic crystal: `d_spacing_cubic`
 
 The spacing of the (h k l) planes of a cubic lattice: $d = a / sqrt$(h^2 + k^2 + l^2).
 
@@ -582,7 +582,7 @@ materials_science_ai999x.solve('d_spacing_cubic', a=4e-10, h=2, k=0, l=0)
 
 <a id="d_spacing_tetragonal"></a>
 
-### Interplanar spacing in a tetragonal crystal — `d_spacing_tetragonal`
+### Interplanar spacing in a tetragonal crystal, `d_spacing_tetragonal`
 
 The spacing of the (h k l) planes of a tetragonal lattice: $1/d^{2} = (h^{2} + k^{2})/a^{2} + l^{2}/c^{2.}$
 
@@ -630,7 +630,7 @@ materials_science_ai999x.solve('d_spacing_tetragonal', a=4e-10, c=6e-10, h=0, k=
 
 <a id="d_spacing_orthorhombic"></a>
 
-### Interplanar spacing in an orthorhombic crystal — `d_spacing_orthorhombic`
+### Interplanar spacing in an orthorhombic crystal, `d_spacing_orthorhombic`
 
 The spacing of the (h k l) planes of an orthorhombic lattice: $1/d^{2} = h^{2}/a^{2} + k^{2}/b^{2} + l^{2}/c^{2.}$
 
@@ -673,7 +673,7 @@ materials_science_ai999x.solve('d_spacing_orthorhombic', a=4e-10, b=5e-10, c=6e-
 
 <a id="d_spacing_hexagonal"></a>
 
-### Interplanar spacing in a hexagonal crystal — `d_spacing_hexagonal`
+### Interplanar spacing in a hexagonal crystal, `d_spacing_hexagonal`
 
 The spacing of the (h k l) planes of a hexagonal lattice: $1/d^{2} = 4$(h^2 + hk + k^2)/(3a^2) + l^2/c^2.
 
@@ -722,7 +722,7 @@ materials_science_ai999x.solve('d_spacing_hexagonal', a=2.5e-10, c=4e-10, h=0, k
 
 <a id="d_spacing_triclinic"></a>
 
-### Interplanar spacing in a general (triclinic) lattice — `d_spacing_triclinic`
+### Interplanar spacing in a general (triclinic) lattice, `d_spacing_triclinic`
 
 The spacing of the (h k l) planes of any lattice from its six cell parameters, through the reciprocal metric tensor.
 
@@ -773,7 +773,7 @@ materials_science_ai999x.solve('d_spacing_triclinic', a=5e-10, b=5e-10, c=7e-10,
 
 <a id="bragg_angle"></a>
 
-### Bragg angle of a reflection — `bragg_angle`
+### Bragg angle of a reflection: `bragg_angle`
 
 The diffraction angle theta (and 2-theta) of planes of spacing d for X-rays of wavelength lambda: n $\lambda = 2$ d sin(theta).
 
@@ -825,7 +825,7 @@ materials_science_ai999x.solve('bragg_angle', d=2e-10, lam=2e-10, n=1)
 
 <a id="bragg_wavelength"></a>
 
-### X-ray wavelength from a Bragg reflection — `bragg_wavelength`
+### X-ray wavelength from a Bragg reflection: `bragg_wavelength`
 
 The wavelength that reflects from planes of spacing d at the Bragg angle theta in order n.
 
@@ -875,7 +875,7 @@ materials_science_ai999x.solve('bragg_wavelength', d=3e-10, theta=30.0, n=2)
 
 <a id="bragg_spacing"></a>
 
-### Interplanar spacing from a Bragg reflection — `bragg_spacing`
+### Interplanar spacing from a Bragg reflection, `bragg_spacing`
 
 The interplanar spacing d of planes that reflect X-rays of wavelength lambda at the Bragg angle theta in order n.
 
@@ -925,7 +925,7 @@ materials_science_ai999x.solve('bragg_spacing', lam=1e-10, theta=30.0, n=2)
 
 <a id="cubic_reflection_angle"></a>
 
-### Diffraction angle of a cubic (h k l) reflection — `cubic_reflection_angle`
+### Diffraction angle of a cubic (h k l) reflection, `cubic_reflection_angle`
 
 The interplanar spacing and the diffraction angle $2-\theta$ of the (h k l) reflection of a cubic crystal of lattice parameter a at wavelength lambda.
 
@@ -982,7 +982,7 @@ materials_science_ai999x.solve('cubic_reflection_angle', a=4e-10, h=2, k=0, l=0,
 
 <a id="structure_factor_cubic"></a>
 
-### Structure factor and extinction of a cubic reflection — `structure_factor_cubic`
+### Structure factor and extinction of a cubic reflection, `structure_factor_cubic`
 
 The structure factor |F|/f of the (h k l) reflection of a monatomic SC, BCC, FCC or diamond-cubic crystal, and whether the reflection is allowed.
 
@@ -1011,9 +1011,9 @@ $$
 
 *The (1 1 1) plane (shaded) cut through the FCC unit cell of the worked example. Labelled with what the package returned: F_over_f = 4, allowed = True. Marked: F_over_f = 4.*
 
-![whether the reflection appears (allowed) over h (Miller index h) from 1 to 9 and k (Miller index k) from 1 to 9: each of the 9 × 9 cells is one run of materials-science-ai999x, coloured by the verdict it returned — yes: 25 cells, no: 56 cells](https://www.ai999x.com/?ax_fig=materials-science-ai999x/structure-factor-cubic-decision)
+![whether the reflection appears (allowed) over h (Miller index h) from 1 to 9 and k (Miller index k) from 1 to 9: each of the 9 × 9 cells is one run of materials-science-ai999x, coloured by the verdict it returned, yes: 25 cells, no: 56 cells](https://www.ai999x.com/?ax_fig=materials-science-ai999x/structure-factor-cubic-decision)
 
-*whether the reflection appears (allowed) over h (Miller index h) from 1 to 9 and k (Miller index k) from 1 to 9: each of the 9 × 9 cells is one run of materials-science-ai999x, coloured by the verdict it returned — yes: 25 cells, no: 56 cells. Other inputs as in the worked example: structure = FCC, l = 1. Marked: the worked example, h = 1, k = 1 → yes.*
+*whether the reflection appears (allowed) over h (Miller index h) from 1 to 9 and k (Miller index k) from 1 to 9: each of the 9 × 9 cells is one run of materials-science-ai999x, coloured by the verdict it returned, yes: 25 cells, no: 56 cells. Other inputs as in the worked example: structure = FCC, l = 1. Marked: the worked example, h = 1, k = 1 → yes.*
 
 ```python
 materials_science_ai999x.solve('structure_factor_cubic', structure='FCC', h=1, k=1, l=1)
@@ -1050,7 +1050,7 @@ materials_science_ai999x.solve('structure_factor_cubic', structure='diamond', h=
 
 <a id="allowed_reflections_cubic"></a>
 
-### First allowed reflections of a cubic crystal — `allowed_reflections_cubic`
+### First allowed reflections of a cubic crystal, `allowed_reflections_cubic`
 
 The values of $h^{2} + k^{2} + l^{2}$ of the first allowed X-ray reflections of a monatomic SC, BCC, FCC or diamond-cubic crystal, in order of increasing angle.
 
@@ -1111,7 +1111,7 @@ materials_science_ai999x.solve('allowed_reflections_cubic', structure='diamond',
 
 <a id="linear_density"></a>
 
-### Linear density along a crystal direction — `linear_density`
+### Linear density along a crystal direction: `linear_density`
 
 The number of atoms per unit length along the [u v w] direction of an SC, BCC or FCC crystal, and the linear packing fraction.
 
@@ -1171,7 +1171,7 @@ materials_science_ai999x.solve('linear_density', structure='FCC', u=1, v=0, w=0,
 
 <a id="planar_density"></a>
 
-### Planar density of a crystal plane — `planar_density`
+### Planar density of a crystal plane: `planar_density`
 
 The number of atoms per unit area on the (h k l) plane of an SC, BCC or FCC crystal, and the planar packing fraction.
 
@@ -1230,7 +1230,7 @@ materials_science_ai999x.solve('planar_density', structure='BCC', h=1, k=1, l=0,
 
 <a id="miller_indices_from_intercepts"></a>
 
-### Miller indices of a plane from its intercepts — `miller_indices_from_intercepts`
+### Miller indices of a plane from its intercepts, `miller_indices_from_intercepts`
 
 The Miller indices (h k l) of a plane cutting the axes at x, y, z (in units of the cell edges; inf for a plane parallel to an axis).
 
@@ -1284,7 +1284,7 @@ materials_science_ai999x.solve('miller_indices_from_intercepts', x='-1', y='inf'
 
 <a id="miller_bravais_direction"></a>
 
-### Three-index to four-index (Miller-Bravais) direction — `miller_bravais_direction`
+### Three-index to four-index (Miller-Bravais) direction, `miller_bravais_direction`
 
 Convert a hexagonal direction [U V W] (axes a1, a2, c) to the Miller-Bravais form [u v t w] (axes a1, a2, a3, c).
 
@@ -1338,7 +1338,7 @@ materials_science_ai999x.solve('miller_bravais_direction', U=1, V=1, W=0)
 
 <a id="miller_bravais_to_three_index"></a>
 
-### Four-index (Miller-Bravais) to three-index direction — `miller_bravais_to_three_index`
+### Four-index (Miller-Bravais) to three-index direction, `miller_bravais_to_three_index`
 
 Convert a Miller-Bravais direction [u v t w] of a hexagonal crystal to the three-index form [U V W].
 
@@ -1387,7 +1387,7 @@ materials_science_ai999x.solve('miller_bravais_to_three_index', u=1, v=1, t=-2, 
 
 <a id="angle_between_directions_cubic"></a>
 
-### Angle between two directions in a cubic crystal — `angle_between_directions_cubic`
+### Angle between two directions in a cubic crystal, `angle_between_directions_cubic`
 
 The angle between the directions [u1 v1 w1] and [u2 v2 w2] of a cubic crystal (also the angle between the planes with those indices).
 
@@ -1440,7 +1440,7 @@ materials_science_ai999x.solve('angle_between_directions_cubic', u1=1, v1=1, w1=
 
 <a id="angle_between_directions"></a>
 
-### Angle between two lattice directions in any crystal — `angle_between_directions`
+### Angle between two lattice directions in any crystal, `angle_between_directions`
 
 The angle between the directions [u1 v1 w1] and [u2 v2 w2] of a crystal with any cell (a, b, c, alpha, beta, gamma).
 
@@ -1493,7 +1493,7 @@ materials_science_ai999x.solve('angle_between_directions', a=3e-10, b=4e-10, c=5
 
 <a id="angle_between_planes"></a>
 
-### Angle between two lattice planes in any crystal — `angle_between_planes`
+### Angle between two lattice planes in any crystal, `angle_between_planes`
 
 The angle between the normals of the planes (h1 k1 l1) and (h2 k2 l2) of a crystal with any cell.
 
@@ -1546,7 +1546,7 @@ materials_science_ai999x.solve('angle_between_planes', a=3e-10, b=3e-10, c=5e-10
 
 <a id="interstitial_site_size"></a>
 
-### Largest atom that fits an interstitial site — `interstitial_site_size`
+### Largest atom that fits an interstitial site, `interstitial_site_size`
 
 The radius of the largest sphere that fits the octahedral or tetrahedral interstitial site of an FCC or BCC lattice of host atoms of radius R.
 
@@ -1593,7 +1593,7 @@ materials_science_ai999x.solve('interstitial_site_size', structure='BCC', site='
 
 <a id="radius_ratio_coordination"></a>
 
-### Coordination number from the cation-anion radius ratio — `radius_ratio_coordination`
+### Coordination number from the cation-anion radius ratio, `radius_ratio_coordination`
 
 The expected coordination number and polyhedron of a cation from the ratio of the cation and anion radii (Pauling's radius-ratio rule).
 
@@ -1622,7 +1622,7 @@ $$
 
 ![coordination polyhedron (geometry) over rc (cation radius) from 1](https://www.ai999x.com/?ax_fig=materials-science-ai999x/radius-ratio-coordination-decision)
 
-*coordination polyhedron (geometry) over rc (cation radius) from 1.0200e-11 m to 1.0200e-09 m and ra (anion radius) from 1.8100e-11 m to 1.8100e-09 m (logarithmic axes): each of the 31 × 21 cells is one run of materials-science-ai999x, coloured by the verdict it returned — cubic: 38 cells, linear: 176 cells, octahedral: 81 cells, tetrahedral: 63 cells, triangular: 41 cells; blank cells: inputs the capability refuses. Marked: the worked example, rc = 1.0200e-10 m, ra = 1.8100e-10 m → octahedral.*
+*coordination polyhedron (geometry) over rc (cation radius) from 1.0200e-11 m to 1.0200e-09 m and ra (anion radius) from 1.8100e-11 m to 1.8100e-09 m (logarithmic axes): each of the 31 × 21 cells is one run of materials-science-ai999x, coloured by the verdict it returned, cubic: 38 cells, linear: 176 cells, octahedral: 81 cells, tetrahedral: 63 cells, triangular: 41 cells; blank cells: inputs the capability refuses. Marked: the worked example, rc = 1.0200e-10 m, ra = 1.8100e-10 m → octahedral.*
 
 ![CN (coordination number) against rc (cation radius) from 5](https://www.ai999x.com/?ax_fig=materials-science-ai999x/radius-ratio-coordination-curve)
 
@@ -1652,7 +1652,7 @@ materials_science_ai999x.solve('radius_ratio_coordination', rc=4e-11, ra=1.4e-10
 
 <a id="ceramic_density"></a>
 
-### Lattice parameter and density of an ionic crystal — `ceramic_density`
+### Lattice parameter and density of an ionic crystal, `ceramic_density`
 
 The cubic lattice parameter and theoretical density of a rock-salt, cesium-chloride, zinc-blende or fluorite crystal from its ionic radii and molar masses.
 
@@ -1707,7 +1707,7 @@ materials_science_ai999x.solve('ceramic_density', prototype='fluorite', rc=1e-10
 
 <a id="polymorphic_volume_change"></a>
 
-### Volume change of a BCC to FCC transformation — `polymorphic_volume_change`
+### Volume change of a BCC to FCC transformation, `polymorphic_volume_change`
 
 The percentage volume change when a metal transforms from BCC to FCC (as iron at 912 C), from the atomic radius in each structure.
 
@@ -1748,7 +1748,7 @@ materials_science_ai999x.solve('polymorphic_volume_change', R_bcc=1.258e-10, R_f
 
 <a id="burgers_vector"></a>
 
-### Burgers vector of a perfect dislocation — `burgers_vector`
+### Burgers vector of a perfect dislocation: `burgers_vector`
 
 The magnitude of the shortest lattice translation (the Burgers vector of a perfect dislocation) in an SC, BCC or FCC metal.
 
@@ -1798,7 +1798,7 @@ materials_science_ai999x.solve('burgers_vector', structure='BCC', a=2.866e-10)
 
 <a id="space_group"></a>
 
-### Space group of a common crystal structure — `space_group`
+### Space group of a common crystal structure: `space_group`
 
 The space-group number, Hermann-Mauguin symbol and crystal system of a common metallic or ionic structure.
 
@@ -1848,7 +1848,7 @@ materials_science_ai999x.solve('space_group', structure='zincblende')
 
 <a id="vacancy_concentration"></a>
 
-### Equilibrium vacancy concentration — `vacancy_concentration`
+### Equilibrium vacancy concentration: `vacancy_concentration`
 
 The number of atomic sites per volume and the equilibrium number of vacancies $N_v = N$ exp(-Q_v/kT) of a metal.
 
@@ -1893,7 +1893,7 @@ materials_science_ai999x.solve('vacancy_concentration', rho=8400.0, A=0.0635, Qv
 
 <a id="vacancy_formation_energy_fit"></a>
 
-### Vacancy formation energy from vacancy fractions — `vacancy_formation_energy_fit`
+### Vacancy formation energy from vacancy fractions, `vacancy_formation_energy_fit`
 
 The vacancy formation energy Q_v and prefactor from vacancy fractions measured at two or more temperatures (least-squares Arrhenius line).
 
@@ -1936,7 +1936,7 @@ materials_science_ai999x.solve('vacancy_formation_energy_fit', T=[800.0, 1000.0]
 
 <a id="fick_first_law_flux"></a>
 
-### Steady-state diffusion flux (Fick's first law) — `fick_first_law_flux`
+### Steady-state diffusion flux (Fick's first law), `fick_first_law_flux`
 
 The steady-state diffusion flux between two positions with known concentrations: $J = -D$ $(C_{2} - C_{1})/(x_{2} - x_{1})$.
 
@@ -1979,7 +1979,7 @@ materials_science_ai999x.solve('fick_first_law_flux', D=3e-11, C1=1.2, C2=0.8, x
 
 <a id="fick_second_law_concentration"></a>
 
-### Concentration in a semi-infinite solid (Fick's second law) — `fick_second_law_concentration`
+### Concentration in a semi-infinite solid (Fick's second law), `fick_second_law_concentration`
 
 The concentration at depth x after time t in a semi-infinite solid with a constant surface concentration (carburizing, doping): $C_x = C_s - (C_s - C_0)$ erf($x / 2$ sqrt(Dt)).
 
@@ -2011,7 +2011,7 @@ $$
 
 ![Concentration against depth for diffusion into a semi-infinite solid (surface Cs = 1](https://www.ai999x.com/?ax_fig=materials-science-ai999x/fick-second-law-concentration-profile-2)
 
-*Concentration against depth for diffusion into a semi-infinite solid (surface Cs = 1.2, initial C0 = 0.25, D = 1.6e-11 m²/s as stated) at three times — a quarter of, equal to and four times the worked example's t = 25200 s — 41 depths each from the package. Marked: x = 0.5 mm, C = 0.798785 at t = 25200 s.*
+*Concentration against depth for diffusion into a semi-infinite solid (surface Cs = 1.2, initial C0 = 0.25, D = 1.6e-11 m²/s as stated) at three times (a quarter of, equal to and four times the worked example's t = 25200 s), 41 depths each from the package. Marked: x = 0.5 mm, C = 0.798785 at t = 25200 s.*
 
 ![Cx (concentration at depth x (unit of C0, Cs)) against Cs (surface concentration (same unit)) from 0](https://www.ai999x.com/?ax_fig=materials-science-ai999x/fick-second-law-concentration-curve)
 
@@ -2036,7 +2036,7 @@ materials_science_ai999x.solve('fick_second_law_concentration', C0=0.0, Cs=1.0, 
 
 <a id="diffusion_time_to_concentration"></a>
 
-### Time to reach a concentration at a depth (Fick's second law) — `diffusion_time_to_concentration`
+### Time to reach a concentration at a depth (Fick's second law), `diffusion_time_to_concentration`
 
 The diffusion time for the concentration at depth x to reach C_x in a semi-infinite solid with constant surface concentration (carburizing time).
 
@@ -2085,7 +2085,7 @@ materials_science_ai999x.solve('diffusion_time_to_concentration', C0=0.25, Cs=1.
 
 <a id="diffusion_depth_of_concentration"></a>
 
-### Depth at which a concentration is reached (Fick's second law) — `diffusion_depth_of_concentration`
+### Depth at which a concentration is reached (Fick's second law), `diffusion_depth_of_concentration`
 
 The depth at which the concentration equals C_x after diffusion time t in a semi-infinite solid with constant surface concentration (case depth).
 
@@ -2128,7 +2128,7 @@ materials_science_ai999x.solve('diffusion_depth_of_concentration', C0=0.0, Cs=1.
 
 <a id="diffusion_arrhenius_fit"></a>
 
-### Activation energy and pre-exponential factor of diffusion — `diffusion_arrhenius_fit`
+### Activation energy and pre-exponential factor of diffusion, `diffusion_arrhenius_fit`
 
 Q_d and D_0 of $D = D_0$ exp(-Q_d/RT) from diffusion coefficients at two or more temperatures, and D at another temperature.
 
@@ -2175,7 +2175,7 @@ materials_science_ai999x.solve('diffusion_arrhenius_fit', T=[773.0, 873.0], D=[5
 
 <a id="true_stress_and_strain"></a>
 
-### True stress and true strain from engineering values — `true_stress_and_strain`
+### True stress and true strain from engineering values, `true_stress_and_strain`
 
 True stress and true strain from the engineering stress and strain of a tensile test before necking (volume conserved).
 
@@ -2216,7 +2216,7 @@ materials_science_ai999x.solve('true_stress_and_strain', stress=400000000.0, str
 
 <a id="elastic_deformation_of_a_rod"></a>
 
-### Elastic elongation and diameter change of a rod in tension — `elastic_deformation_of_a_rod`
+### Elastic elongation and diameter change of a rod in tension, `elastic_deformation_of_a_rod`
 
 Stress, axial strain, elongation, lateral strain and diameter change of a cylindrical rod under an axial force (Hooke's law and Poisson's ratio).
 
@@ -2262,7 +2262,7 @@ materials_science_ai999x.solve('elastic_deformation_of_a_rod', F=15000.0, d0=0.0
 
 <a id="isotropic_elastic_constants"></a>
 
-### Shear modulus, bulk modulus and Lame constant from E and Poisson's ratio — `isotropic_elastic_constants`
+### Shear modulus, bulk modulus and Lame constant from E and Poisson's ratio, `isotropic_elastic_constants`
 
 The shear modulus G, bulk modulus K and Lame constant lambda of an isotropic material from Young's modulus E and Poisson's ratio nu.
 
@@ -2309,7 +2309,7 @@ materials_science_ai999x.solve('isotropic_elastic_constants', E=200000000000.0, 
 
 <a id="youngs_modulus_from_data"></a>
 
-### Young's modulus from elastic stress-strain data — `youngs_modulus_from_data`
+### Young's modulus from elastic stress-strain data, `youngs_modulus_from_data`
 
 Young's modulus as the slope of the least-squares line through stress-strain points of the elastic region.
 
@@ -2351,7 +2351,7 @@ materials_science_ai999x.solve('youngs_modulus_from_data', strain=[0, 0.001, 0.0
 
 <a id="offset_yield_strength"></a>
 
-### 0.2 % offset yield strength from a stress-strain curve — `offset_yield_strength`
+### 0.2 % offset yield strength from a stress-strain curve, `offset_yield_strength`
 
 The yield strength where the stress-strain curve (piecewise linear through the data) meets a line of slope E offset by 0.2 % strain (or another offset).
 
@@ -2397,7 +2397,7 @@ materials_science_ai999x.solve('offset_yield_strength', strain=[0, 0.002, 0.004,
 
 <a id="tensile_toughness"></a>
 
-### Toughness (area under the stress-strain curve) — `tensile_toughness`
+### Toughness (area under the stress-strain curve), `tensile_toughness`
 
 The energy absorbed per unit volume up to fracture (trapezoidal area under the stress-strain data), the tensile strength and the fracture strain.
 
@@ -2439,7 +2439,7 @@ materials_science_ai999x.solve('tensile_toughness', strain=[0, 0.002, 0.05, 0.1,
 
 <a id="modulus_of_resilience"></a>
 
-### Modulus of resilience — `modulus_of_resilience`
+### Modulus of resilience: `modulus_of_resilience`
 
 The elastic strain energy per unit volume stored up to yielding: $U_r = sigma_y^{2}/(2E)$.
 
@@ -2484,7 +2484,7 @@ materials_science_ai999x.solve('modulus_of_resilience', sy=415000000.0, E=207000
 
 <a id="strain_hardening_exponent"></a>
 
-### Strain-hardening exponent and strength coefficient (Hollomon) — `strain_hardening_exponent`
+### Strain-hardening exponent and strength coefficient (Hollomon), `strain_hardening_exponent`
 
 The strain-hardening exponent n and strength coefficient K of $sigma_T = K$ epsilon_T^n from true stress-strain points of the plastic region, and the stress at another strain.
 
@@ -2527,7 +2527,7 @@ materials_science_ai999x.solve('strain_hardening_exponent', true_strain=[0.1, 0.
 
 <a id="hall_petch"></a>
 
-### Hall-Petch grain-size strengthening — `hall_petch`
+### Hall-Petch grain-size strengthening: `hall_petch`
 
 sigma_0 and k of $sigma_y = sigma_0 + k$ $d^{-1/2}$ from yield strengths at two or more grain sizes, and the yield strength at another grain size.
 
@@ -2571,7 +2571,7 @@ materials_science_ai999x.solve('hall_petch', d_um=[100, 4], yield_MPa=[150, 350]
 
 <a id="thermal_stress"></a>
 
-### Thermal stress in a constrained body — `thermal_stress`
+### Thermal stress in a constrained body: `thermal_stress`
 
 The stress from a temperature change in a body held in one direction (rod between walls), two (thin film or plate) or three (fully constrained).
 
@@ -2619,7 +2619,7 @@ materials_science_ai999x.solve('thermal_stress', E=70000000000.0, alpha=2.3e-05,
 
 <a id="composite_rule_of_mixtures"></a>
 
-### Elastic moduli of a continuous-fibre composite (rule of mixtures) — `composite_rule_of_mixtures`
+### Elastic moduli of a continuous-fibre composite (rule of mixtures), `composite_rule_of_mixtures`
 
 The longitudinal (isostrain) and transverse (isostress) moduli of an aligned continuous-fibre composite and the fraction of the load carried by the fibres.
 
@@ -2663,7 +2663,7 @@ materials_science_ai999x.solve('composite_rule_of_mixtures', Ef=69000000000.0, E
 
 <a id="critical_fiber_length"></a>
 
-### Critical fibre length — `critical_fiber_length`
+### Critical fibre length: `critical_fiber_length`
 
 The critical length $l_c = sigma_f$ d / (2 tau_c) a fibre needs to be loaded to its strength through the fibre-matrix interface.
 
@@ -2705,7 +2705,7 @@ materials_science_ai999x.solve('critical_fiber_length', sigma_f=3500000000.0, d=
 
 <a id="griffith_critical_stress"></a>
 
-### Griffith critical stress of a brittle solid — `griffith_critical_stress`
+### Griffith critical stress of a brittle solid, `griffith_critical_stress`
 
 The stress at which a crack of length 2a (internal) or a (surface) propagates in a brittle solid: $sigma_c = sqrt$(2 E gamma_s / (pi a)).
 
@@ -2746,7 +2746,7 @@ materials_science_ai999x.solve('griffith_critical_stress', E=69000000000.0, gamm
 
 <a id="fracture_critical_stress"></a>
 
-### Fracture stress from the fracture toughness — `fracture_critical_stress`
+### Fracture stress from the fracture toughness, `fracture_critical_stress`
 
 The stress at which a crack of length a fails in a material of plane-strain fracture toughness K_IC: sigma_c = K_IC / (Y sqrt(pi a)).
 
@@ -2787,7 +2787,7 @@ materials_science_ai999x.solve('fracture_critical_stress', K_IC=26000000.0, a=0.
 
 <a id="critical_crack_length"></a>
 
-### Critical crack length from the fracture toughness — `critical_crack_length`
+### Critical crack length from the fracture toughness, `critical_crack_length`
 
 The largest crack a part can carry at stress sigma without fracture: a_c = (K_IC / (Y sigma))^$2 / pi.$
 
@@ -2828,7 +2828,7 @@ materials_science_ai999x.solve('critical_crack_length', K_IC=55000000.0, sigma=1
 
 <a id="weibull_failure_probability"></a>
 
-### Weibull probability of failure of a brittle part — `weibull_failure_probability`
+### Weibull probability of failure of a brittle part, `weibull_failure_probability`
 
 The probability that a brittle (ceramic) part fails at stress sigma, from the Weibull modulus m and characteristic strength sigma_0, with an optional volume ratio $V/V_{0}.$
 
@@ -2875,7 +2875,7 @@ materials_science_ai999x.solve('weibull_failure_probability', sigma=400000000.0,
 
 <a id="weibull_design_stress"></a>
 
-### Design stress for a target failure probability (Weibull) — `weibull_design_stress`
+### Design stress for a target failure probability (Weibull), `weibull_design_stress`
 
 The stress at which a brittle part reaches a given failure probability, from the Weibull modulus and characteristic strength (and V/V0).
 
@@ -2917,7 +2917,7 @@ materials_science_ai999x.solve('weibull_design_stress', P_failure=0.001, sigma0=
 
 <a id="weibull_modulus_fit"></a>
 
-### Weibull modulus from a set of measured strengths — `weibull_modulus_fit`
+### Weibull modulus from a set of measured strengths, `weibull_modulus_fit`
 
 The Weibull modulus m and characteristic strength sigma_0 from measured fracture strengths, by median-rank regression (Bernard's ranks).
 
@@ -2957,7 +2957,7 @@ materials_science_ai999x.solve('weibull_modulus_fit', strengths=[310, 342, 365, 
 
 <a id="creep_parameters_fit"></a>
 
-### Stress exponent and activation energy of steady-state creep — `creep_parameters_fit`
+### Stress exponent and activation energy of steady-state creep, `creep_parameters_fit`
 
 n and Q_c of the power-law creep model rate = A $\sigma^{n}$ exp(-Q_c/RT) from steady-state creep rates at several stresses and temperatures (least squares).
 
@@ -2998,7 +2998,7 @@ materials_science_ai999x.solve('creep_parameters_fit', stress_MPa=[100, 200, 100
 
 <a id="maxwell_stress_relaxation"></a>
 
-### Stress relaxation of a Maxwell viscoelastic solid — `maxwell_stress_relaxation`
+### Stress relaxation of a Maxwell viscoelastic solid, `maxwell_stress_relaxation`
 
 The stress remaining after time t in a polymer held at constant strain, modelled as a Maxwell element: sigma(t) = sigma_0 exp(-t E/eta).
 
@@ -3042,7 +3042,7 @@ materials_science_ai999x.solve('maxwell_stress_relaxation', sigma0=10000000.0, E
 
 <a id="kelvin_voigt_creep"></a>
 
-### Creep strain of a Kelvin-Voigt viscoelastic solid — `kelvin_voigt_creep`
+### Creep strain of a Kelvin-Voigt viscoelastic solid, `kelvin_voigt_creep`
 
 The strain after time t under constant stress for a Kelvin-Voigt (spring and dashpot in parallel) material: eps(t) = (sigma_0/E)(1 - exp(-t E/eta)).
 
@@ -3084,7 +3084,7 @@ materials_science_ai999x.solve('kelvin_voigt_creep', sigma0=5000000.0, E=5000000
 
 <a id="schmid_factor"></a>
 
-### Resolved shear stress and Schmid factor of a slip system — `schmid_factor`
+### Resolved shear stress and Schmid factor of a slip system, `schmid_factor`
 
 The Schmid factor cos(phi) cos(lambda) of a slip system (plane normal and slip direction) for a tensile load along a direction of a cubic crystal, the resolved shear stress and the stress to start slip.
 
@@ -3136,7 +3136,7 @@ materials_science_ai999x.solve('schmid_factor', load=[0, 0, 1], plane=[1, 1, 1],
 
 <a id="max_schmid_factor"></a>
 
-### Most favourable slip system of an FCC or BCC crystal — `max_schmid_factor`
+### Most favourable slip system of an FCC or BCC crystal, `max_schmid_factor`
 
 The largest Schmid factor over the 12 {111}<110> (FCC) or {110}<111> (BCC) slip systems for a tensile load direction, how many systems share it, and the yield stress from the CRSS.
 
@@ -3184,7 +3184,7 @@ materials_science_ai999x.solve('max_schmid_factor', structure='FCC', load=[1, 1,
 
 <a id="lever_rule"></a>
 
-### Phase fractions by the lever rule — `lever_rule`
+### Phase fractions by the lever rule: `lever_rule`
 
 The mass fractions (and masses) of the two phases of an alloy of overall composition C0 in a two-phase region whose tie line ends at C1 and C2.
 
@@ -3237,7 +3237,7 @@ materials_science_ai999x.solve('lever_rule', C0=40.0, C1=20.0, C2=60.0, mass=3.0
 
 <a id="eutectic_microconstituents"></a>
 
-### Primary and eutectic microconstituent fractions — `eutectic_microconstituents`
+### Primary and eutectic microconstituent fractions, `eutectic_microconstituents`
 
 The fractions of primary phase and eutectic microconstituent, and of total alpha and beta, in a binary eutectic alloy cooled just below the eutectic temperature.
 
@@ -3286,7 +3286,7 @@ materials_science_ai999x.solve('eutectic_microconstituents', C0=25.0, C_alpha=18
 
 <a id="iron_carbon_microconstituents"></a>
 
-### Proeutectoid phase and pearlite in a plain-carbon steel — `iron_carbon_microconstituents`
+### Proeutectoid phase and pearlite in a plain-carbon steel, `iron_carbon_microconstituents`
 
 The fractions of proeutectoid ferrite or cementite and of pearlite, and of total ferrite and cementite, in a steel cooled slowly just below the eutectoid temperature.
 
@@ -3341,7 +3341,7 @@ materials_science_ai999x.solve('iron_carbon_microconstituents', C0=1.2)
 
 <a id="gibbs_phase_rule"></a>
 
-### Degrees of freedom by Gibbs' phase rule — `gibbs_phase_rule`
+### Degrees of freedom by Gibbs' phase rule: `gibbs_phase_rule`
 
 The number of degrees of freedom $F = C - P + 2$ (or + 1 at fixed pressure) of a system of C components and P phases in equilibrium.
 
@@ -3363,9 +3363,9 @@ $$
 - **Assumes:** $F  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Degrees of freedom F returned by the package for C = 1, 2, 3 components (rows) and P = 1–3 coexisting phases (columns), one run per cell; F = 0 marks an invariant point (no variable can change)](https://www.ai999x.com/?ax_fig=materials-science-ai999x/gibbs-phase-rule-table)
+![Degrees of freedom F returned by the package for C = 1 … 3 components (rows) and P = 1 … 3 coexisting phases (columns), one run per cell; F = 0 marks an invariant point (no variable can change), a dot a combination that cannot exist](https://www.ai999x.com/?ax_fig=materials-science-ai999x/gibbs-phase-rule-table)
 
-*Degrees of freedom F returned by the package for C = 1, 2, 3 components (rows) and P = 1–3 coexisting phases (columns), one run per cell; F = 0 marks an invariant point (no variable can change).*
+*Degrees of freedom F returned by the package for C = 1 … 3 components (rows) and P = 1 … 3 coexisting phases (columns), one run per cell; F = 0 marks an invariant point (no variable can change), a dot a combination that cannot exist. The worked example, C = 1 and P = 3: F = 0.*
 
 ```python
 materials_science_ai999x.solve('gibbs_phase_rule', C=1, P=3)
@@ -3391,7 +3391,7 @@ materials_science_ai999x.solve('gibbs_phase_rule', C=2, P=3, pressure='constant'
 
 <a id="homogeneous_nucleation"></a>
 
-### Critical nucleus radius and activation energy (homogeneous nucleation) — `homogeneous_nucleation`
+### Critical nucleus radius and activation energy (homogeneous nucleation), `homogeneous_nucleation`
 
 The critical radius r* and the energy barrier dG* for homogeneous nucleation of a solid from its undercooled melt.
 
@@ -3437,7 +3437,7 @@ materials_science_ai999x.solve('homogeneous_nucleation', gamma=0.132, dHf=116000
 
 <a id="avrami_kinetics"></a>
 
-### Avrami (JMAK) transformation kinetics — `avrami_kinetics`
+### Avrami (JMAK) transformation kinetics: `avrami_kinetics`
 
 The Avrami exponent n and rate constant k of $y = 1 - exp$(-k t^n) from transformed fractions at two or more times, the half-transformation time and the time for a target fraction.
 
@@ -3482,7 +3482,7 @@ materials_science_ai999x.solve('avrami_kinetics', t=[50, 100], y=[0.2, 0.8])
 
 <a id="weight_to_atomic_percent"></a>
 
-### Weight percent to atomic percent (binary alloy) — `weight_to_atomic_percent`
+### Weight percent to atomic percent (binary alloy), `weight_to_atomic_percent`
 
 Convert the composition of a binary alloy from weight percent to atomic percent.
 
@@ -3523,7 +3523,7 @@ materials_science_ai999x.solve('weight_to_atomic_percent', element1='Cu', elemen
 
 <a id="atomic_to_weight_percent"></a>
 
-### Atomic percent to weight percent (binary alloy) — `atomic_to_weight_percent`
+### Atomic percent to weight percent (binary alloy), `atomic_to_weight_percent`
 
 Convert the composition of a binary alloy from atomic percent to weight percent.
 
@@ -3563,7 +3563,7 @@ materials_science_ai999x.solve('atomic_to_weight_percent', element1='Al', elemen
 
 <a id="molecular_weight_averages"></a>
 
-### Number- and weight-average molecular weight and dispersity — `molecular_weight_averages`
+### Number- and weight-average molecular weight and dispersity, `molecular_weight_averages`
 
 Mn, Mw and the dispersity Mw/Mn of a polymer from a molecular-weight distribution given as number fractions or weight fractions per size range.
 
@@ -3610,7 +3610,7 @@ materials_science_ai999x.solve('molecular_weight_averages', M=[10000, 20000], fr
 
 <a id="degree_of_polymerization"></a>
 
-### Repeat-unit molecular weight and degree of polymerization — `degree_of_polymerization`
+### Repeat-unit molecular weight and degree of polymerization, `degree_of_polymerization`
 
 The molecular weight of a repeat unit from its formula and the number-average degree of polymerization $DP = Mn / m.$
 
@@ -3650,7 +3650,7 @@ materials_science_ai999x.solve('degree_of_polymerization', formula='C2H3Cl', Mn=
 
 <a id="copolymer_degree_of_polymerization"></a>
 
-### Average repeat-unit weight and degree of polymerization of a copolymer — `copolymer_degree_of_polymerization`
+### Average repeat-unit weight and degree of polymerization of a copolymer, `copolymer_degree_of_polymerization`
 
 The average repeat-unit molecular weight of a copolymer from the two repeat-unit formulas and the mole fraction of the first, and its degree of polymerization.
 
@@ -3695,7 +3695,7 @@ materials_science_ai999x.solve('copolymer_degree_of_polymerization', formula1='C
 
 <a id="polymer_crystallinity"></a>
 
-### Percent crystallinity of a polymer from densities — `polymer_crystallinity`
+### Percent crystallinity of a polymer from densities, `polymer_crystallinity`
 
 The mass percent crystallinity of a semicrystalline polymer from its density and the densities of the fully crystalline and fully amorphous polymer.
 
@@ -3735,7 +3735,7 @@ materials_science_ai999x.solve('polymer_crystallinity', rho_s=925.0, rho_c=1000.
 
 <a id="rubber_elasticity"></a>
 
-### Stress in a stretched rubber (affine network) — `rubber_elasticity`
+### Stress in a stretched rubber (affine network), `rubber_elasticity`
 
 The shear modulus $G = \rho$ R T / Mc of a crosslinked rubber and its engineering and true stress at a uniaxial stretch ratio lambda.
 
@@ -3778,7 +3778,7 @@ materials_science_ai999x.solve('rubber_elasticity', rho=950.0, Mc=5.0, T=300.0, 
 
 <a id="polymer_chain_dimensions"></a>
 
-### End-to-end distance of a freely rotating chain — `polymer_chain_dimensions`
+### End-to-end distance of a freely rotating chain, `polymer_chain_dimensions`
 
 The root-mean-square end-to-end distance and characteristic ratio of a polymer chain of n bonds of length l with fixed bond angle and free rotation, and its all-trans contour length.
 
@@ -3830,7 +3830,7 @@ materials_science_ai999x.solve('polymer_chain_dimensions', n=2, l=1.54e-10, thet
 
 <a id="intrinsic_carrier_concentration"></a>
 
-### Intrinsic carrier concentration of a semiconductor — `intrinsic_carrier_concentration`
+### Intrinsic carrier concentration of a semiconductor, `intrinsic_carrier_concentration`
 
 The effective densities of states Nc and Nv and the intrinsic carrier concentration $ni = sqrt$(Nc Nv) exp(-Eg/2kT) from the band gap, temperature and effective masses.
 
@@ -3876,7 +3876,7 @@ materials_science_ai999x.solve('intrinsic_carrier_concentration', Eg=1.794437830
 
 <a id="band_gap_from_conductivity"></a>
 
-### Band gap from intrinsic conductivities at several temperatures — `band_gap_from_conductivity`
+### Band gap from intrinsic conductivities at several temperatures, `band_gap_from_conductivity`
 
 The band gap of an intrinsic semiconductor from its conductivity at two or more temperatures, with $\sigma = C$ exp(-Eg/2kT) (the weak temperature dependence of the prefactor neglected).
 
@@ -3917,7 +3917,7 @@ materials_science_ai999x.solve('band_gap_from_conductivity', T=[300, 400], sigma
 
 <a id="wiedemann_franz"></a>
 
-### Electronic thermal conductivity of a metal (Wiedemann-Franz law) — `wiedemann_franz`
+### Electronic thermal conductivity of a metal (Wiedemann-Franz law), `wiedemann_franz`
 
 The electronic thermal conductivity $\kappa = L$ sigma T of a metal from its electrical conductivity (or resistivity) and temperature, with the Sommerfeld value of the Lorenz number.
 
@@ -3962,7 +3962,7 @@ materials_science_ai999x.solve('wiedemann_franz', T=300.0, sigma=59600000.0)
 
 <a id="debye_heat_capacity"></a>
 
-### Molar heat capacity of a solid (Debye model) — `debye_heat_capacity`
+### Molar heat capacity of a solid (Debye model), `debye_heat_capacity`
 
 The constant-volume molar heat capacity of a monatomic solid from the Debye model at temperature T.
 
@@ -4002,7 +4002,7 @@ materials_science_ai999x.solve('debye_heat_capacity', theta_D=343.0, T=1000000.0
 
 <a id="einstein_heat_capacity"></a>
 
-### Molar heat capacity of a solid (Einstein model) — `einstein_heat_capacity`
+### Molar heat capacity of a solid (Einstein model), `einstein_heat_capacity`
 
 The constant-volume molar heat capacity of a solid from the Einstein model (all atoms vibrating at one frequency).
 
@@ -4045,7 +4045,7 @@ materials_science_ai999x.solve('einstein_heat_capacity', theta_E=300.0, T=300.0)
 
 <a id="fermi_energy_free_electron"></a>
 
-### Fermi energy of a free-electron metal — `fermi_energy_free_electron`
+### Fermi energy of a free-electron metal: `fermi_energy_free_electron`
 
 The conduction-electron density, Fermi energy, Fermi temperature and Fermi velocity of a metal from its density, molar mass and number of valence electrons per atom.
 
@@ -4090,7 +4090,7 @@ materials_science_ai999x.solve('fermi_energy_free_electron', rho=8960.0, A=0.063
 
 <a id="arrhenius_diffusivity"></a>
 
-### Diffusion coefficient at a temperature (Arrhenius) — `arrhenius_diffusivity`
+### Diffusion coefficient at a temperature (Arrhenius), `arrhenius_diffusivity`
 
 The diffusion coefficient $D = D_{0}$ exp(-Q_d/RT) at temperature T from the pre-exponential factor and the activation energy.
 
@@ -4138,7 +4138,7 @@ materials_science_ai999x.solve('arrhenius_diffusivity', D0=0.0001, Q=19144.75768
 
 <a id="larson_miller_parameter"></a>
 
-### Larson-Miller parameter (creep rupture) — `larson_miller_parameter`
+### Larson-Miller parameter (creep rupture): `larson_miller_parameter`
 
 The Larson-Miller parameter LMP = T (C + log10 t_r) from a rupture time at a temperature, and the rupture time at another temperature for the same parameter (same stress).
 
@@ -4194,7 +4194,7 @@ materials_science_ai999x.solve('larson_miller_parameter', T=1000.0, t_r=360000.0
 
 <a id="linear_thermal_expansion"></a>
 
-### Linear thermal expansion — `linear_thermal_expansion`
+### Linear thermal expansion: `linear_thermal_expansion`
 
 The length change $dL = \alpha$ L0 dT and the new length of a bar heated or cooled freely by dT.
 
@@ -4243,7 +4243,7 @@ materials_science_ai999x.solve('linear_thermal_expansion', alpha=2.36e-05, L0=10
 
 <a id="volumetric_thermal_expansion"></a>
 
-### Volumetric thermal expansion — `volumetric_thermal_expansion`
+### Volumetric thermal expansion: `volumetric_thermal_expansion`
 
 The volume change $dV = \beta$ V0 dT of an isotropic solid with $\beta = 3$ alpha (linearised), and the exact change V0((1 + alpha dT)^3 - 1).
 
@@ -4294,7 +4294,7 @@ materials_science_ai999x.solve('volumetric_thermal_expansion', alpha=1e-05, V0=1
 
 <a id="extrinsic_carrier_concentration"></a>
 
-### Electron and hole concentrations of a doped semiconductor — `extrinsic_carrier_concentration`
+### Electron and hole concentrations of a doped semiconductor, `extrinsic_carrier_concentration`
 
 The electron and hole concentrations of a semiconductor with donor and acceptor concentrations Nd and Na (complete ionisation), from charge neutrality and n $p = ni^{2}$, and the Fermi level relative to the intrinsic level.
 
@@ -4324,7 +4324,7 @@ $$
 
 ![n-type, p-type or intrinsic (carrier_type) over Nd (donor concentration) from 1](https://www.ai999x.com/?ax_fig=materials-science-ai999x/extrinsic-carrier-concentration-decision)
 
-*n-type, p-type or intrinsic (carrier_type) over Nd (donor concentration) from 1.0000e+21 1/m^3 to 1.0000e+23 1/m^3 and Na (acceptor concentration) from 2.0000e+20 1/m^3 to 2.0000e+22 1/m^3 (logarithmic axes): each of the 31 × 21 cells is one run of materials-science-ai999x, coloured by the verdict it returned — n-type: 504 cells, p-type: 147 cells. Other inputs as in the worked example: ni = 1e+16 1/m^3. Marked: the worked example, Nd = 1.0000e+22 1/m^3, Na = 2.0000e+21 1/m^3 → n-type.*
+*n-type, p-type or intrinsic (carrier_type) over Nd (donor concentration) from 1.0000e+21 1/m^3 to 1.0000e+23 1/m^3 and Na (acceptor concentration) from 2.0000e+20 1/m^3 to 2.0000e+22 1/m^3 (logarithmic axes): each of the 31 × 21 cells is one run of materials-science-ai999x, coloured by the verdict it returned, n-type: 504 cells, p-type: 147 cells. Other inputs as in the worked example: ni = 1e+16 1/m^3. Marked: the worked example, Nd = 1.0000e+22 1/m^3, Na = 2.0000e+21 1/m^3 → n-type.*
 
 ![log10_n (log10 of n in m^-3) against Na (acceptor concentration) from 2](https://www.ai999x.com/?ax_fig=materials-science-ai999x/extrinsic-carrier-concentration-curve)
 
@@ -4350,7 +4350,7 @@ materials_science_ai999x.solve('extrinsic_carrier_concentration', Nd=0.0, Na=3e+
 
 <a id="pn_junction_built_in_potential"></a>
 
-### Built-in potential of a p-n junction — `pn_junction_built_in_potential`
+### Built-in potential of a p-n junction: `pn_junction_built_in_potential`
 
 The built-in potential $V_bi = (kT/q)$ ln(n_n p_p/ni^2) of an abrupt p-n junction (majority concentrations from charge neutrality; V_bi ~ (kT/q) ln(Na Nd/ni^2) when Na, Nd >> ni), and with a permittivity the zero-bias depletion width.
 
