@@ -86,9 +86,10 @@
   "linear_thermal_expansion",
   "volumetric_thermal_expansion",
   "extrinsic_carrier_concentration",
-  "pn_junction_built_in_potential"
+  "pn_junction_built_in_potential",
+  "paris_law_fatigue_life"
  ],
- "generated": "2026-10-24",
+ "generated": "2026-11-13",
  "tool": "tools/certify_procedures.py",
  "report": "release/procedure_certification.json",
  "weak_references": {

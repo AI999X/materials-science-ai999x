@@ -4929,4 +4929,131 @@ _add("pn_junction_built_in_potential",
                 {"q": "Built-in potential: Na = 1e23 m^-3, Nd = 1e22 m^-3, ni = 1e16 m^-3, T = 0 K", "outcome": "INVALID_INPUT"},
                 {"q": "Built-in potential: Na = 1e23 m^-3, Nd = 1e22 m^-3, T = 300 K", "outcome": "NEEDS_INPUT"}])
 
+
+# ================================================================================================ fatigue crack growth (core gap, 2026-11-12)
+# Paris' law da/dN = C (dK)^m with dK = Y dsigma sqrt(pi a), integrated from the initial crack a0 to a final crack af
+# or to the critical crack a_c = (K_IC/(Y sigma_max))^2/pi. Conventions: C is a plain number in the usual units
+# (m/cycle) per (MPa sqrt(m))^m, i.e. da/dN in m per cycle with dK in MPa sqrt(m); Y is constant over the growth
+# (default 1); dsigma is the stress range (the tensile part only when the cycle reaches into compression, as the user
+# decides); sigma_max (needed only with K_IC) is the peak stress of the cycle. The life is integrated in closed form
+# with expm1 (exact also for m = 2, where it is ln(af/a0)/(C (Y dsigma)^2 pi)).
+def paris_life(C, m, dsigma, a0, Y=1.0, af=None, K_IC=None, sigma_max=None):
+    _pos("C, m, the stress range, the initial crack and Y", C, m, dsigma, a0, Y)
+    if not (0.5 <= m <= 10):
+        raise ValueError("the Paris exponent m must lie between 0.5 and 10")
+    if (af is None) == (K_IC is None):
+        raise ValueError("give exactly one of the final crack length af and the fracture toughness K_IC")
+    if K_IC is not None:
+        _pos("K_IC", K_IC)
+        if sigma_max is None:
+            raise ValueError("the critical crack from K_IC needs the peak stress sigma_max of the cycle")
+        _pos("sigma_max", sigma_max)
+        a_end = (K_IC / (Y * sigma_max)) ** 2 / math.pi
+    else:
+        if sigma_max is not None:
+            raise ValueError("sigma_max is used only with K_IC (to find the critical crack)")
+        _pos("the final crack length", af)
+        a_end = af
+    if not a_end > a0:
+        raise ValueError("the final (or critical) crack must be longer than the initial crack: no growth life remains")
+    S = Y * (dsigma / 1e6) * math.sqrt(math.pi)          # dK = S sqrt(a), MPa sqrt(m)
+    L = math.log(a_end / a0)
+    p = 1.0 - m / 2.0
+    if p == 0:
+        N = L / (C * S * S)
+    else:
+        N = a0 ** p * math.expm1(p * L) / (C * S ** m * p)
+    dK0 = S * math.sqrt(a0)
+    out = {"N": N, "log10_N": math.log10(N), "a_final": a_end, "a_final_mm": a_end * 1e3, "dK_initial": dK0,
+           "dK_final": S * math.sqrt(a_end), "dadN_initial": C * dK0 ** m}
+    if K_IC is not None:
+        out["a_c"] = a_end
+        out["a_c_mm"] = a_end * 1e3
+    return _out(**out)
+
+
+def ref_paris_life(C, m, dsigma, a0, Y=1.0, af=None, K_IC=None, sigma_max=None):
+    """Numerical integration of dN = da/(C dK^m) (scipy quad on u = ln a, relative tolerance 1e-13); the critical crack
+    as the root of Y sigma_max sqrt(pi a) = K_IC (scipy brentq); dK and the initial growth rate from their definitions."""
+    from scipy.integrate import quad
+    from scipy.optimize import brentq
+    Kmpa = (lambda s, a: Y * s / 1e6 * math.sqrt(math.pi * a))
+    if K_IC is not None:
+        a_end = brentq(lambda a: Kmpa(sigma_max, a) - K_IC / 1e6, 1e-15, 1e6, xtol=1e-300, rtol=8.9e-16, maxiter=500)
+    else:
+        a_end = af
+    lo = math.log(a0)
+    N, _ = quad(lambda u: math.exp(u) / (C * Kmpa(dsigma, math.exp(u)) ** m), lo, math.log(a_end), epsabs=0.0, epsrel=1e-13, limit=200)
+    out = {"N": N, "log10_N": math.log10(N), "a_final": a_end, "a_final_mm": a_end * 1e3, "dK_initial": Kmpa(dsigma, a0),
+           "dK_final": Kmpa(dsigma, a_end), "dadN_initial": C * Kmpa(dsigma, a0) ** m}
+    if K_IC is not None:
+        out["a_c"] = a_end
+        out["a_c_mm"] = a_end * 1e3
+    return out
+
+
+def _wrong_paris_life(C, m, dsigma, a0, Y=1.0, af=None, K_IC=None, sigma_max=None):
+    """pi left out of the stress intensity range (dK = Y dsigma sqrt(a))."""
+    o = paris_life(C, m, dsigma, a0, Y, af, K_IC, sigma_max)
+    f = math.pi ** (m / 2.0)
+    return dict(o, N=_r(o["N"] * f), log10_N=_r(math.log10(o["N"] * f)), dK_initial=_r(o["dK_initial"] / math.sqrt(math.pi)),
+                dadN_initial=_r(o["dadN_initial"] / f))
+
+
+def _rand_paris(rng):
+    x = {"C": float(f"{_lu(rng, 1e-13, 1e-10):.3g}"), "m": rng.choice([2.0, round(rng.uniform(2.0, 4.5), 2)]),
+         "dsigma": round(rng.uniform(50, 400), 1) * 1e6, "a0": round(_lu(rng, 0.1, 5.0), 3) * 1e-3}
+    if rng.random() < 0.6:
+        x["Y"] = round(rng.uniform(0.9, 1.3), 3)
+    if rng.random() < 0.5:
+        x["af"] = round(x["a0"] * 1e3 * rng.uniform(2.0, 40.0), 3) * 1e-3
+    else:
+        x["K_IC"] = round(rng.uniform(20, 120), 1) * 1e6
+        x["sigma_max"] = round(x["dsigma"] / 1e6 * rng.uniform(1.0, 1.5), 1) * 1e6
+    return x
+
+
+_PARIS_N1 = (0.001 ** -0.5 - 0.01 ** -0.5) * 2.0 / (1e-12 * (200 * math.sqrt(math.pi)) ** 3)
+_PARIS_AC2 = (50.0 / (1.12 * 100.0)) ** 2 / math.pi
+_PARIS_N2 = math.log(_PARIS_AC2 / 0.0005) / (5e-11 * (1.12 * 100.0) ** 2 * math.pi)
+
+_add("paris_law_fatigue_life",
+     name="Fatigue crack growth life by Paris' law", topic="fracture / fatigue crack growth",
+     purpose="The number of load cycles for a crack to grow from a0 to a final length af, or to the critical length a_c = (K_IC/(Y sigma_max))^2/pi at which it fractures, by integrating Paris' law da/dN = C (dK)^m with dK = Y dsigma sqrt(pi a).",
+     inputs=[_numin("C", "Paris coefficient C in (m/cycle)/(MPa sqrt(m))^m"), _numin("m", "Paris exponent m"),
+             _phys("dsigma", "stress", "stress range of the cycle"), _phys("a0", "length", "initial crack length (surface) or half-length (internal)"),
+             _numin("Y", "geometry factor Y, constant (default 1)", required=False),
+             _phys("af", "length", "final crack length (give af or K_IC)", required=False),
+             _phys("K_IC", "fracture_toughness", "plane-strain fracture toughness, for the critical crack (give K_IC or af)", required=False),
+             _phys("sigma_max", "stress", "peak stress of the cycle (with K_IC)", required=False)],
+     outputs=[_o("N", "number", "cycles to grow the crack from a0 to the final (or critical) length"), _o("log10_N", "number", "log10 of the life"),
+              _o("a_final", "length", "final crack length used (af or a_c)"), _o("a_final_mm", "number", "final crack length in mm"),
+              _o("dK_initial", "number", "stress intensity range at a0 in MPa sqrt(m)"), _o("dK_final", "number", "stress intensity range at the final crack in MPa sqrt(m)"),
+              _o("dadN_initial", "number", "initial growth rate in m per cycle"),
+              _o("a_c", "length", "critical crack length (with K_IC)"), _o("a_c_mm", "number", "critical crack length in mm (with K_IC)")],
+     primary="N", conditions=["C, m, dsigma, a0, Y > 0; 0.5 <= m <= 10", "exactly one of af and K_IC (K_IC with sigma_max)",
+                              "final (or critical) crack longer than a0", "Y constant over the growth; Paris (stable growth) regime"],
+     method="N = integral from a0 to af of da / (C (Y dsigma sqrt(pi a))^m) = (af^(1-m/2) - a0^(1-m/2)) / (C (Y dsigma sqrt(pi))^m (1 - m/2)); m = 2: ln(af/a0)/(C (Y dsigma)^2 pi)",
+     latex=r"N_f = \int_{a_0}^{a_f}\frac{da}{C\,(Y\Delta\sigma\sqrt{\pi a})^m},\qquad a_c = \frac{1}{\pi}\left(\frac{K_{Ic}}{Y\sigma_{max}}\right)^2",
+     run=paris_life,
+     parse=lambda q: _pairs(q, r"paris(?:['’]s)? law(?: fatigue life| crack growth(?: life)?)?|fatigue crack growth(?: life)?|crack growth life",
+                            {"C": "C", "m": "m", "dsigma": "dsigma", "delta_sigma": "dsigma", "Y": "Y", "a0": "a0", "ai": "a0", "af": "af",
+                             "K_IC": "K_IC", "KIC": "K_IC", "sigma_max": "sigma_max", "smax": "sigma_max"},
+                            phys={"dsigma", "a0", "af", "K_IC", "sigma_max"}),
+     reference=ref_paris_life,
+     wrong=_safe(_wrong_paris_life),
+     random_inputs=_rand_paris,
+     templates=["Paris law fatigue life: C = 1e-12, m = 3, dsigma = 200 MPa, a0 = 1 mm, af = 10 mm",
+                "Fatigue crack growth life: C = 5e-11, m = 2, dsigma = 100 MPa, Y = 1.12, a0 = 0.5 mm, K_IC = 50 MPa*m^0.5, sigma_max = 100 MPa"],
+     examples=[{"inputs": {"C": 1e-12, "m": 3.0, "dsigma": 200e6, "a0": 0.001, "af": 0.01},
+                "outputs": {"N": _PARIS_N1, "dK_initial": 200 * math.sqrt(math.pi * 0.001), "a_final_mm": 10.0}},
+               {"inputs": {"C": 5e-11, "m": 2.0, "dsigma": 100e6, "Y": 1.12, "a0": 0.0005, "K_IC": 50e6, "sigma_max": 100e6},
+                "outputs": {"N": _PARIS_N2, "a_c": _PARIS_AC2, "a_c_mm": _PARIS_AC2 * 1e3}}],
+     questions=[{"q": "Paris law fatigue life: C = 1e-12, m = 3, dsigma = 200 MPa, a0 = 1 mm, af = 10 mm", "outputs": {"N": _PARIS_N1}},
+                {"q": "Fatigue crack growth life: C = 5e-11, m = 2, dsigma = 100 MPa, Y = 1.12, a0 = 0.5 mm, K_IC = 50 MPa*m^0.5, sigma_max = 100 MPa",
+                 "outputs": {"N": _PARIS_N2, "a_c_mm": _PARIS_AC2 * 1e3}},
+                {"q": "Paris law fatigue life: C = 1e-12, m = 3, dsigma = 200 MPa, a0 = 10 mm, af = 1 mm", "outcome": "INVALID_INPUT"},
+                {"q": "Paris law fatigue life: C = 1e-12, m = 3, dsigma = 200 MPa, a0 = 1 mm, af = 10 mm, K_IC = 50 MPa*m^0.5", "outcome": "INVALID_INPUT"},
+                {"q": "Paris law fatigue life: C = 1e-12, m = 3, a0 = 1 mm, af = 10 mm", "outcome": "NEEDS_INPUT"}])
+
 # ==== END OF PROCEDURES

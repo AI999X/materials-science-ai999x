@@ -46,6 +46,7 @@ result.show()
 | Electronic properties / metals | [Fermi energy of a free-electron metal](#fermi_energy_free_electron) |
 | Electronic properties / semiconductor devices | [Built-in potential of a p-n junction](#pn_junction_built_in_potential) |
 | Electronic properties / semiconductors | [Intrinsic carrier concentration of a semiconductor](#intrinsic_carrier_concentration), [Band gap from intrinsic conductivities at several temperatures](#band_gap_from_conductivity), [Electron and hole concentrations of a doped semiconductor](#extrinsic_carrier_concentration) |
+| Fracture / fatigue crack growth | [Fatigue crack growth life by Paris' law](#paris_law_fatigue_life) |
 | Fracture / fracture mechanics | [Griffith critical stress of a brittle solid](#griffith_critical_stress), [Fracture stress from the fracture toughness](#fracture_critical_stress), [Critical crack length from the fracture toughness](#critical_crack_length) |
 | Fracture / statistics of brittle fracture | [Weibull probability of failure of a brittle part](#weibull_failure_probability), [Design stress for a target failure probability (Weibull)](#weibull_design_stress), [Weibull modulus from a set of measured strengths](#weibull_modulus_fit) |
 | Mechanical properties / creep | [Stress exponent and activation energy of steady-state creep](#creep_parameters_fit), [Larson-Miller parameter (creep rupture)](#larson_miller_parameter) |
@@ -197,6 +198,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 | volumetric_thermal_expansion | Volumetric thermal expansion | alpha, V0, dT | beta, dV, dV_cm3, V, dV_exact, dV_exact_cm3 |
 | extrinsic_carrier_concentration | Electron and hole concentrations of a doped semiconductor | Nd, Na, ni, T | n, p, log10_n, log10_p, carrier_type, EF_minus_Ei_eV |
 | pn_junction_built_in_potential | Built-in potential of a p-n junction | Na, Nd, ni, T, eps_r | V_bi, V_bi_approx, thermal_voltage, W, W_um, x_n_um, x_p_um |
+| paris_law_fatigue_life | Fatigue crack growth life by Paris' law | C, m, dsigma, a0, Y, af, K_IC, sigma_max | N, log10_N, a_final, a_final_mm, dK_initial, dK_final, dadN_initial, a_c, a_c_mm |
 
 <a id="cubic_lattice_parameter"></a>
 
@@ -4401,3 +4403,64 @@ materials_science_ai999x.solve('pn_junction_built_in_potential', Na=1e+23, Nd=1e
 | Built-in potential: Na = 1e23 m^-3, Nd = 1e22 m^-3, ni = 1e16 m^-3, T = 300 K | SOLVED | V_bi = 0.773844 V, V_bi_approx = 0.773844 V, thermal_voltage = 0.025852 V |
 | Built-in potential: Na = 1e23 m^-3, Nd = 1e22 m^-3, ni = 1e16 m^-3, T = 0 K | INVALID_INPUT | Built-in potential of a p-n junction: Na, Nd, ni and T must be a positive number. |
 | Built-in potential: Na = 1e23 m^-3, Nd = 1e22 m^-3, T = 300 K | NEEDS_INPUT | pn_junction_built_in_potential needs ni (intrinsic carrier concentration). Example: solve('pn_junction_built_in_potentia |
+
+<a id="paris_law_fatigue_life"></a>
+
+### Fatigue crack growth life by Paris' law: `paris_law_fatigue_life`
+
+The number of load cycles for a crack to grow from a0 to a final length af, or to the critical length a_c = (K_IC/(Y sigma_max))^$2/pi$ at which it fractures, by integrating Paris' law $da/dN = C$ $(dK)^{m}$ with $dK = Y$ dsigma sqrt(pi a).
+
+$$
+N_f = \int_{a_0}^{a_f}\frac{da}{C\,(Y\Delta\sigma\sqrt{\pi a})^m},\qquad a_c = \frac{1}{\pi}\left(\frac{K_{Ic}}{Y\sigma_{max}}\right)^2
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `C` | Paris coefficient C in (m/cycle)/(MPa sqrt(m))^m |  |
+| `m` | Paris exponent m |  |
+| `dsigma` | stress range of the cycle |  |
+| `a0` | initial crack length (surface) or half-length (internal) |  |
+| `Y` | geometry factor Y, constant (default 1) |  |
+| `af` | final crack length (give af or K_IC) |  |
+| `K_IC` | plane-strain fracture toughness, for the critical crack (give K_IC or af) |  |
+| `sigma_max` | peak stress of the cycle (with K_IC) |  |
+
+| output | meaning |
+|---|---|
+| `N` | cycles to grow the crack from a0 to the final (or critical) length |
+| `log10_N` | log10 of the life |
+| `a_final` | final crack length used (af or a_c) |
+| `a_final_mm` | final crack length in mm |
+| `dK_initial` | stress intensity range at a0 in MPa sqrt(m) |
+| `dK_final` | stress intensity range at the final crack in MPa sqrt(m) |
+| `dadN_initial` | initial growth rate in m per cycle |
+| `a_c` | critical crack length (with K_IC) |
+| `a_c_mm` | critical crack length in mm (with K_IC) |
+
+- **Method:** N = integral from a0 to af of da / (C (Y dsigma sqrt(pi a))^$m) = (af^{1-m/2} - a_{0}^{1-m/2}$) / (C (Y dsigma sqrt(pi))^m $(1 - m/2)$); $m = 2$: ln($af/a_{0})/(C$ (Y dsigma)^2 pi)
+- **Assumes:** C, m, dsigma, a0, $Y > 0$; $0.5  \leq  m  \leq  10$; exactly one of af and K_IC (K_IC with sigma_max); final (or critical) crack longer than a0; Y constant over the growth; Paris (stable growth) regime
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![N (cycles to grow the crack from a0 to the final (or critical) length) against C (Paris coefficient C in (m/cycle)/(MPa sqrt(m))^m) from 0](https://www.ai999x.com/?ax_fig=materials-science-ai999x/paris-law-fatigue-life-curve)
+
+*N (cycles to grow the crack from a0 to the final (or critical) length) against C (Paris coefficient C in (m/cycle)/(MPa sqrt(m))^m) from 0.02 to 0.98. One curve for each value of m (Paris exponent m): 3, 1.5, 6. Other inputs as in the worked example: dsigma = 200000000.0 Pa, a0 = 0.001 m, af = 0.01 m. 41 points per curve computed by materials-science-ai999x; marked: the worked example, C = 1.0000e-12, N = 970793.*
+
+```python
+materials_science_ai999x.solve('paris_law_fatigue_life', C=1e-12, m=3.0, dsigma=200000000.0, a0=0.001, af=0.01)
+# -> N = 970793, log10_N = 5.98713, a_final = 0.01 m, a_final_mm = 10, dK_initial = 11.21, dK_final = 35.4491, dadN_initial = 1.40869e-09   (SOLVED)
+```
+
+```python
+materials_science_ai999x.solve('paris_law_fatigue_life', C=5e-11, m=2.0, dsigma=100000000.0, Y=1.12, a0=0.0005, K_IC=50000000.0, sigma_max=100000000.0)
+# -> N = 2.45798e+06, log10_N = 6.39058, a_final = 0.0634387 m, a_final_mm = 63.4387, dK_initial = 4.43893, dK_final = 50, dadN_initial = 9.85203e-10, a_c = 0.0634387 m, a_c_mm = 63.4387   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Paris law fatigue life: C = 1e-12, m = 3, dsigma = 200 MPa, a0 = 1 mm, af = 10 mm | SOLVED | N = 970793, log10_N = 5.98713, a_final = 0.01 m, a_final_mm = 10, dK_initial = 11.21, dK_final = 35.4491, dadN_initial = 1.40869e-09 |
+| Fatigue crack growth life: C = 5e-11, m = 2, dsigma = 100 MPa, Y = 1.12, a0 = 0.5 mm, K_IC = 50 MPa*m^0.5, sigma_max = 100 MPa | SOLVED | N = 2.45798e+06, log10_N = 6.39058, a_final = 0.0634387 m, a_final_mm = 63.4387, dK_initial = 4.43893, dK_final = 50, dadN_initial = 9.85203e-10, a_c = 0.0634387 m, a_c_mm = 63.4387 |
+| Paris law fatigue life: C = 1e-12, m = 3, dsigma = 200 MPa, a0 = 10 mm, af = 1 mm | INVALID_INPUT | Fatigue crack growth life by Paris' law: the final (or critical) crack must be longer than the initial crack: no growth  |
+| Paris law fatigue life: C = 1e-12, m = 3, dsigma = 200 MPa, a0 = 1 mm, af = 10 mm, K_IC = 50 MPa*m^0.5 | INVALID_INPUT | Fatigue crack growth life by Paris' law: give exactly one of the final crack length af and the fracture toughness K_IC. |
+| Paris law fatigue life: C = 1e-12, m = 3, a0 = 1 mm, af = 10 mm | NEEDS_INPUT | paris_law_fatigue_life needs dsigma (stress range of the cycle). Example: solve('paris_law_fatigue_life', C=1e-12, m=3,  |

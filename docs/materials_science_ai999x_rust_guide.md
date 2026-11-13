@@ -1,8 +1,8 @@
 # materials-science: the Materials Science program, user guide
 
-**materials-science-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**materials-science-ai999x 1.6.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
-Materials Science covers crystal structures and diffraction, defects and diffusion, mechanical properties, phase diagrams, polymers, ceramics and composites, and electronic and thermal properties. This guide is about `materials-science`, the model as a self-contained program for Windows and Linux: 87 capabilities in 13 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/materials-science-ai999x/); the Python package (`pip install materials-science-ai999x`) has its own guide. Every command output printed here is what the program printed.
+Materials Science covers crystal structures and diffraction, defects and diffusion, mechanical properties, phase diagrams, polymers, ceramics and composites, and electronic and thermal properties. This guide is about `materials-science`, the model as a self-contained program for Windows and Linux: 88 capabilities in 13 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/materials-science-ai999x/); the Python package (`pip install materials-science-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
 ## Contents
 
@@ -17,37 +17,37 @@ Materials Science covers crystal structures and diffraction, defects and diffusi
 
 ## 1. Get it
 
-Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.6.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Materials Science | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-materials-science-1.5.0-windows-x86_64.zip |
-| Desktop app: Materials Science | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-materials-science-1.5.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: Materials Science | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-materials-science-1.6.0-windows-x86_64.zip |
+| Desktop app: Materials Science | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-materials-science-1.6.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Materials Science in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-materials-science-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-materials-science.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Materials Science in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-materials-science-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-materials-science.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-materials-science-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-materials-science-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-materials-science-1.5.0-linux-x86_64.tar.gz
-./ai999x-materials-science-1.5.0-linux-x86_64/ai999x-materials-science
+tar xzf ai999x-materials-science-1.6.0-linux-x86_64.tar.gz
+./ai999x-materials-science-1.6.0-linux-x86_64/ai999x-materials-science
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
-./ai999x-1.5.0-linux-x86_64/ai999x
+tar xzf ai999x-1.6.0-linux-x86_64.tar.gz
+./ai999x-1.6.0-linux-x86_64/ai999x
 ```
 
 ### Command line: Linux
@@ -55,11 +55,11 @@ tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
 The bundle holds one program per model; `materials-science` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.6.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.6.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 materials-science --version
 ```
 
@@ -68,12 +68,12 @@ materials-science --version
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.6.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.6.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.6.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 materials-science --version
 ```
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ materials-science --version
-materials-science-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
+materials-science-ai999x 1.6.0 (Rust build, ax-engine 1.6.0)
 ```
 
 ### 2.2 Ask in words
@@ -147,7 +147,7 @@ arrhenius_diffusivity                    Diffusion coefficient at a temperature 
 atomic_packing_factor                    Atomic packing factor and coordination number
 atomic_to_weight_percent                 Atomic percent to weight percent (binary alloy)
 avrami_kinetics                          Avrami (JMAK) transformation kinetics
-… 79 more
+… 80 more
 ```
 
 ### 2.5 What a capability needs
@@ -1970,7 +1970,7 @@ Ei_offset_meV = -5.577867657
 
 **What the worked example means:** This calculation determines the effective densities of states for the conduction and valence bands, yielding Nc as 2.81649e+25 1/m^3 and Nv as 1.82936e+25 1/m^3 per cubic meter. These values are combined with the band gap to find the intrinsic carrier concentration ni, which equals 8.8801e+15 1/m^3 per cubic meter. The logarithmic base ten value of this concentration is 15.9484. Additionally, the position of the intrinsic Fermi level relative to the midgap is calculated as an offset of -5.57787 milli electron volts, reflecting the asymmetry between electron and hole effective masses.
 
-### Fracture (6)
+### Fracture (7)
 
 <a id="critical_crack_length"></a>
 
@@ -2037,6 +2037,58 @@ sigma_MPa = 200.4849216
 ```
 
 **What the worked example means:** The calculated design stress is 2.00485e+08 Pa Pa, ensuring the brittle part meets the target failure probability of 0.001.
+
+<a id="paris_law_fatigue_life"></a>
+
+#### Fatigue crack growth life by Paris' law: `paris_law_fatigue_life`
+
+The number of load cycles for a crack to grow from a0 to a final length af, or to the critical length a_c = (K_IC/(Y sigma_max))^2/pi at which it fractures, by integrating Paris' law da/dN = C (dK)^m with dK = Y dsigma sqrt(pi a).
+
+$$
+N_f = \int_{a_0}^{a_f}\frac{da}{C\,(Y\Delta\sigma\sqrt{\pi a})^m},\qquad a_c = \frac{1}{\pi}\left(\frac{K_{Ic}}{Y\sigma_{max}}\right)^2
+$$
+
+| symbol |  | meaning | SI unit |
+|---|---|---|---|
+| `C` | in | Paris coefficient C in (m/cycle)/(MPa sqrt(m))^m | - |
+| `m` | in | Paris exponent m | - |
+| `dsigma` | in | stress range of the cycle | Pa |
+| `a0` | in | initial crack length (surface) or half-length (internal) | m |
+| `Y` | in | geometry factor Y, constant (default 1) (optional) | - |
+| `af` | in | final crack length (give af or K_IC) (optional) | m |
+| `K_IC` | in | plane-strain fracture toughness, for the critical crack (give K_IC or af) (optional) | Pa*m^0.5 |
+| `sigma_max` | in | peak stress of the cycle (with K_IC) (optional) | Pa |
+| `N` | out | cycles to grow the crack from a0 to the final (or critical) length | - |
+| `log10_N` | out | log10 of the life | - |
+| `a_final` | out | final crack length used (af or a_c) | m |
+| `a_final_mm` | out | final crack length in mm | - |
+| `dK_initial` | out | stress intensity range at a0 in MPa sqrt(m) | - |
+| `dK_final` | out | stress intensity range at the final crack in MPa sqrt(m) | - |
+| `dadN_initial` | out | initial growth rate in m per cycle | - |
+| `a_c` | out | critical crack length (with K_IC) | m |
+| `a_c_mm` | out | critical crack length in mm (with K_IC) | - |
+
+**Applies when:** C, m, dsigma, a0, Y > 0; 0.5 <= m <= 10; exactly one of af and K_IC (K_IC with sigma_max); final (or critical) crack longer than a0; Y constant over the growth; Paris (stable growth) regime.
+
+```shell
+$ materials-science solve paris_law_fatigue_life C=1e-12 m=3 "dsigma=200 MPa" "a0=1 mm" "af=10 mm"
+N = 970793.0556
+log10_N = 5.987126661
+a_final = 0.01 m
+a_final_mm = 10
+dK_initial = 11.20998243
+dK_final = 35.44907702
+dadN_initial = 1.408687938e-09
+  by: Fatigue crack growth life by Paris' law  (N = integral from a0 to af of da / (C (Y dsigma sqrt(pi a))^m) = (af^(1-m/2) - a0^(1-m/2)) / (C (Y dsigma sqrt(pi))^m (1 - m/2)); m = 2: ln(af/a0)/(C (Y dsigma)^2 pi))
+  C = 1e-12
+  m = 3
+  dsigma = 200000000 Pa
+  a0 = 0.001 m
+  af = 0.01 m
+  assumes: C, m, dsigma, a0, Y > 0; 0.5 <= m <= 10; exactly one of af and K_IC (K_IC with sigma_max); final (or critical) crack longer than a0; Y constant over the growth; Paris (stable growth) regime
+```
+
+In the worked example, C = 1e-12, m = 3, dsigma = 200 MPa, a0 = 1 mm, af = 10 mm go through the equation above and give N = 970793.0556, log10_N = 5.987126661, a_final = 0.01 m, a_final_mm = 10. It applies only when C, m, dsigma, a0, Y > 0; 0.5 <= m <= 10; exactly one of af and K_IC (K_IC with sigma_max); final (or critical) crack longer than a0; Y constant over the growth; Paris (stable growth) regime: outside that it says what is wrong instead of returning a number.
 
 <a id="fracture_critical_stress"></a>
 

@@ -1,5 +1,5 @@
 {
- "package": "1.5.0",
+ "package": "1.6.0",
  "pack": "1.0.1",
  "knowledge_db": null,
  "files": {
@@ -7,8 +7,8 @@
   "dictionary/terms.json": "3781eac9e78cc74a52dfbb7f7c6ecd5f218e2a208be5aad6dabd1094f82ddc60",
   "knowledge/relations.json": "38bb8610f995224f3835edf5e879a217c2227bdc93a67055b3fe0fb96c380a3f",
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
-  "capabilities/procedures.py": "748f5f41d0cc37b6a7a3df2b28c3f2aa2a63c9ef32b2710f8ecdf5a516714f28",
-  "capabilities/procedures_certified.json": "9997ad48acd383af25f547a1f99ad19bffe11126c413399949eaecef0f930e03",
+  "capabilities/procedures.py": "8b983d6380652295ae55830ab1cb3ea7bd9e2f266404e3a24aacfc17098ef620",
+  "capabilities/procedures_certified.json": "9db313143ea6c0bc4e5b7c1a1d65a8b9e4b966156818bd5c86c1580095bdadfa",
   "materials_science_knowledge_public.sqlite": "45a4a2d547a8bde16e0239deb3eb931747adf361e1fb9dfab15201ffdcfe8a9a"
  },
  "engine": [
