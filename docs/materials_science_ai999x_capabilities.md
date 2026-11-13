@@ -508,7 +508,7 @@ $$
 
 ![V_nm3 (cell volume in nm^3) against beta (cell angle beta in degrees (between a and c)) from 0 to 180](https://www.ai999x.com/?ax_fig=materials-science-ai999x/unit-cell-volume-curve)
 
-*V_nm3 (cell volume in nm^3) against beta (cell angle beta in degrees (between a and c)) from 0 to 180. One curve for each value of a (cell edge a): 5.0000e-10 m, 2.5000e-10 m, 1.0000e-09 m. Other inputs as in the worked example: b = 6e-10 m, c = 7e-10 m, alpha = 90, gamma = 90. 39 points per curve computed by materials-science-ai999x; marked: the worked example, beta = 100, V_nm3 = 0.20681.*
+*V_nm3 (cell volume in nm^3) against beta (cell angle beta in degrees (between a and c)) from 0 to 180. One curve for each value of a (cell edge a): 5.0000e-10 m, 2.5000e-10 m, 1.0000e-09 m. Other inputs as in the worked example: b = 6e-10 m, c = 7e-10 m, alpha = 90.0, gamma = 90.0. 39 points per curve computed by materials-science-ai999x; marked: the worked example, beta = 100, V_nm3 = 0.20681.*
 
 ```python
 materials_science_ai999x.solve('unit_cell_volume', a=5e-10, b=6e-10, c=7e-10, alpha=90, beta=100, gamma=90)
@@ -753,9 +753,9 @@ $$
 - **Assumes:** a valid cell; integer indices, not all zero
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![d_nm (interplanar spacing in nm) against l (Miller index l) from -10 to 10](https://www.ai999x.com/?ax_fig=materials-science-ai999x/d-spacing-triclinic-curve)
+![d_nm (interplanar spacing in nm) against k (Miller index k) from -10 to 10](https://www.ai999x.com/?ax_fig=materials-science-ai999x/d-spacing-triclinic-curve)
 
-*d_nm (interplanar spacing in nm) against l (Miller index l) from -10 to 10. One curve for each value of a (cell edge a): 5.0000e-10 m, 2.5000e-10 m, 1.0000e-09 m. Other inputs as in the worked example: b = 6e-10 m, c = 7e-10 m, alpha = 90, beta = 90, gamma = 90, h = 1, k = 1. 21 points per curve computed by materials-science-ai999x; marked: the worked example, l = 0, d_nm = 0.384111.*
+*d_nm (interplanar spacing in nm) against k (Miller index k) from -10 to 10. One curve for each value of a (cell edge a): 5.0000e-10 m, 2.5000e-10 m, 1.0000e-09 m. Other inputs as in the worked example: b = 5e-10 m, c = 7e-10 m, alpha = 90.0, beta = 90.0, gamma = 120.0, h = 1, l = 0. 21 points per curve computed by materials-science-ai999x; marked: the worked example, k = 0, d_nm = 0.433013.*
 
 ```python
 materials_science_ai999x.solve('d_spacing_triclinic', a=5e-10, b=6e-10, c=7e-10, alpha=90, beta=90, gamma=90, h=1, k=1, l=0)
@@ -963,7 +963,7 @@ $$
 
 ![two_theta_deg (diffraction angle 2-theta in degrees) against a (lattice parameter) from 1](https://www.ai999x.com/?ax_fig=materials-science-ai999x/cubic-reflection-angle-curve)
 
-*two_theta_deg (diffraction angle 2-theta in degrees) against a (lattice parameter) from 1.8075e-10 m to 5.4225e-10 m. One curve for each value of h (Miller index h): 1, 2, 3. Other inputs as in the worked example: k = 1, l = 1, lam = 1.542e-10 m. 31 points per curve computed by materials-science-ai999x; marked: the worked example, a = 3.6150e-10 m, two_theta_deg = 43.3583.*
+*two_theta_deg (diffraction angle 2-theta in degrees) against a (lattice parameter) from 1.8075e-10 m to 5.4225e-10 m. One curve for each value of h (Miller index h): 1, 2, 3. Other inputs as in the worked example: k = 1, l = 1, lam = 1.5420000000000002e-10 m. 31 points per curve computed by materials-science-ai999x; marked: the worked example, a = 3.6150e-10 m, two_theta_deg = 43.3583.*
 
 ```python
 materials_science_ai999x.solve('cubic_reflection_angle', a=3.615e-10, h=1, k=1, l=1, lam=1.542e-10)
@@ -1013,9 +1013,9 @@ $$
 
 *The (1 1 1) plane (shaded) cut through the FCC unit cell of the worked example. Labelled with what the package returned: F_over_f = 4, allowed = True. Marked: F_over_f = 4.*
 
-![whether the reflection appears (allowed) over h (Miller index h) from 1 to 9 and k (Miller index k) from 1 to 9: each of the 9 × 9 cells is one run of materials-science-ai999x, coloured by the verdict it returned, yes: 25 cells, no: 56 cells](https://www.ai999x.com/?ax_fig=materials-science-ai999x/structure-factor-cubic-decision)
+![whether the reflection appears (allowed) over k (Miller index k) from -10 to 10 and l (Miller index l) from -10 to 10: each of the 21 × 21 cells is one run of materials-science-ai999x, coloured by the verdict it returned, yes: 121 cells, no: 320 cells](https://www.ai999x.com/?ax_fig=materials-science-ai999x/structure-factor-cubic-decision)
 
-*whether the reflection appears (allowed) over h (Miller index h) from 1 to 9 and k (Miller index k) from 1 to 9: each of the 9 × 9 cells is one run of materials-science-ai999x, coloured by the verdict it returned, yes: 25 cells, no: 56 cells. Other inputs as in the worked example: structure = FCC, l = 1. Marked: the worked example, h = 1, k = 1 → yes.*
+*whether the reflection appears (allowed) over k (Miller index k) from -10 to 10 and l (Miller index l) from -10 to 10: each of the 21 × 21 cells is one run of materials-science-ai999x, coloured by the verdict it returned, yes: 121 cells, no: 320 cells. Other inputs as in the worked example: structure = FCC, h = 2. Marked: the worked example, k = 0, l = 0 → yes.*
 
 ```python
 materials_science_ai999x.solve('structure_factor_cubic', structure='FCC', h=1, k=1, l=1)
@@ -1203,9 +1203,9 @@ $$
 
 *The (1 0 0) plane (shaded) cut through the FCC unit cell of the worked example. Labelled with what the package returned: PD_per_nm2 = 12.5, PPF = 0.785398. Marked: PD_per_nm2 = 12.5.*
 
-![PD_per_nm2 (atoms per nm^2 on the plane) against k (Miller index k) from -10 to 10](https://www.ai999x.com/?ax_fig=materials-science-ai999x/planar-density-curve)
+![PD_per_nm2 (atoms per nm^2 on the plane) against a (lattice parameter) from 2](https://www.ai999x.com/?ax_fig=materials-science-ai999x/planar-density-curve)
 
-*PD_per_nm2 (atoms per nm^2 on the plane) against k (Miller index k) from -10 to 10. Other inputs as in the worked example: structure = FCC, h = 1, l = 0, a = 4e-10 m. 7 points computed by materials-science-ai999x; marked: the worked example, k = 0, PD_per_nm2 = 12.5.*
+*PD_per_nm2 (atoms per nm^2 on the plane) against a (lattice parameter) from 2.0000e-10 m to 6.0000e-10 m. One curve for each value of h (Miller index h): 1, 2, 3. Other inputs as in the worked example: structure = FCC, k = 1, l = 1. 31 points per curve computed by materials-science-ai999x; marked: the worked example, a = 4.0000e-10 m, PD_per_nm2 = 14.4338.*
 
 ```python
 materials_science_ai999x.solve('planar_density', structure='FCC', h=1, k=0, l=0, a=4e-10)
@@ -1475,7 +1475,7 @@ $$
 
 ![angle_deg (angle in degrees) against w1 (index w of direction 1) from -10 to 10](https://www.ai999x.com/?ax_fig=materials-science-ai999x/angle-between-directions-curve)
 
-*angle_deg (angle in degrees) against w1 (index w of direction 1) from -10 to 10. One curve for each value of v1 (index v of direction 1): 0, 1, 2. Other inputs as in the worked example: a = 3e-10 m, b = 3e-10 m, c = 5e-10 m, alpha = 90, beta = 90, gamma = 120, u1 = 1, u2 = 0, v2 = 1, w2 = 0. 13 points per curve computed by materials-science-ai999x; marked: the worked example, w1 = 0, angle_deg = 120.*
+*angle_deg (angle in degrees) against w1 (index w of direction 1) from -10 to 10. One curve for each value of v1 (index v of direction 1): 0, 1, 2. Other inputs as in the worked example: a = 3e-10 m, b = 3e-10 m, c = 5e-10 m, alpha = 90.0, beta = 90.0, gamma = 120.0, u1 = 1, u2 = 0, v2 = 1, w2 = 0. 13 points per curve computed by materials-science-ai999x; marked: the worked example, w1 = 0, angle_deg = 120.*
 
 ```python
 materials_science_ai999x.solve('angle_between_directions', a=3e-10, b=3e-10, c=5e-10, alpha=90, beta=90, gamma=120, u1=1, v1=0, w1=0, u2=0, v2=1, w2=0)
@@ -1528,7 +1528,7 @@ $$
 
 ![angle_deg (angle between the plane normals in degrees) against l2 (Miller index l of plane 2) from -11 to 9](https://www.ai999x.com/?ax_fig=materials-science-ai999x/angle-between-planes-curve)
 
-*angle_deg (angle between the plane normals in degrees) against l2 (Miller index l of plane 2) from -11 to 9. One curve for each value of c (cell edge c): 4.0000e-10 m, 2.0000e-10 m, 8.0000e-10 m. Other inputs as in the worked example: a = 4e-10 m, b = 4e-10 m, alpha = 90, beta = 90, gamma = 90, h1 = 1, k1 = 1, l1 = 1, h2 = 1, k2 = 1. 13 points per curve computed by materials-science-ai999x; marked: the worked example, l2 = -1, angle_deg = 70.5288.*
+*angle_deg (angle between the plane normals in degrees) against l2 (Miller index l of plane 2) from -11 to 9. One curve for each value of c (cell edge c): 4.0000e-10 m, 2.0000e-10 m, 8.0000e-10 m. Other inputs as in the worked example: a = 4.0000000000000007e-10 m, b = 4.0000000000000007e-10 m, alpha = 90.0, beta = 90.0, gamma = 90.0, h1 = 1, k1 = 1, l1 = 1, h2 = 1, k2 = 1. 13 points per curve computed by materials-science-ai999x; marked: the worked example, l2 = -1, angle_deg = 70.5288.*
 
 ```python
 materials_science_ai999x.solve('angle_between_planes', a=4e-10, b=4e-10, c=4e-10, alpha=90, beta=90, gamma=90, h1=1, k1=1, l1=1, h2=1, k2=1, l2=-1)
@@ -2115,7 +2115,7 @@ $$
 
 ![x_mm (depth in mm) against Cx (target concentration) from 0](https://www.ai999x.com/?ax_fig=materials-science-ai999x/diffusion-depth-of-concentration-curve)
 
-*x_mm (depth in mm) against Cx (target concentration) from 0.02 to 0.98. One curve for each value of D (diffusion coefficient): 1.0000e-10 m^2/s, 5.0000e-11 m^2/s, 2.0000e-10 m^2/s. Other inputs as in the worked example: C0 = 0.0, Cs = 1.0, t = 10000.0 s. 41 points per curve computed by materials-science-ai999x; marked: the worked example, Cx = 0.4795, x_mm = 1.*
+*x_mm (depth in mm) against Cx (target concentration) from 0.02 to 0.98. One curve for each value of D (diffusion coefficient): 2.0000e-11 m^2/s, 1.0000e-11 m^2/s, 4.0000e-11 m^2/s. Other inputs as in the worked example: C0 = 0.2, Cs = 1.0, t = 36000.0 s. 33 points per curve computed by materials-science-ai999x; marked: the worked example, Cx = 0.6, x_mm = 0.809388.*
 
 ```python
 materials_science_ai999x.solve('diffusion_depth_of_concentration', C0=0.0, Cs=1.0, Cx=0.4795001221869535, D=1e-10, t=10000.0)
@@ -2691,7 +2691,7 @@ $$
 
 ![lc_mm (critical length in mm) against tau_c (fibre-matrix bond strength (or matrix shear yield strength)) from 1](https://www.ai999x.com/?ax_fig=materials-science-ai999x/critical-fiber-length-curve)
 
-*lc_mm (critical length in mm) against tau_c (fibre-matrix bond strength (or matrix shear yield strength)) from 1.0000e+07 Pa to 3.0000e+07 Pa. One curve for each value of sigma_f (fibre tensile strength): 3.5000e+09 Pa, 1.7500e+09 Pa, 7.0000e+09 Pa. Other inputs as in the worked example: d = 1e-05 m. 31 points per curve computed by materials-science-ai999x; marked: the worked example, tau_c = 2.0000e+07 Pa, lc_mm = 0.875.*
+*lc_mm (critical length in mm) against tau_c (fibre-matrix bond strength (or matrix shear yield strength)) from 1.0000e+07 Pa to 3.0000e+07 Pa. One curve for each value of sigma_f (fibre tensile strength): 3.5000e+09 Pa, 1.7500e+09 Pa, 7.0000e+09 Pa. Other inputs as in the worked example: d = 9.999999999999999e-06 m. 31 points per curve computed by materials-science-ai999x; marked: the worked example, tau_c = 2.0000e+07 Pa, lc_mm = 0.875.*
 
 ```python
 materials_science_ai999x.solve('critical_fiber_length', sigma_f=3500000000.0, d=1e-05, tau_c=20000000.0)
@@ -3721,7 +3721,7 @@ $$
 
 ![crystallinity_percent (percent crystallinity (by mass)) against rho_c (density of the totally crystalline polymer) from 500 kg/m^3 to 1500 kg/m^3](https://www.ai999x.com/?ax_fig=materials-science-ai999x/polymer-crystallinity-curve)
 
-*crystallinity_percent (percent crystallinity (by mass)) against rho_c (density of the totally crystalline polymer) from 500 kg/m^3 to 1500 kg/m^3. One curve for each value of rho_a (density of the totally amorphous polymer): 870 kg/m^3, 435 kg/m^3. Other inputs as in the worked example: rho_s = 925.0 kg/m^3. 18 points per curve computed by materials-science-ai999x; marked: the worked example, rho_c = 1000 kg/m^3, crystallinity_percent = 45.738.*
+*crystallinity_percent (percent crystallinity (by mass)) against rho_c (density of the totally crystalline polymer) from 500 kg/m^3 to 1500 kg/m^3. One curve for each value of rho_a (density of the totally amorphous polymer): 870 kg/m^3, 435 kg/m^3. Other inputs as in the worked example: rho_s = 924.9999999999999 kg/m^3. 18 points per curve computed by materials-science-ai999x; marked: the worked example, rho_c = 1000 kg/m^3, crystallinity_percent = 45.738.*
 
 ```python
 materials_science_ai999x.solve('polymer_crystallinity', rho_s=925.0, rho_c=1000.0, rho_a=870.0)
@@ -3764,7 +3764,7 @@ $$
 
 ![stress_MPa (engineering stress in MPa) against Mc (molecular weight between crosslinks) from 2](https://www.ai999x.com/?ax_fig=materials-science-ai999x/rubber-elasticity-curve)
 
-*stress_MPa (engineering stress in MPa) against Mc (molecular weight between crosslinks) from 2.5 kg/mol to 7.5 kg/mol. One curve for each value of stretch (stretch ratio lambda = L/L0): 2, 1, 4. Other inputs as in the worked example: rho = 950.0 kg/m^3, T = 300.0 K. 31 points per curve computed by materials-science-ai999x; marked: the worked example, Mc = 5 kg/mol, stress_MPa = 0.829368.*
+*stress_MPa (engineering stress in MPa) against Mc (molecular weight between crosslinks) from 2.5 kg/mol to 7.5 kg/mol. One curve for each value of stretch (stretch ratio lambda = L/L0): 2, 1, 4. Other inputs as in the worked example: rho = 949.9999999999999 kg/m^3, T = 300.0 K. 31 points per curve computed by materials-science-ai999x; marked: the worked example, Mc = 5 kg/mol, stress_MPa = 0.829368.*
 
 ```python
 materials_science_ai999x.solve('rubber_elasticity', rho=950.0, Mc=5.0, T=300.0, stretch=2.0)
@@ -3805,13 +3805,9 @@ $$
 - **Assumes:** $n  \geq  1$; $l > 0$; $90 < \theta < 180$ degrees
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![r_rms_nm (rms end-to-end distance in nm) against n (number of backbone bonds) from 1 to 9](https://www.ai999x.com/?ax_fig=materials-science-ai999x/polymer-chain-dimensions-curve)
+![r_rms_nm (rms end-to-end distance in nm) against n (number of backbone bonds) from 1 to 10](https://www.ai999x.com/?ax_fig=materials-science-ai999x/polymer-chain-dimensions-curve)
 
-*r_rms_nm (rms end-to-end distance in nm) against n (number of backbone bonds) from 1 to 9. One curve for each value of l (bond length): 1.5400e-10 m, 7.7000e-11 m, 3.0800e-10 m. 9 points per curve computed by materials-science-ai999x; marked: the worked example, n = 1, r_rms_nm = 0.154.*
-
-![r_rms_nm (rms end-to-end distance in nm) over l (bond length) from 7](https://www.ai999x.com/?ax_fig=materials-science-ai999x/polymer-chain-dimensions-field)
-
-*r_rms_nm (rms end-to-end distance in nm) over l (bond length) from 7.7000e-11 m to 2.3100e-10 m and n (number of backbone bonds) from 1 to 9: each of the 21 × 9 cells is one run of materials-science-ai999x, shaded by its value (light 0.077 to dark 0.938311); iso-lines at r_rms_nm = 0.2, 0.4, 0.6, 0.8. Marked: the worked example, l = 1.5400e-10 m, n = 1, r_rms_nm = 0.154.*
+*r_rms_nm (rms end-to-end distance in nm) against n (number of backbone bonds) from 1 to 10. One curve for each value of l (bond length): 1.5400e-10 m, 7.7000e-11 m, 3.0800e-10 m. Other inputs as in the worked example: theta = 120.0. 10 points per curve computed by materials-science-ai999x; marked: the worked example, n = 2, r_rms_nm = 0.266736.*
 
 ```python
 materials_science_ai999x.solve('polymer_chain_dimensions', n=1, l=1.54e-10)
@@ -4076,7 +4072,7 @@ $$
 
 ![EF_eV (Fermi energy in eV) against A (molar mass) from 0](https://www.ai999x.com/?ax_fig=materials-science-ai999x/fermi-energy-free-electron-curve)
 
-*EF_eV (Fermi energy in eV) against A (molar mass) from 0.031775 kg/mol to 0.095325 kg/mol. One curve for each value of rho (density): 8960 kg/m^3, 4480 kg/m^3, 17920 kg/m^3. Other inputs as in the worked example: valence = 1. 31 points per curve computed by materials-science-ai999x; marked: the worked example, A = 0.06355 kg/mol, EF_eV = 7.04421.*
+*EF_eV (Fermi energy in eV) against A (molar mass) from 0.031775 kg/mol to 0.095325 kg/mol. One curve for each value of rho (density): 8960 kg/m^3, 4480 kg/m^3, 17920 kg/m^3. Other inputs as in the worked example: valence = 1.0. 31 points per curve computed by materials-science-ai999x; marked: the worked example, A = 0.06355 kg/mol, EF_eV = 7.04421.*
 
 ```python
 materials_science_ai999x.solve('fermi_energy_free_electron', rho=8960.0, A=0.06355, valence=1)
