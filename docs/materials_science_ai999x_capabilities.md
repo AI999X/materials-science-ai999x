@@ -227,7 +227,7 @@ $$
 
 ![The FCC unit cell (atoms at the standard positions of the structure; corner atoms in the first colour, atoms inside or on faces in the second; the hidden edge dashed), the structure of the worked example with R = 1](https://www.ai999x.com/?ax_fig=materials-science-ai999x/cubic-lattice-parameter-cell)
 
-*The FCC unit cell (atoms at the standard positions of the structure; corner atoms in the first colour, atoms inside or on faces in the second; the hidden edge dashed), the structure of the worked example with R = 1.278e-10. Labelled with what the package returned: a_nm = 0.361473, nearest_neighbour_nm = 0.2556. Marked: a_nm = 0.361473.*
+*The FCC unit cell (atoms at the standard positions of the structure; corner atoms in the first colour, atoms inside or on faces in the second; the hidden edge dashed), the structure of the worked example with R = 1.2780000000000001e-10. Labelled with what the package returned: a_nm = 0.361473, nearest_neighbour_nm = 0.2556. Marked: a_nm = 0.361473.*
 
 ![a_nm (lattice parameter in nm) against R (atomic radius) from 6](https://www.ai999x.com/?ax_fig=materials-science-ai999x/cubic-lattice-parameter-curve)
 
@@ -353,7 +353,7 @@ $$
 
 ![The FCC unit cell (atoms at the standard positions of the structure; corner atoms in the first colour, atoms inside or on faces in the second; the hidden edge dashed), the structure of the worked example with A = 0](https://www.ai999x.com/?ax_fig=materials-science-ai999x/theoretical-density-cell)
 
-*The FCC unit cell (atoms at the standard positions of the structure; corner atoms in the first colour, atoms inside or on faces in the second; the hidden edge dashed), the structure of the worked example with A = 0.06355, R = 1.28e-10. Labelled with what the package returned: rho_gcc = 8.89528, a_nm = 0.362039. Marked: rho_gcc = 8.89528.*
+*The FCC unit cell (atoms at the standard positions of the structure; corner atoms in the first colour, atoms inside or on faces in the second; the hidden edge dashed), the structure of the worked example with A = 0.06355, R = 1.2800000000000002e-10. Labelled with what the package returned: rho_gcc = 8.89528, a_nm = 0.362039. Marked: rho_gcc = 8.89528.*
 
 ![rho_gcc (density in g/cm^3) against R (atomic radius) from 6](https://www.ai999x.com/?ax_fig=materials-science-ai999x/theoretical-density-curve)
 
@@ -800,7 +800,7 @@ $$
 
 ![Bragg reflection from two lattice planes a spacing d apart: rays arriving and leaving at θ, the lower ray travelling 2d·sin θ further](https://www.ai999x.com/?ax_fig=materials-science-ai999x/bragg-angle-geometry)
 
-*Bragg reflection from two lattice planes a spacing d apart: rays arriving and leaving at θ, the lower ray travelling 2d·sin θ further. Inputs as in the worked example (d = 2.087e-10, lam = 1.542e-10); returned by the package: theta_deg = 21.6805, two_theta_deg = 43.3609. Marked: θ = 21.6805°.*
+*Bragg reflection from two lattice planes a spacing d apart: rays arriving and leaving at θ, the lower ray travelling 2d·sin θ further. Inputs as in the worked example (d = 2.0870000000000001e-10, lam = 1.5420000000000002e-10); returned by the package: theta_deg = 21.6805, two_theta_deg = 43.3609. Marked: θ = 21.6805°.*
 
 ![two_theta_deg (diffraction angle 2-theta in degrees) against d (interplanar spacing) from 1](https://www.ai999x.com/?ax_fig=materials-science-ai999x/bragg-angle-curve)
 
@@ -902,7 +902,7 @@ $$
 
 ![Bragg reflection from two lattice planes a spacing d apart: rays arriving and leaving at θ, the lower ray travelling 2d·sin θ further](https://www.ai999x.com/?ax_fig=materials-science-ai999x/bragg-spacing-geometry)
 
-*Bragg reflection from two lattice planes a spacing d apart: rays arriving and leaving at θ, the lower ray travelling 2d·sin θ further. Inputs as in the worked example (lam = 1.542e-10, theta = 30.0); returned by the package: . Marked: θ = 30°.*
+*Bragg reflection from two lattice planes a spacing d apart: rays arriving and leaving at θ, the lower ray travelling 2d·sin θ further. Inputs as in the worked example (lam = 1.5420000000000002e-10, theta = 30.0); returned by the package: . Marked: θ = 30°.*
 
 ![d_nm (interplanar spacing in nm) against theta (Bragg angle theta in degrees (half of 2-theta)) from 0 to 90](https://www.ai999x.com/?ax_fig=materials-science-ai999x/bragg-spacing-curve)
 
@@ -959,7 +959,7 @@ $$
 
 ![Bragg reflection from two lattice planes a spacing d apart: rays arriving and leaving at θ, the lower ray travelling 2d·sin θ further](https://www.ai999x.com/?ax_fig=materials-science-ai999x/cubic-reflection-angle-geometry)
 
-*Bragg reflection from two lattice planes a spacing d apart: rays arriving and leaving at θ, the lower ray travelling 2d·sin θ further. Inputs as in the worked example (a = 3.615e-10, h = 1, k = 1, l = 1, lam = 1.542e-10); returned by the package: theta_deg = 21.6791, two_theta_deg = 43.3583. Marked: θ = 21.6791°.*
+*Bragg reflection from two lattice planes a spacing d apart: rays arriving and leaving at θ, the lower ray travelling 2d·sin θ further. Inputs as in the worked example (a = 3.615e-10, h = 1, k = 1, l = 1, lam = 1.5420000000000002e-10); returned by the package: theta_deg = 21.6791, two_theta_deg = 43.3583. Marked: θ = 21.6791°.*
 
 ![two_theta_deg (diffraction angle 2-theta in degrees) against a (lattice parameter) from 1](https://www.ai999x.com/?ax_fig=materials-science-ai999x/cubic-reflection-angle-curve)
 
@@ -1009,9 +1009,9 @@ $$
 - **Assumes:** integer indices, not all zero
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The (1 1 1) plane (shaded) cut through the FCC unit cell of the worked example](https://www.ai999x.com/?ax_fig=materials-science-ai999x/structure-factor-cubic-cell)
+![The (2 0 0) plane (shaded) cut through the FCC unit cell of the worked example](https://www.ai999x.com/?ax_fig=materials-science-ai999x/structure-factor-cubic-cell)
 
-*The (1 1 1) plane (shaded) cut through the FCC unit cell of the worked example. Labelled with what the package returned: F_over_f = 4, allowed = True. Marked: F_over_f = 4.*
+*The (2 0 0) plane (shaded) cut through the FCC unit cell of the worked example. Labelled with what the package returned: F_over_f = 4, allowed = True. Marked: F_over_f = 4.*
 
 ![whether the reflection appears (allowed) over k (Miller index k) from -10 to 10 and l (Miller index l) from -10 to 10: each of the 21 × 21 cells is one run of materials-science-ai999x, coloured by the verdict it returned, yes: 121 cells, no: 320 cells](https://www.ai999x.com/?ax_fig=materials-science-ai999x/structure-factor-cubic-decision)
 
@@ -1199,9 +1199,9 @@ $$
 - **Assumes:** $a > 0$; integer indices between -3 and 3, not all zero
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The (1 0 0) plane (shaded) cut through the FCC unit cell of the worked example](https://www.ai999x.com/?ax_fig=materials-science-ai999x/planar-density-cell)
+![The (1 1 1) plane (shaded) cut through the FCC unit cell of the worked example](https://www.ai999x.com/?ax_fig=materials-science-ai999x/planar-density-cell)
 
-*The (1 0 0) plane (shaded) cut through the FCC unit cell of the worked example. Labelled with what the package returned: PD_per_nm2 = 12.5, PPF = 0.785398. Marked: PD_per_nm2 = 12.5.*
+*The (1 1 1) plane (shaded) cut through the FCC unit cell of the worked example. Labelled with what the package returned: PD_per_nm2 = 14.4338, PPF = 0.9069. Marked: PD_per_nm2 = 14.4338.*
 
 ![PD_per_nm2 (atoms per nm^2 on the plane) against a (lattice parameter) from 2](https://www.ai999x.com/?ax_fig=materials-science-ai999x/planar-density-curve)
 
@@ -1574,7 +1574,7 @@ $$
 
 ![The FCC unit cell (atoms at the standard positions of the structure; corner atoms in the first colour, atoms inside or on faces in the second; the hidden edge dashed), the structure of the worked example with site = octahedral, R = 1](https://www.ai999x.com/?ax_fig=materials-science-ai999x/interstitial-site-size-cell)
 
-*The FCC unit cell (atoms at the standard positions of the structure; corner atoms in the first colour, atoms inside or on faces in the second; the hidden edge dashed), the structure of the worked example with site = octahedral, R = 1.29e-10. Labelled with what the package returned: r_nm = 0.0534335, ratio = 0.414214. Marked: r_nm = 0.0534335.*
+*The FCC unit cell (atoms at the standard positions of the structure; corner atoms in the first colour, atoms inside or on faces in the second; the hidden edge dashed), the structure of the worked example with site = octahedral, R = 1.2900000000000002e-10. Labelled with what the package returned: r_nm = 0.0534335, ratio = 0.414214. Marked: r_nm = 0.0534335.*
 
 ```python
 materials_science_ai999x.solve('interstitial_site_size', structure='FCC', site='octahedral', R=1.29e-10)
@@ -3367,7 +3367,7 @@ $$
 
 ![Degrees of freedom F returned by the package for C = 1 … 3 components (rows) and P = 1 … 3 coexisting phases (columns), one run per cell; F = 0 marks an invariant point (no variable can change), a dot a combination that cannot exist](https://www.ai999x.com/?ax_fig=materials-science-ai999x/gibbs-phase-rule-table)
 
-*Degrees of freedom F returned by the package for C = 1 … 3 components (rows) and P = 1 … 3 coexisting phases (columns), one run per cell; F = 0 marks an invariant point (no variable can change), a dot a combination that cannot exist. The worked example, C = 1 and P = 3: F = 0.*
+*Degrees of freedom F returned by the package for C = 1 … 3 components (rows) and P = 1 … 3 coexisting phases (columns), one run per cell; F = 0 marks an invariant point (no variable can change), a dot a combination that cannot exist. The worked example, C = 2 and P = 3: F = 1.*
 
 ```python
 materials_science_ai999x.solve('gibbs_phase_rule', C=1, P=3)
