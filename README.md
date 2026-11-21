@@ -10,8 +10,8 @@ Materials Science covers crystal structures and diffraction, defects and diffusi
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-materials-science-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-materials-science-1.6.6-linux-x86_64.tar.gz) |
-| **Command line** `materials-science` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-materials-science-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-materials-science-1.6.7-linux-x86_64.tar.gz) |
+| **Command line** `materials-science` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/materials-science-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install materials-science-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -143,86 +143,6 @@ print(a.outcome, a.values)
 # SOLVED {'N_values': [3, 4, 8, 11, 12, 16], 'N_last': 16, 'N_first': 3}
 ```
 
-## Command line: 15 examples
-
-Each command below was run with `materials-science` of this release; the lines under it are the answer it printed (the full answer goes on with the method, every input in SI units and the conditions it assumes).
-
-```text
-$ materials-science solve radius_ratio_coordination "rc=0.102 nm" "ra=0.181 nm"
-ratio = 0.5635359116
-CN = 6
-geometry = octahedral
-
-$ materials-science solve critical_fiber_length "sigma_f=3.5 GPa" "d=10 um" "tau_c=20 MPa"
-lc = 0.000875 m
-lc_mm = 0.875
-aspect_ratio = 87.5
-
-$ materials-science solve angle_between_directions_cubic u1=1 v1=0 w1=0 u2=1 v2=1 w2=1
-angle_deg = 54.73561032
-
-$ materials-science solve burgers_vector structure=FCC "a=0.3615 nm"
-b = 2.556191014e-10 m
-b_nm = 0.2556191014
-direction = a/2<110>
-
-$ materials-science solve bragg_angle "d=0.2087 nm" "lam=0.1542 nm"
-theta_deg = 21.68045609
-two_theta_deg = 43.36091219
-
-$ materials-science solve diffusion_arrhenius_fit "T=[773, 873]" "D=[5.8e-13, 5.3e-12]"
-Q = 124136.1426 J/mol
-Q_kJmol = 124.1361426
-D0 = 0.0001417848903 m^2/s
-log10_D0 = -3.848370049
-r_squared = 1
-
-$ materials-science solve band_gap_from_conductivity "T=[300, 400]" "sigma=[2.2, 63]"
-Eg_eV = 0.6938009484
-prefactor = 1479429.095
-r_squared = 1
-
-$ materials-science solve critical_crack_length "K_IC=55 MPa*m^0.5" "sigma=1000 MPa"
-a_c = 0.0009628874057 m
-a_c_mm = 0.9628874057
-
-$ materials-science solve offset_yield_strength "strain=[0, 0.002, 0.004, 0.006, 0.008]" "stress=[0, 400, 520, 560, 580]" "E=200 GPa"
-yield_MPa = 533.3333333
-yield_strain = 0.004666666667
-
-$ materials-science solve atomic_to_weight_percent element1=Al element2=Cu at1=90
-wt1 = 79.25907969
-wt2 = 20.74092031
-
-$ materials-science solve avrami_kinetics "t=[50, 100]" "y=[0.2, 0.8]"
-n = 2.850512903
-k = 3.203674769e-06
-log10_k = -5.494351579
-t_half = 74.41407874
-r_squared = 1
-
-$ materials-science solve copolymer_degree_of_polymerization formula1=C4H6 formula2=C8H8 f1=0.75 "Mn=350000 g/mol"
-m_avg_g_mol = 66.60511
-DP = 5254.852068
-
-$ materials-science solve wiedemann_franz "T=300 K" "sigma=59600000 S/m"
-kappa = 436.8092062 W/(m*K)
-lorenz = 2.443004509e-08
-
-$ materials-science solve ceramic_density prototype=rocksalt "rc=0.102 nm" "ra=0.181 nm" "Ac=22.99 g/mol" "Aa=35.45 g/mol"
-a = 5.66e-10 m
-a_nm = 0.566
-rho = 2140.769963 kg/m^3
-rho_gcc = 2.140769963
-
-$ materials-science solve composite_rule_of_mixtures "Ef=69 GPa" "Em=3.4 GPa" Vf=0.4
-E_long_GPa = 29.64
-E_trans_GPa = 5.486435921
-fiber_load_fraction = 0.9311740891
-E_long = 2.964e+10 Pa
-E_trans = 5486435921 Pa
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/materials-science-ai999x/blob/main/docs/materials_science_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/materials-science-ai999x/blob/main/docs/materials_science_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/materials-science-ai999x/blob/main/docs/materials_science_ai999x_desktop_guide.md)
@@ -231,13 +151,13 @@ E_trans = 5486435921 Pa
 
 Every calculation, with its formula, a worked example and its figures: **[Materials Science on ai999x.com](https://www.ai999x.com/models/materials-science-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.7 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/materials-science-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.6`; the [GitHub release](https://github.com/AI999X/materials-science-ai999x/releases/tag/v1.6.6) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/materials-science-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.7`; the [GitHub release](https://github.com/AI999X/materials-science-ai999x/releases/tag/v1.6.7) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
 
 ## Build the program from source
 
